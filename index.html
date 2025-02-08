@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronicas Spectrais</title>
+    <link rel="stylesheet" href="./assets/styles/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-100">
+   <!-- Navbar -->
+<nav class="fixed top-0 left-0 w-full bg-blue-900 shadow-md z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+        <a href="#header" class="text-white hover:text-yellow-400 transition block py-2"><h1 class="text-white text-xl font-bold">Crônicas Espectrais</h1></a>
+
+        <!-- Botão do Menu para Mobile -->
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+            <!-- <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg> -->
+            <i class="fa-solid fa-bars w-6 h-6"></i>
+        </button>
+
+        <!-- Links da Navbar -->
+        <ul id="menu" class="hidden md:flex space-x-6 md:space-x-6 text-center md:text-left">
+            <li><a href="#sobre" class="text-white hover:text-yellow-400 transition block py-2">Sobre o Livro</a></li>
+            <li><a href="#autor" class="text-white hover:text-yellow-400 transition block py-2">Sobre o Autor</a></li>
+            <li><a href="#depoimentos" class="text-white hover:text-yellow-400 transition block py-2">Depoimentos</a></li>
+            <li><a href="#cta" class="text-white hover:text-yellow-400 transition block py-2">Comprar</a></li>
+        </ul>
+    </div>
+
+    <!-- Menu Mobile (Dropdown) -->
+    <div id="mobile-menu" class="hidden bg-blue-900 md:hidden">
+        <ul class="flex flex-col items-center space-y-4 py-4">
+            <li><a href="#sobre" class="text-white hover:text-yellow-400 transition">Sobre o Livro</a></li>
+            <li><a href="#autor" class="text-white hover:text-yellow-400 transition">Sobre o Autor</a></li>
+            <li><a href="#depoimentos" class="text-white hover:text-yellow-400 transition">Depoimentos</a></li>
+            <li><a href="#cta" class="text-white hover:text-yellow-400 transition">Comprar</a></li>
+        </ul>
+    </div>
+</nav>
