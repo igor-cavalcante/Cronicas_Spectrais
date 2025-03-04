@@ -1,117 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cronicas Spectrais</title>
     <link rel="stylesheet" href="./assets/styles/output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-gray-100">
-   <!-- Navbar -->
-<nav class="fixed top-0 left-0 w-full bg-blue-900 shadow-md z-50">
-    <div class="container mx-auto flex justify-between items-center p-4">
-        <a href="#header" class="text-white hover:text-yellow-400 transition block py-2"><h1 class="text-white text-xl font-bold">Crônicas Espectrais</h1></a>
+    <header class="bg-white h-15 shadow-md w-full fixed top-0 z-50">
+        <nav class="flex justify-between items-center w-[92%] h-full  mx-auto ">
+            <div>
+                <a href="#header" class=" hover:text-yellow-400 transition block py-2">
+                    <h1 class=" text-xl font-bold">Crônicas Espectrais</h1>
+                </a>
+            </div>
+            <div
+                class="z-100 nav-links duration-500 md:static fixed  bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="hover:text-gray-500" href="#sobre"> Sobre o Livro</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#autor">Sobre o Autor</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#depoimentos">Depoimentos</a>
+                    </li>
+                </ul>
+            </div>
 
-        <!-- Botão do Menu para Mobile -->
-        <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
-            <!-- <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg> -->
-            <i class="fa-solid fa-bars w-6 h-6"></i>
-        </button>
+            <div class="flex items-center gap-6">
+                <button class="bg-orange-500 text-white px-5 py-2 rounded-full  hover:bg-orange-600">
+                    <i class="fa-solid fa-shopping-cart "></i> Comprar
+                </button>
 
-        <!-- Links da Navbar -->
-        <ul id="menu" class="hidden md:flex space-x-6 md:space-x-6 text-center md:text-left">
-            <li><a href="#sobre" class="text-white hover:text-yellow-400 transition block py-2">Sobre o Livro</a></li>
-            <li><a href="#autor" class="text-white hover:text-yellow-400 transition block py-2">Sobre o Autor</a></li>
-            <li><a href="#depoimentos" class="text-white hover:text-yellow-400 transition block py-2">Depoimentos</a></li>
-            <li><a href="#comprar" class="text-white hover:text-yellow-400 transition block py-2">Comprar</a></li>
-        </ul>
-    </div>
-
-    <!-- Menu Mobile (Dropdown) -->
-    <div id="mobile-menu" class="hidden bg-blue-900 md:hidden">
-        <ul class="flex flex-col items-center space-y-4 py-4">
-            <li><a href="#sobre" class="text-white hover:text-yellow-400 transition">Sobre o Livro</a></li>
-            <li><a href="#autor" class="text-white hover:text-yellow-400 transition">Sobre o Autor</a></li>
-            <li><a href="#depoimentos" class="text-white hover:text-yellow-400 transition">Depoimentos</a></li>
-            <li><a href="#comprar" class="text-white hover:text-yellow-400 transition">Comprar</a></li>
-        </ul>
-    </div>
-</nav>
+                <!-- Ícone do menu -->
+                <button id="menuToggle" onclick="onToggleMenu()" class="text-3xl cursor-pointer md:hidden">
+                    <i id="menuIcon" class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
 
 
-<!-- Header -->
-<header id="header" class="flex flex-col md:flex-row items-center justify-center min-h-screen px-6 md:px-12 lg:px-20 pt-24">
-    <!-- Texto à Esquerda -->
-    <div class="md:w-1/2 text-center md:text-left space-y-6">
-        <h1 class="text-3xl md:text-5xl font-bold text-blue-900 leading-tight">
+    <section id="banner" class="bg-img bg-cover bg-center p-10 w-full h-dvh">
+
+        <div class=" mx-auto flex justify-end md:flex-row flex-col items-center gap-10 w-full h-full">
+            <!-- Conteúdo centralizado -->
+            <div class="flex justify-center flex-col w-full z-10 max-w-3xl text-center text-white  md:text-blue-900 px-2 md:px-12  ">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+                    Descubra as Crônicas Espectrais: Uma Jornada sobre o TEA
+                </h1>
+                <p class="mt-4 text-lg sm:text-xl leading-relaxed">
+                    Um livro que mergulha nas nuances do Transtorno do Espectro Autista (TEA) através de crônicas
+                    emocionantes e reflexivas.
+                </p>
+                <!-- Botão com dropdown embutido -->
+                <div class="relative inline-block mt-6">
+
+                    <button id="dropdownBtn"
+                        class=" w-full bg-orange-500 text-white px-6 py-3 rounded-lg text-lg font-semibold flex items-center justify-center gap-2 hover:bg-orange-600 transition transform hover:-translate-y-1 hover:scale-105">
+                        Garanta na Pré-venda <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+
+                    <!-- Menu retrátil estilizado -->
+                    <div id="dropdownMenu"
+                        class="w-full absolute left-0 top-full mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible transform scale-95 transition-all duration-300">
+                        <a href="https://www.editorapatua.com.br/cronicas-espectrais-notas-sobre-o-tea-de-luciano-de-jesus-goncalves/p"
+                            class="flex items-center gap-2 px-4 py-3 text-blue-900 hover:bg-gray-200 rounded-t-lg">
+                            <i class="fa-solid fa-shopping-cart text-orange-500 "></i> Comprar na Patuá
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-2 px-4 py-3 text-blue-900 hover:bg-gray-200 rounded-b-lg">
+                            <i class="fa-brands fa-amazon text-orange-500"></i>Comprar na Amazon
+                        </a>
+                    </div>
+                </div>
+
+    </section>
+
+    <!--     
+<div class="relative w-full h-screen h-full flex items-center justify-end  ">
+
+      <section class="absolute inset-0 bg-img bg-cover bg-center bg-no-repeat">
+    </section>
+
+    Conteúdo centralizado 
+    <div class="relative z-10 max-w-3xl text-center text-blue-900 px-6 md:px-12  ">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
             Descubra as Crônicas Espectrais: Uma Jornada sobre o TEA
         </h1>
-        <p class="text-gray-700 text-lg md:text-xl leading-relaxed">
+        <p class="mt-4 text-lg sm:text-xl leading-relaxed">
             Um livro que mergulha nas nuances do Transtorno do Espectro Autista (TEA) através de crônicas emocionantes e reflexivas.
         </p>
-        <button>
-        <a href="https://www.editorapatua.com.br/cronicas-espectrais-notas-sobre-o-tea-de-luciano-de-jesus-goncalves/p" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-orange-600 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-            Garanta na Pré venda <i class="fa-solid fa-cart-shopping"></i> 
+    Botão com dropdown embutido 
+   <div class="relative inline-block mt-6">
+
+    <button id="dropdownBtn" class="bg-orange-500 text-white px-6 py-3 rounded-lg text-lg font-semibold flex items-center gap-2 hover:bg-orange-600 transition transform hover:-translate-y-1 hover:scale-105">
+        Garanta na Pré-venda <i class="fa-solid fa-cart-shopping"></i>
+    </button>
+
+Menu retrátil estilizado 
+    <div id="dropdownMenu" class="w-full absolute left-0 top-full mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible transform scale-95 transition-all duration-300">
+        <a href="https://www.editorapatua.com.br/cronicas-espectrais-notas-sobre-o-tea-de-luciano-de-jesus-goncalves/p" class="flex items-center gap-2 px-4 py-3 text-blue-900 hover:bg-gray-200 rounded-t-lg">
+            <i class="fa-solid fa-shopping-cart text-orange-500 "></i> Comprar na Patuá
         </a>
-       </button>
+        <a href="#" class="flex items-center gap-2 px-4 py-3 text-blue-900 hover:bg-gray-200 rounded-b-lg">
+            <i class="fa-brands fa-amazon text-orange-500"></i>Comprar na Amazon
+        </a>
     </div>
-
-    <!-- Imagem do Livro à Direita -->
-    <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
-        <img src="./assets/imagem_livro.webp" 
-             alt="Capa do Livro" 
-             class="w-64 md:w-80 lg:w-[400px] rounded-lg shadow-lg">
+    
     </div>
-</header>
+</div> -->
 
+    <section id="sobre" class="p-10 bg-white">
+        <div class="container mx-auto flex flex-col md:flex-row items-center gap-10">
+            <!-- Imagem do Livro à Esquerda -->
+            <div class="md:w-1/2 flex justify-center">
+                <img src="./assets/img/foto_capa_livro_2.jpg" alt="Capa do Livro"
+                    class="rounded-lg shadow-lg w-80 md:w-[350px] lg:w-[400px]">
+            </div>
 
-<section id="sobre" class="p-10 bg-white">
-    <div class="container mx-auto flex flex-col md:flex-row items-center gap-10">
-        <!-- Imagem do Livro à Esquerda -->
-        <div class="md:w-1/2 flex justify-center">
-            <img src="./assets/imagem_livro.webp" 
-                 alt="Capa do Livro" 
-                 class="rounded-lg shadow-lg w-80 md:w-[350px] lg:w-[400px]">
+            <!-- Texto à Direita -->
+            <div class="md:w-1/2 text-center md:text-left">
+                <h3 class="text-3xl font-bold text-blue-900"> Crônicas Espectrais: Uma Jornada sobre o TEA</h3>
+                <p class="mt-4 text-gray-700 leading-relaxed">
+                    Na crise da idade, endividado e insone, um professor de 39 anos decide descobrir e listar todos os
+                    seus fracassos e problemas de saúde. Ao final da empreitada, o docente encontra-se diante do
+                    diagnóstico de Transtorno do Espectro Autista (TEA).
+                </p>
+                <p class="mt-2 text-gray-700 leading-relaxed">
+                    Em face dessa surpresa, ainda que recente, tardia, levemente amedrontado, Luciano repensa a vida,
+                    altera rotas, modifica hábitos, agora, consciente de condição neurodivergente. O enredo parece
+                    prosaico. E é.
+                </p>
+                <blockquote class="italic text-lg text-orange-600 border-l-4 border-orange-500 pl-4 mt-4">
+                    "Aos quarenta, começo a vislumbrar: a festa está apenas começando. Aproveitem!"
+                </blockquote>
+            </div>
         </div>
-
-        <!-- Texto à Direita -->
-        <div class="md:w-1/2 text-center md:text-left">
-            <h3 class="text-3xl font-bold text-blue-900"> Crônicas Espectrais: Uma Jornada sobre o TEA</h3>
-            <p class="mt-4 text-gray-700 leading-relaxed">
-                Na crise da idade, endividado e insone, um professor de 39 anos decide descobrir e listar todos os seus fracassos e problemas de saúde. Ao final da empreitada, o docente encontra-se diante do diagnóstico de Transtorno do Espectro Autista (TEA).
-            </p>
-            <p class="mt-2 text-gray-700 leading-relaxed">
-                Em face dessa surpresa, ainda que recente, tardia, levemente amedrontado, Luciano repensa a vida, altera rotas, modifica hábitos, agora, consciente de condição neurodivergente. O enredo parece prosaico. E é.
-            </p>
-            <blockquote class="italic text-lg text-orange-600 border-l-4 border-orange-500 pl-4 mt-4">
-                "Aos quarenta, começo a vislumbrar: a festa está apenas começando. Aproveitem!"
-            </blockquote>
-        </div>
-    </div>
-</section>
+    </section>
 
 
     <section id="autor" class="p-10 bg-gray-200">
         <div class="flex flex-col md:flex-row items-center md:items-start gap-8 max-w-5xl mx-auto">
             <div class="w-full md:w-1/3">
-                <img src="./assets/imagem_luciano.webp" alt="Foto do Autor" class="rounded-lg shadow-lg w-full object-cover">
+                <img src="./assets/img/img-luciano/TOC01735.jpg" alt="Foto do Autor"
+                    class="rounded-lg shadow-lg w-full object-cover">
             </div>
             <div class="w-full md:w-2/3 text-gray-800 p-10">
                 <h3 class="text-3xl font-bold text-blue-900  mb-6">Luciano de Jesus Gonçalves</h3>
                 <p class="text-lg leading-relaxed">
-                    Nascido em Teixeira de Freitas, Bahia, Luciano de Jesus Gonçalves possui doutorado pelo Programa de 
-                    Pós-Graduação em Literatura Brasileira da Universidade de São Paulo (USP). Graduado e mestre em Letras 
-                    pela Universidade Federal de Mato Grosso Sul (UFMS), há quinze anos, pesquisa a obra de Samuel Rawet, 
-                    escritor judeu-polonês, naturalizado brasileiro. Atua como professor de Português e suas literaturas 
-                    no Instituto Federal do Tocantins (IFTO). <strong>Crônicas do Autista</strong> é sua estreia na prosa.
+                    Nascido em Teixeira de Freitas, Bahia, Luciano de Jesus Gonçalves possui doutorado pelo Programa de
+                    Pós-Graduação em Literatura Brasileira da Universidade de São Paulo (USP). Graduado e mestre em
+                    Letras
+                    pela Universidade Federal de Mato Grosso Sul (UFMS), há quinze anos, pesquisa a obra de Samuel
+                    Rawet,
+                    escritor judeu-polonês, naturalizado brasileiro. Atua como professor de Português e suas literaturas
+                    no Instituto Federal do Tocantins (IFTO). <strong>Crônicas do Autista</strong> é sua estreia na
+                    prosa.
                 </p>
             </div>
         </div>
     </section>
-    
+
 
     <section id="depoimentos" class="p-10 bg-white">
         <h3 class="text-2xl font-bold text-blue-900">Depoimentos</h3>
@@ -131,45 +188,45 @@
         </div>
     </section>
 
-<!-- Seção de Compra -->
-<section id="comprar" class="text-center p-12 bg-blue-900 text-white">
-    <div class="max-w-3xl mx-auto">
-        <h3 class="text-3xl font-bold">Garanta seu exemplar agora! <i class="fa-solid fa-book"></i></h3>
-        <p class="mt-2 text-lg text-gray-300">Adquira o livro e embarque nessa jornada emocionante.</p>
-        <a href="https://www.editorapatua.com.br/cronicas-espectrais-notas-sobre-o-tea-de-luciano-de-jesus-goncalves/p" act class="mt-6 inline-block bg-orange-500 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-orange-600 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">
-            Clique aqui para comprar <i class="fa-solid fa-cart-shopping"></i>
-        </a>
-    </div>
-</section>
+    <!-- Seção de Compra -->
+    <section id="comprar" class="text-center p-12 bg-blue-900 text-white">
+        <div class="max-w-3xl mx-auto">
+            <h3 class="text-3xl font-bold">Garanta seu exemplar agora! <i class="fa-solid fa-book"></i></h3>
+            <p class="mt-2 text-lg text-gray-300">Adquira o livro e embarque nessa jornada emocionante.</p>
+            <a href="https://www.editorapatua.com.br/cronicas-espectrais-notas-sobre-o-tea-de-luciano-de-jesus-goncalves/p"
+                act
+                class="mt-6 inline-block bg-orange-500 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-orange-600 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">
+                Clique aqui para comprar <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </div>
+
+    </section>
 
 
 
-<footer class="bg-gray-900 text-white text-center p-6 relative z-1000">
-    <p class="text-lg font-semibold">Siga-nos nas redes sociais</p>
-    <div class="flex justify-center gap-6 mt-4">
-        <a href="https://www.instagram.com/lj_goncalves/" target="_blank" class="flex items-center gap-2 text-gray-300 hover:text-white transition">
-            <i class="fa-brands fa-instagram text-xl"></i> Instagram
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=100083157130201" target="_blank"  class="flex items-center gap-2 text-gray-300 hover:text-white transition">
-            <i class="fa-brands fa-facebook text-xl"></i> Facebook
-        </a>
-        <a href="https://www.tiktok.com/@luciano.de.jesus043" target="_blank"  class="flex items-center gap-2 text-gray-300 hover:text-white transition">
-            <i class="fa-brands fa-tiktok text-xl"></i> TikTok
-        </a>
-    </div>
-    <p class="mt-4 text-gray-400 text-sm">&copy; 2024 Crônicas Espectrais. Todos os direitos reservados.</p>
-</footer>
+    <footer class="bg-gray-900 text-white text-center p-6 relative z-1000">
+        <p class="text-lg font-semibold">Siga-nos nas redes sociais</p>
+        <div class="flex justify-center gap-6 mt-4">
+            <a href="https://www.instagram.com/lj_goncalves/" target="_blank"
+                class="flex items-center gap-2 text-gray-300 hover:text-white transition">
+                <i class="fa-brands fa-instagram text-xl"></i> Instagram
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100083157130201" target="_blank"
+                class="flex items-center gap-2 text-gray-300 hover:text-white transition">
+                <i class="fa-brands fa-facebook text-xl"></i> Facebook
+            </a>
+            <a href="https://www.tiktok.com/@luciano.de.jesus043" target="_blank"
+                class="flex items-center gap-2 text-gray-300 hover:text-white transition">
+                <i class="fa-brands fa-tiktok text-xl"></i> TikTok
+            </a>
+        </div>
+        <p class="mt-4 text-gray-400 text-sm">&copy; 2024 Crônicas Espectrais. Todos os direitos reservados.</p>
+    </footer>
 
 
 
 </body>
+
 </html>
 
-
-<!-- Script para Menu Mobile -->
-<script>
-    document.getElementById("menu-toggle").addEventListener("click", function () {
-        let mobileMenu = document.getElementById("mobile-menu");
-        mobileMenu.classList.toggle("hidden");
-    });
-</script>
+<script src="./assets/script/index.js"></script>
