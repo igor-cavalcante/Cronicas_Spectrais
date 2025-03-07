@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -11,11 +11,12 @@
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-gray-100">
+
+<body>
     <header class="bg-white h-15 shadow-md w-full fixed top-0 z-50">
         <nav class="flex justify-between items-center w-[92%] h-full  mx-auto ">
             <div>
-                <a href="#header" class=" hover:text-yellow-400 transition block py-2">
+                <a href="#header" class=" hover:text-blue-900 transition block py-2">
                     <h1 class=" text-xl font-bold">Crônicas Espectrais</h1>
                 </a>
             </div>
@@ -48,29 +49,31 @@
     </header>
 
 
-    <section id="banner" class="bg-img bg-cover bg-center p-10 w-full h-dvh">
+    <section id="banner" class="bg-img bg-cover bg-center p-10 w-full h-dvh ">
 
         <div class=" mx-auto flex justify-end md:flex-row flex-col items-center gap-10 w-full h-full">
             <!-- Conteúdo centralizado -->
-            <div class="flex justify-center flex-col w-full z-10 max-w-3xl text-center text-white  md:text-blue-900 px-2 md:px-12  ">
+            <div
+                class="flex justify-center  flex-col w-full z-10 max-w-3xl text-center text-white  md:text-blue-900 px-2 md:px-12  ">
                 <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
                     Descubra as Crônicas Espectrais: Uma Jornada sobre o TEA
                 </h1>
                 <p class="mt-4 text-lg sm:text-xl leading-relaxed">
-                    Um livro que mergulha nas nuances do Transtorno do Espectro Autista (TEA) através de crônicas
+                    Um livro que mergulha nas nuances do Transtorno do Espectro Autista (TEA) através de
+                    crônicas
                     emocionantes e reflexivas.
                 </p>
                 <!-- Botão com dropdown embutido -->
-                <div class="relative inline-block mt-6">
+                <div class="relative  flex flex-row justify-center items-center mt-6">
 
                     <button id="dropdownBtn"
-                        class=" w-full bg-orange-500 text-white px-6 py-3 rounded-lg text-lg font-semibold flex items-center justify-center gap-2 hover:bg-orange-600 transition transform hover:-translate-y-1 hover:scale-105">
-                        Garanta na Pré-venda <i class="fa-solid fa-cart-shopping"></i>
+                        class=" w-[50%]  bg-orange-500 text-white px-6 py-3 rounded-lg text-lg font-semibold flex items-center justify-center  gap-2 hover:bg-orange-600 transition transform hover:-translate-y-1 hover:scale-105">
+                        <i class="fa-solid fa-cart-shopping"> </i>Garanta na Pré-venda
                     </button>
 
                     <!-- Menu retrátil estilizado -->
                     <div id="dropdownMenu"
-                        class="w-full absolute left-0 top-full mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible transform scale-95 transition-all duration-300">
+                        class="w-[50%] absolute  top-full mt-2  bg-white shadow-lg rounded-lg opacity-0 invisible transform scale-95 transition-all duration-300">
                         <a href="https://www.editorapatua.com.br/cronicas-espectrais-notas-sobre-o-tea-de-luciano-de-jesus-goncalves/p"
                             class="flex items-center gap-2 px-4 py-3 text-blue-900 hover:bg-gray-200 rounded-t-lg">
                             <i class="fa-solid fa-shopping-cart text-orange-500 "></i> Comprar na Patuá
@@ -81,7 +84,6 @@
                         </a>
                     </div>
                 </div>
-
     </section>
 
     <!--     
@@ -188,6 +190,34 @@ Menu retrátil estilizado
         </div>
     </section>
 
+
+
+    <section id="more" class="text-center p-12">
+        <!-- Linha horizontal centralizada -->
+        <div class="flex justify-center">
+            <hr class="w-5xl border-t-2">
+        </div>
+
+        <div class="w-full mt-2 p-2">
+            <p class="mt-2 text-lg ">Veja mais sobre Cronicas Spectrais</p>
+        </div>
+
+        <div class="flex flex-row justify-center w-full gap-5">
+
+            <div class="flex flex-col justify-center">
+                <h1>teste</h1>
+                <h2>conteudo</h2>
+            </div>
+
+            <div class="flex flex-col justify-center">
+                <h1>teste</h1>
+                <h2>conteudo</h2>
+            </div>
+
+        </div>
+
+    </section>
+
     <!-- Seção de Compra -->
     <section id="comprar" class="text-center p-12 bg-blue-900 text-white">
         <div class="max-w-3xl mx-auto">
@@ -203,6 +233,7 @@ Menu retrátil estilizado
     </section>
 
 
+    
 
     <footer class="bg-gray-900 text-white text-center p-6 relative z-1000">
         <p class="text-lg font-semibold">Siga-nos nas redes sociais</p>

@@ -1,7 +1,12 @@
 @import "tailwindcss";
 
 
-.bg-img{
+.bg-img {
     background-image: url("../img/foto_capa_mobile.png");
-}
-
+  }
+  
+  @media (min-width: 768px) { /* Tela >= 768px */
+    .bg-img {
+      background-image: url("../img/banner-livro-2.jpg");
+    }
+  }
