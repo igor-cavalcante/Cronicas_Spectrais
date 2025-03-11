@@ -13,9 +13,9 @@
 </head>
 
 <body>
-    <header class="bg-white h-15 shadow-md w-full fixed top-0 z-50">
+    <header class="bg-white h-15 shadow-md w-full fixed top-0 z-50 ">
 
-        <nav class="flex justify-between items-center w-[92%] h-full  mx-auto ">
+        <nav class="flex justify-between items-center w-[92%] h-full  mx-auto">
             <div>
                 <a href="#header" class=" hover:text-blue-900 transition block py-2">
                     <h1 class=" text-xl font-bold">Crônicas Espectrais</h1>
@@ -53,32 +53,31 @@
         </nav>
     </header>
 
+    <section id="banner" class=" bg-img bg-cover bg-center p-10 w-full h-screen ">
 
-    <section id="banner" class="bg-img bg-cover bg-center p-10 w-full h-dvh ">
+        <div class=" mx-auto flex justify-end md:flex-row flex-col items-center gap-10  w-full h-full">
 
-        <div class=" mx-auto flex justify-end md:flex-row flex-col items-center gap-10 w-full h-full">
-            <!-- Conteúdo centralizado -->
             <div
-                class="flex justify-center  flex-col w-full z-10 max-w-3xl text-center text-white  md:text-blue-900 px-2 md:px-12  ">
+                class=" flex justify-self-start flex-col z-10 max-w-3xl text-center text-blue-900 px-2 md:px-12 w-80 md:w-full  ">
                 <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
                     Descubra as Crônicas Espectrais: Uma Jornada sobre o TEA
                 </h1>
-                <p class="mt-4 text-lg sm:text-xl leading-relaxed">
+                <p class="text-black mt-4 text-lg sm:text-xl leading-relaxed">
                     Um livro que mergulha nas nuances do Transtorno do Espectro Autista (TEA) através de
                     crônicas
                     emocionantes e reflexivas.
                 </p>
-                <!-- Botão com dropdown embutido -->
+            
                 <div class="relative  flex flex-row justify-center items-center mt-6">
 
                     <button id="dropdownBtn"
-                        class=" w-[50%]  bg-orange-500 text-white px-6 py-3 rounded-lg text-lg font-semibold flex items-center justify-center  gap-2 hover:bg-orange-600 transition transform hover:-translate-y-1 hover:scale-105">
+                        class=" w-full  md:w-[50%]  bg-orange-500 text-white px-6 py-3 rounded-lg text-lg font-semibold flex items-center justify-center  gap-2 hover:bg-orange-600 transition transform hover:-translate-y-1 hover:scale-105">
                         <i class="fa-solid fa-cart-shopping"> </i>Garanta na Pré-venda
                     </button>
 
-                    <!-- Menu retrátil estilizado -->
+              
                     <div id="dropdownMenu"
-                        class="w-[50%] absolute  top-full mt-2  bg-white shadow-lg rounded-lg opacity-0 invisible transform scale-95 transition-all duration-300">
+                        class="w-full  md:w-[50%]  absolute  top-full mt-2  bg-white shadow-lg rounded-lg opacity-0 invisible transform scale-95 transition-all duration-300">
                         <a href="https://www.editorapatua.com.br/cronicas-espectrais-notas-sobre-o-tea-de-luciano-de-jesus-goncalves/p"
                             class="flex items-center gap-2 px-4 py-3 text-blue-900 hover:bg-gray-200 rounded-t-lg">
                             <i class="fa-solid fa-shopping-cart text-orange-500 "></i> Comprar na Patuá
@@ -89,41 +88,10 @@
                         </a>
                     </div>
                 </div>
-    </section>
+    </section> 
 
-    <!--     
-<div class="relative w-full h-screen h-full flex items-center justify-end  ">
 
-      <section class="absolute inset-0 bg-img bg-cover bg-center bg-no-repeat">
-    </section>
-
-    Conteúdo centralizado 
-    <div class="relative z-10 max-w-3xl text-center text-blue-900 px-6 md:px-12  ">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-            Descubra as Crônicas Espectrais: Uma Jornada sobre o TEA
-        </h1>
-        <p class="mt-4 text-lg sm:text-xl leading-relaxed">
-            Um livro que mergulha nas nuances do Transtorno do Espectro Autista (TEA) através de crônicas emocionantes e reflexivas.
-        </p>
-    Botão com dropdown embutido 
-   <div class="relative inline-block mt-6">
-
-    <button id="dropdownBtn" class="bg-orange-500 text-white px-6 py-3 rounded-lg text-lg font-semibold flex items-center gap-2 hover:bg-orange-600 transition transform hover:-translate-y-1 hover:scale-105">
-        Garanta na Pré-venda <i class="fa-solid fa-cart-shopping"></i>
-    </button>
-
-Menu retrátil estilizado 
-    <div id="dropdownMenu" class="w-full absolute left-0 top-full mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible transform scale-95 transition-all duration-300">
-        <a href="https://www.editorapatua.com.br/cronicas-espectrais-notas-sobre-o-tea-de-luciano-de-jesus-goncalves/p" class="flex items-center gap-2 px-4 py-3 text-blue-900 hover:bg-gray-200 rounded-t-lg">
-            <i class="fa-solid fa-shopping-cart text-orange-500 "></i> Comprar na Patuá
-        </a>
-        <a href="#" class="flex items-center gap-2 px-4 py-3 text-blue-900 hover:bg-gray-200 rounded-b-lg">
-            <i class="fa-brands fa-amazon text-orange-500"></i>Comprar na Amazon
-        </a>
-    </div>
-    
-    </div>
-</div> -->
+   
 
     <section id="sobre" class="p-10 bg-white">
         <div class="container mx-auto flex flex-col md:flex-row items-center gap-10">
@@ -155,12 +123,12 @@ Menu retrátil estilizado
 
 
     <section id="autor" class="p-10 bg-gray-200">
-        <div class="flex flex-col md:flex-row items-center md:items-start gap-8 max-w-5xl mx-auto">
+        <div class="flex flex-col  items-center  md:flex-row  gap-8 max-w-5xl mx-auto">
             <div class="w-full md:w-1/3">
                 <img src="./assets/img/img-luciano/TOC01735.jpg" alt="Foto do Autor"
                     class="rounded-lg shadow-lg w-full object-cover">
             </div>
-            <div class="w-full md:w-2/3 text-gray-800 p-10">
+            <div class="w-full md:w-2/3 text-gray-800 p-10 text-left">
                 <h3 class="text-3xl font-bold text-blue-900  mb-6">Luciano de Jesus Gonçalves</h3>
                 <p class="text-lg leading-relaxed">
                     Nascido em Teixeira de Freitas, Bahia, Luciano de Jesus Gonçalves possui doutorado pelo Programa de
@@ -185,21 +153,22 @@ Menu retrátil estilizado
             <!-- Depoimento 1 -->
             <div class="w-full md:w-auto max-w-md space-y-2 border border-gray-300 rounded-2xl shadow-lg p-4 bg-white">
                 <div class="flex items-center gap-1 mb-2">
-                    <span class="text-yellow-500 text-xl">★</span>
-                    <span class="text-yellow-500 text-xl">★</span>
-                    <span class="text-yellow-500 text-xl">★</span>
-                    <span class="text-yellow-500 text-xl">★</span>
-                    <span class="text-yellow-500 text-xl">★</span>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+           
                 </div>
-                <div class="bg-green-200 p-3 rounded-xl shadow-md m-2 hover:bg-green-300 transition">
+                <div class="bg-blue-200 p-3 rounded-xl shadow-md m-2 hover:bg-green-300 transition">
                     <p class="text-gray-800">Gostei bastante do livro, Luciano.</p>
                     <span class="text-gray-500 text-xs flex justify-end">12:27</span>
                 </div>
-                <div class="bg-green-200 p-3 rounded-xl shadow-md m-2 hover:bg-green-300 transition">
+                <div class="bg-blue-200 p-3 rounded-xl shadow-md m-2 hover:bg-green-300 transition">
                     <p class="text-gray-800">Li quase como se fosse uma carta, com sua voz narrando na cabeça kkk.</p>
                     <span class="text-gray-500 text-xs flex justify-end">12:28</span>
                 </div>
-                <div class="bg-green-200 p-3 rounded-xl shadow-md m-2 hover:bg-green-300 transition">
+                <div class="bg-blue-200 p-3 rounded-xl shadow-md m-2 hover:bg-green-300 transition">
                     <p class="text-gray-800">Ele é bem leve, li em 2 horinhas...</p>
                     <span class="text-gray-500 text-xs flex justify-end">12:28</span>
                 </div>
@@ -208,22 +177,25 @@ Menu retrátil estilizado
             <!-- Depoimento 2 -->
             <div class="w-full md:w-auto max-w-md space-y-2 border border-gray-300 rounded-2xl shadow-lg p-4 bg-white">
                 <div class="flex items-center gap-1 mb-2">
-                    <span class="text-yellow-500 text-xl">★</span>
-                    <span class="text-yellow-500 text-xl">★</span>
-                    <span class="text-yellow-500 text-xl">★</span>
-                    <span class="text-yellow-500 text-xl">★</span>
-                    <span class="text-yellow-500 text-xl">★</span>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
                 </div>
-                <div class="bg-green-200 p-3 rounded-xl shadow-md m-2 hover:bg-green-300 transition">
-                    <p class="text-gray-800">Terminei todo seu livro.</p>
+                <div class="bg-blue-200 p-3 rounded-xl shadow-md m-2 hover:bg-green-300 transition">
+                    <p class="text-gray-800">Boa tarde Luciano.</p>
                     <span class="text-gray-500 text-xs flex justify-end">13:38</span>
                 </div>
-                <div class="bg-green-200 p-3 rounded-xl shadow-md m-2 hover:bg-green-300 transition">
-                    <p class="text-gray-800">Li de uma vez só.</p>
+                <div class="bg-blue-200 p-3 rounded-xl shadow-md m-2 hover:bg-green-300 transition">
+                    <p class="text-gray-800">Obrigada mais uma vez pelo livro.</p>
                     <span class="text-gray-500 text-xs flex justify-end">13:39</span>
                 </div>
-                <div class="bg-green-200 p-3 rounded-xl shadow-md m-2 hover:bg-green-300 transition">
-                    <p class="text-gray-800">Eram 4 da manhã. A casa estava em penumbra...</p>
+                <div class="bg-blue-200 p-3 rounded-xl shadow-md m-2 hover:bg-green-300 transition">
+                    <p class="text-gray-800">Amei a crônica: gostoso é comer pipoca.
+
+                        (Ri, em lugares públicos ) <i class="fa-regular fa-face-grin-tears" style="color: #696247;"></i> <i class="fa-regular fa-face-grin-tears" style="color: #696247;"></i> 
+                    </p>
                     <span class="text-gray-500 text-xs flex justify-end">13:39</span>
                 </div>
             </div>
@@ -231,23 +203,23 @@ Menu retrátil estilizado
             <!-- Depoimento 3 -->
             <div class="w-full md:w-auto max-w-md space-y-2 border border-gray-300 rounded-2xl shadow-lg p-4 bg-white">
                 <div class="flex items-center gap-1 mb-2">
-                    <span class="text-yellow-500 text-xl">★</span>
-                    <span class="text-yellow-500 text-xl">★</span>
-                    <span class="text-yellow-500 text-xl">★</span>
-                    <span class="text-yellow-500 text-xl">★</span>
-                    <span class="text-yellow-500 text-xl">★</span>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
                 </div>
-                <div class="bg-green-200 p-3 rounded-xl shadow-md m-2 hover:bg-green-300 transition">
+                <div class="bg-blue-200 p-3 rounded-xl shadow-md m-2 hover:bg-green-300 transition">
                     <p class="text-gray-800">Terminei todo seu livro.</p>
-                    <span class="text-gray-500 text-xs flex justify-end">13:38</span>
+                    <span class="text-gray-500 text-xs flex justify-end">15:42</span>
                 </div>
-                <div class="bg-green-200 p-3 rounded-xl shadow-md m-2 hover:bg-green-300 transition">
+                <div class="bg-blue-200 p-3 rounded-xl shadow-md m-2 hover:bg-green-300 transition">
                     <p class="text-gray-800">Li de uma vez só.</p>
-                    <span class="text-gray-500 text-xs flex justify-end">13:39</span>
+                    <span class="text-gray-500 text-xs flex justify-end">15:42</span>
                 </div>
-                <div class="bg-green-200 p-3 rounded-xl shadow-md m-2 hover:bg-green-300 transition">
+                <div class="bg-blue-200 p-3 rounded-xl shadow-md m-2 hover:bg-green-300 transition">
                     <p class="text-gray-800">Eram 4 da manhã. A casa estava em penumbra, e os espectros do seu livro não saíam da minha cabeça.</p>
-                    <span class="text-gray-500 text-xs flex justify-end">13:39</span>
+                    <span class="text-gray-500 text-xs flex justify-end">15:42</span>
                 </div>
             </div>
         </div>
