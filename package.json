@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx @tailwindcss/cli -i ./assets/styles/style.css -o ./assets/styles/output.css --watch"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/igor-cavalcante/Cronicas_Spectrais.git"
@@ -22,6 +21,7 @@
   "homepage": "https://github.com/igor-cavalcante/Cronicas_Spectrais#readme",
   "dependencies": {
     "@tailwindcss/cli": "^4.0.5",
+    "cronicas_spectrais": "file:",
     "tailwindcss": "^4.0.5"
   }
 }
