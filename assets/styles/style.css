@@ -10,3 +10,9 @@
       background-image: url("../img/banner/banner-pc.png");
     }
   }
+
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
