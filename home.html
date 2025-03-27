@@ -1,213 +1,367 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crônicas Espectrais</title>
-    <link rel="stylesheet" href="./assets/styles/output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link rel="stylesheet" href="./assets/styles/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<body class="min-h-screen flex flex-col">
+  <style>
+    main {
+  flex-grow: 1;
+}
+  </style>
+
+  <body class=" min-h-screen flex flex-col">
     <!-- Navbar fixa -->
     <header class="bg-white h-16 shadow-md w-full fixed top-0 z-50">
-        <nav class="flex justify-between items-center w-[92%] h-full mx-auto">
-            <div>
-                <a href="home.html" class="hover:text-blue-900 transition block py-2">
-                    <h1 class="text-xl font-bold">Crônicas Espectrais</h1>
-                </a>
-            </div>
-            <div
-                class="z-100 nav-links duration-500 md:static fixed bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
-                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-medium">
-                    <li><a class="hover:text-blue-300" href="#livro">O Livro</a></li>
-                    <li><a class="hover:text-blue-300" href="#autor">O Autor</a></li>
-                    <li><a class="hover:text-blue-300" href="#depoimentos">Depoimentos</a></li>
-                    <li><a class="hover:text-blue-300" href="#more">Lançamentos</a></li>
-                    <li><a class="hover:text-blue-300" href="#more">Notícias</a></li>
-                </ul>
-            </div>
+      <nav class="flex justify-between items-center w-[92%] h-full mx-auto">
+        <div>
+          <a href="home.html" class="hover:text-blue-900 transition block py-2">
+            <h1 class="text-xl font-bold">Crônicas Espectrais</h1>
+          </a>
+        </div>
+        <div
+          class="z-100 nav-links duration-500 md:static fixed bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
+        >
+          <ul
+            class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-medium"
+          >
+            <li>
+              <a
+                class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+                href="#autor"
+                >O Autor</a
+              >
+            </li>
+            <li>
+              <a
+                class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+                href="#livro"
+                >O Livro</a
+              >
+            </li>
+            <li>
+              <a
+                class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+                href="#depoimentos"
+                >Depoimentos</a
+              >
+            </li>
+            <li>
+              <a
+                class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+                href="#more"
+                >Lançamentos</a
+              >
+            </li>
+            <li>
+              <a
+                class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+                href="#more"
+                >Notícias</a
+              >
+            </li>
+          </ul>
+        </div>
 
-            <div class="flex items-center gap-3 sm:gap-2">
-                <button
-                    class="bg-orange-500 text-white px-4 py-1 text-sm rounded-full hover:bg-orange-600 sm:px-2 sm:py-1 sm:text-xs sm:w-[90px] sm:max-w-[90px] sm:flex sm:items-center sm:justify-center">
-                    <i class="fa-solid fa-shopping-cart"></i> Comprar
-                </button>
+        <div class="flex items-center gap-3 sm:gap-2">
+          <button
+            class="bg-orange-500 text-white px-4 py-1 text-sm rounded-full hover:bg-orange-600 sm:px-2 sm:py-1 sm:text-xs sm:w-[90px] sm:max-w-[90px] sm:flex sm:items-center sm:justify-center"
+          >
+            <i class="fa-solid fa-shopping-cart"></i> Comprar
+          </button>
 
-                <!-- Ícone do menu -->
-                <button id="menuToggle" onclick="onToggleMenu()" class="text-3xl cursor-pointer md:hidden">
-                    <i id="menuIcon" class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </nav>
+          <!-- Ícone do menu -->
+          <button
+            id="menuToggle"
+            onclick="onToggleMenu()"
+            class="text-3xl cursor-pointer md:hidden"
+          >
+            <i id="menuIcon" class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
     </header>
 
-    <!-- Seção principal -->
-    <section id="main" class="py-24 bg-gray-100 text-center">
-        <div class="max-w-6xl mx-auto px-6">
-            <!-- Título do Livro -->
-            <h2 class="text-4xl md:text-5xl font-bold text-blue-900">Crônicas Espectrais, Notas Sobre o TEA</h2>
-            <p class="text-black mt-4 text-lg sm:text-xl leading-relaxed">
-                Um livro que mergulha nas nuances do Transtorno do Espectro Autista (TEA) através de
-                crônicas emocionantes e reflexivas.
-            </p>
-
-            <!-- Depoimentos -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                <!-- Comentário 1 -->
-                <div class="border-l-4 border-orange-500 pl-6 flex flex-col justify-between h-full">
-                    <p class="text-xl italic text-gray-700">
-                        "Uma leitura emocionante que nos aproxima das experiências vividas no espectro autista."
-                    </p>
-                    <p class="text-gray-600 mt-4 self-start">— Usuário 1</p>
-                </div>
-
-                <!-- Comentário 2 -->
-                <div class="border-l-4 border-orange-500 pl-6 flex flex-col justify-between h-full">
-                    <p class="text-xl italic text-gray-700">
-                        "Um livro essencial para quem deseja entender melhor o TEA através de uma escrita sensível e
-                        cativante."
-                    </p>
-                    <p class="text-gray-600 mt-4 self-start">— Usuário 2</p>
-                </div>
-
-                <!-- Comentário 3 -->
-                <div class="border-l-4 border-orange-500 pl-6 flex flex-col justify-between h-full">
-                    <p class="text-xl italic text-gray-700">
-                        "Luciano de Jesus Gonçalves nos guia por reflexões profundas, tornando a leitura uma experiência
-                        única."
-                    </p>
-                    <p class="text-gray-600 mt-4 self-start">— Usuário 3</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-
-
-    <section id="autor" class="p-6 bg-gray-200">
-        <div class="w-full flex flex-col md:flex-row items-center md:items-start  gap-6 max-w-5xl mx-auto">
-            <div class="w-full md:w-1/3">
-                <img src="./assets/img/img-luciano/TOC01735.jpg" alt="Foto do Autor"
-                    class="rounded-lg shadow-lg w-full object-cover">
-            </div>
-            <div class="w-full md:w-2/3 text-gray-800 p-6">
-                
-              
-                <h3 class="text-2xl font-bold text-blue-900 mb-4 text-center md:text-left">Luciano de Jesus Gonçalves
-                </h3>
-                <p class="text-lg leading-relaxed text-left md:text-left">
-                    Nascido em Teixeira de Freitas, Bahia, Luciano de Jesus Gonçalves possui doutorado pelo Programa de
-                    Pós-Graduação em Literatura Brasileira da Universidade de São Paulo (USP). Graduado e mestre em
-                    Letras
-                    pela Universidade Federal de Mato Grosso Sul (UFMS), há quinze anos, pesquisa a obra de Samuel
-                    Rawet,
-                    escritor judeu-polonês, naturalizado brasileiro. Atua como professor de Português e suas literaturas
-                    no Instituto Federal do Tocantins (IFTO). <strong>Crônicas Espectrais notas sobre o TEA</strong> é
-                    sua estreia na
-                    prosa.
-                </p>
-            </div>
-        </div>
-    </section>
-
-
    
-    <section id="livro" class="p-10 bg-white">
-        <div class="container mx-auto flex flex-col md:flex-row items-center gap-10">
-            <!-- Imagem do Livro à Esquerda -->
-            <div class="md:w-1/2 flex justify-center">
-                <img src="./assets/img/foto_pagina_livro.jpg" alt="Capa do Livro"
-                    class="rounded-lg shadow-lg w-80 md:w-[350px] lg:w-[400px]">
-            </div>
-    
-            <!-- Texto à Direita -->
-            <div class="md:w-1/2 text-left">
-                <span><i class="mb-4 text-2xl fa-solid fa-quote-left text-blue-900"></i></span>
-                <h1 class="text-3xl font-bold text-blue-900">Tudo bem! Ele é autista!</h1>
-                
-                <blockquote class="italic text-lg text-orange-600 border-l-4 border-orange-500 pl-4 mt-4">
-                    "Mesmo acanhado, não consegui me controlar. Perguntei à esposa se o marido era, de fato, autista. A resposta veio rápida, objetiva, sonora:  
-                    <strong>‘Não! Ele não é autista! É que eu só brinco com ele assim. Estamos juntos há vinte e tantos anos’,</strong> calculou um número, orgulhosa.  
-                    Surpreso, incrédulo, confuso, soltei um ‘ah, sim’, entre risos amarelados e a conversa seguiu normalmente..."
-                </blockquote>
-                
-                <p class="mt-4 text-gray-700 leading-relaxed">
-                    Uma coletânea de crônicas que explora, com ironia e sensibilidade, as descobertas, desafios e transformações de alguém que, ao buscar respostas sobre si mesmo, se depara com o diagnóstico de Transtorno do Espectro Autista (TEA).
-                </p>
-                
-                <div class="text-right w-full"> 
-                    <span><i class="text-blue-900 text-2xl fa-solid fa-quote-right"></i></span>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="livro" class="p-10 bg-gray-100">
-        <div class="container mx-auto flex flex-col md:flex-row items-center gap-10">
-            <!-- Imagem do Livro à Esquerda -->
-            <div class="md:w-1/2 flex justify-center">
-                <img src="./assets/img/foto_pagina_livro.jpg" alt="Capa do Livro"
-                    class="rounded-lg shadow-lg w-80 md:w-[350px] lg:w-[400px]">
-            </div>
-    
-            <!-- Texto à Direita -->
-            <div class="md:w-1/2 text-left">
-                <span><i class="mb-4 text-2xl fa-solid fa-quote-left text-blue-900"></i></span>
-               <h1 class="text-3xl font-bold text-blue-900">Tudo bem! Ele é autista!</h1>
-                
-                <blockquote class="italic text-lg text-gray-700 border-l-4 border-orange-500  pl-4 mt-4">
-                    "Mesmo acanhado, não consegui me controlar. Perguntei à esposa se o marido era, de fato, autista. 
-                    A resposta veio rápida, objetiva, sonora: <strong>‘Não! Ele não é autista! É que eu só brinco com ele assim. 
-                    Estamos juntos há vinte e tantos anos’,</strong> calculou um número, orgulhosa.  
-                    Surpreso, incrédulo, confuso, soltei um ‘ah, sim’, entre risos amarelados e a conversa seguiu normalmente..."
-                </blockquote>
-                
-                <p class="mt-4 text-gray-700 leading-relaxed">
-                    Uma coletânea de crônicas que explora, com ironia e sensibilidade, as descobertas, desafios e transformações 
-                    de alguém que, ao buscar respostas sobre si mesmo, se depara com o diagnóstico de Transtorno do Espectro Autista (TEA).
-                </p>
-                
-                <div class="text-right w-full"> 
-                    <span><i class="text-blue-900 text-2xl fa-solid fa-quote-right"></i></span>
-                </div>
+<main class="flex-1  ">
+   <!-- Seção principal -->
+   <section id="main" class="py-24 bg-gray-100 text-center">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Título do Livro -->
+      <h2 class="text-4xl md:text-5xl font-bold text-blue-900">
+        Crônicas Espectrais, Notas Sobre o TEA
+      </h2>
+      <p class="text-black mt-4 text-lg sm:text-xl leading-relaxed">
+        Um livro que mergulha nas nuances do Transtorno do Espectro Autista
+        (TEA) através de crônicas emocionantes e reflexivas.
+      </p>
+
+      <!-- Depoimentos -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <!-- Comentário 1 -->
+        <div
+          class="border-l-4 border-orange-500 pl-6 flex flex-col justify-between h-full"
+        >
+          <p class="text-xl italic text-gray-700">
+            "Uma leitura emocionante que nos aproxima das experiências vividas
+            no espectro autista."
+          </p>
+          <p class="text-gray-600 mt-4 self-start">— Usuário 1</p>
+        </div>
+
+        <!-- Comentário 2 -->
+        <div
+          class="border-l-4 border-orange-500 pl-6 flex flex-col justify-between h-full"
+        >
+          <p class="text-xl italic text-gray-700">
+            "Um livro essencial para quem deseja entender melhor o TEA através
+            de uma escrita sensível e cativante."
+          </p>
+          <p class="text-gray-600 mt-4 self-start">— Usuário 2</p>
+        </div>
+
+        <!-- Comentário 3 -->
+        <div
+          class="border-l-4 border-orange-500 pl-6 flex flex-col justify-between h-full"
+        >
+          <p class="text-xl italic text-gray-700">
+            "Luciano de Jesus Gonçalves nos guia por reflexões profundas,
+            tornando a leitura uma experiência única."
+          </p>
+          <p class="text-gray-600 mt-4 self-start">— Usuário 3</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="autor" class="p-6 bg-gray-200">
+    <div
+      class="w-full flex flex-col md:flex-row items-center md:items-start gap-6 max-w-5xl mx-auto"
+    >
+      <div class="w-full md:w-1/3">
+        <img
+          src="./assets/img/img-luciano/TOC01735.jpg"
+          alt="Foto do Autor"
+          class="rounded-lg shadow-lg w-full object-cover"
+        />
+      </div>
+      <div class="w-full md:w-2/3 text-gray-800 p-6">
+        <h3
+          class="text-2xl font-bold text-blue-900 mb-4 text-center md:text-left"
+        >
+          Luciano de Jesus Gonçalves
+        </h3>
+        <p class="text-lg leading-relaxed text-left md:text-left">
+          Nascido em Teixeira de Freitas, Bahia, Luciano de Jesus Gonçalves
+          possui doutorado pelo Programa de Pós-Graduação em Literatura
+          Brasileira da Universidade de São Paulo (USP). Graduado e mestre em
+          Letras pela Universidade Federal de Mato Grosso Sul (UFMS), há
+          quinze anos, pesquisa a obra de Samuel Rawet, escritor
+          judeu-polonês, naturalizado brasileiro. Atua como professor de
+          Português e suas literaturas no Instituto Federal do Tocantins
+          (IFTO). <strong>Crônicas Espectrais notas sobre o TEA</strong> é sua
+          estreia na prosa.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="livro" class="p-10 bg-gray-100 ">
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-10">
+      <!-- Imagem do Livro à Esquerda -->
+      <div class="w-full md:w-2/5 flex justify-center">
+        <div class="relative w-full max-w-xs md:max-w-md aspect-[3/4]"> <!-- Proporção 3:4 (livro) -->
+          <img
+            src="./assets/img/foto_pagina_livro.jpg"
+            alt="Capa do Livro"
+            class="rounded-lg shadow-lg w-full h-full object-cover"
+          />
+        </div>
+      </div>
+  
+      <!-- Texto à Direita -->
+      <div class="md:w-1/2 text-left">
+        <span><i class="mb-4 text-2xl fa-solid fa-quote-left text-blue-900"></i></span>
+        <h1 class="text-3xl font-bold text-blue-900">
+          Tudo bem! Ele é autista!
+        </h1>
+  
+        <blockquote class="italic text-lg text-gray-700 border-l-4 border-orange-500 pl-4 mt-4">
+          "Uma visita de cortesia a uma prima me colocou diante de situação curiosa, um almoço com dois desconhecidos, casal de amigos dela. Por vezes, o papo descontraído era interrompido pela senhora que, diante de uma manifestação do marido, reprovava-o e, em cumplicidade comigo, logo eu, soltava a frase: ‘tudo bem! Ele é autista!’
+          
+          <br><br>
+          
+          Entre a primeira e, talvez, a quinta, sexta reprimenda conjugal, comecei a traçar na mente uma estratégia para acompanhar o assunto mais de perto, de modo mais empático. A confusão inicial foi tomada pela certeza de que eu estava, sim, diante de um autista.
+          
+          <br><br>
+          
+          Mesmo acanhado, não consegui me controlar. Perguntei à esposa se o marido era, de fato, autista. A resposta veio rápida, objetiva, sonora: ‘não! Ele não é autista! É que eu só brinco com ele assim. Estamos juntos há vinte e tantos anos’, calculou um número, orgulhosa.
+          
+          <br><br>
+          
+          Surpreso, incrédulo, confuso, soltei um ‘ah, sim’, entre risos amarelados e a conversa seguiu normalmente. Escutei um pouco aquele senhor, negro retinto, 61 anos não aparentados – apesar da barba e dos cabelos brancos –, que me falava sobre o seu trabalho, o esforço para abrir e manter uma empresa, os clientes, a postura nos negócios, pautada na honestidade, afinal de contas, ‘vivia num país extremamente racista e, por isso, era preciso ser honesto’."
+        </blockquote>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          Primeira crônica do autor, revela com humor e sensibilidade a descoberta do autismo através de situações cotidianas. Uma narrativa que convida à reflexão sobre diversidade e autoconhecimento.
+        </p>
+        
+        <div class="text-center mt-8">
+          <p class="text-lg font-medium text-gray-600 mb-4">
+            Gostou deste trecho? O livro completo traz muitas outras histórias como esta!
+          </p>
+          
+          <div class="relative  flex flex-row justify-center items-center mt-6">
+
+            <button id="dropdownBtn"
+                class=" w-full  md:w-[50%]  bg-orange-500 text-white px-6 py-3 rounded-lg text-lg font-semibold flex items-center justify-center  gap-2 hover:bg-orange-600 transition transform hover:-translate-y-1 hover:scale-105">
+                <i class="fa-solid fa-cart-shopping"> </i>Garanta seu livro aqui!
+            </button>
+
+      
+            <div id="dropdownMenu"
+                class="w-full  md:w-[50%]  absolute  top-full mt-2  bg-white shadow-lg rounded-lg opacity-0 invisible transform scale-95 transition-all duration-300">
+                <a href="https://www.editorapatua.com.br/cronicas-espectrais-notas-sobre-o-tea-de-luciano-de-jesus-goncalves/p"
+                    class="flex items-center gap-2 px-4 py-3 text-blue-900 hover:bg-gray-200 rounded-t-lg">
+                    <i class="fa-solid fa-shopping-cart text-orange-500 "></i> Comprar na Patuá
+                </a>
+                <a href="#"
+                    class="flex items-center gap-2 px-4 py-3 text-blue-900 hover:bg-gray-200 rounded-b-lg">
+                    <i class="fa-brands fa-amazon text-orange-500"></i>Comprar na Amazon
+                </a>
             </div>
         </div>
+          
+            </div>
+          </div>
+        </div>
+        
+
+  
+        <div class="text-right w-full mt-6">
+          <span><i class="text-blue-900 text-2xl fa-solid fa-quote-right"></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section id="livro" class="p-10 bg-gray-100 ">
+    <div
+      class="container mx-auto flex flex-col md:flex-row items-center gap-10"
+    >
+      <!-- Imagem do Livro à Esquerda -->
+      <div class="md:w-1/2 flex justify-center ">
+        <img
+          src="./assets/img/foto_pagina_livro.jpg"
+          alt="Capa do Livro"
+          class="rounded-lg shadow-lg  w-80 md:w-[350px] lg:w-[400px]"
+        />
+      </div>
+
+      <!-- Texto à Direita -->
+      <div class="md:w-1/2 text-left">
+        <span
+          ><i class="mb-4 text-2xl fa-solid fa-quote-left text-blue-900"></i
+        ></span>
+        <h1 class="text-3xl font-bold text-blue-900">
+          Tudo bem! Ele é autista!
+        </h1>
+
+        <blockquote
+          class=" text-lg text-gray-700 border-l-4 border-orange-500 pl-4 mt-4"
+        >
+          "Mesmo acanhado, não consegui me controlar. Perguntei à esposa se o
+          marido era, de fato, autista. A resposta veio rápida, objetiva,
+          sonora:
+          <strong
+            >‘Não! Ele não é autista! É que eu só brinco com ele assim.
+            Estamos juntos há vinte e tantos anos’,</strong
+          >
+          calculou um número, orgulhosa. Surpreso, incrédulo, confuso, soltei
+          um ‘ah, sim’, entre risos amarelados e a conversa seguiu
+          normalmente..."
+        </blockquote>
+
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          Primeira crônica do autor, revela com humor e sensibilidade a descoberta do autismo através de situações cotidianas. Uma narrativa que convida à reflexão sobre diversidade e autoconhecimento.
+        </p>
+        
+        <div class="text-center mt-8">
+          <p class="text-lg font-medium text-gray-600 mb-4">
+            Gostou deste trecho? O livro completo traz muitas outras histórias como esta!
+          </p>
+          
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#livro2" class="bg-blue-900 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-800 transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-shopping-cart text-white "></i> Comprar na Patuá
+            </a>
+            
+            <div class="relative">
+              <a href="#livro2" class="bg-blue-900 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-800 transition flex items-center justify-center gap-2">
+                <i class="fa-brands fa-amazon text-white"></i> Comprar na Amazon
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-right w-full">
+          <span
+            ><i class="text-blue-900 text-2xl fa-solid fa-quote-right"></i
+          ></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+  </section>
+
+</main>
     
-        <!-- Call to Action -->
-       
-    </section>
-    
-    
-    
-    
+
     <!-- Footer fixado -->
     <footer class="bg-gray-900 text-white text-center p-6 mt-auto">
-        <p class="text-lg font-semibold">Siga-nos nas redes sociais</p>
-        <div class="flex justify-center gap-6 mt-4">
-            <a href="https://www.instagram.com/lj_goncalves/" target="_blank"
-                class="flex items-center gap-2 text-gray-300 hover:text-white transition">
-                <i class="fa-brands fa-instagram text-xl"></i> Instagram
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=100083157130201" target="_blank"
-                class="flex items-center gap-2 text-gray-300 hover:text-white transition">
-                <i class="fa-brands fa-facebook text-xl"></i> Facebook
-            </a>
-            <a href="https://www.tiktok.com/@luciano.de.jesus043" target="_blank"
-                class="flex items-center gap-2 text-gray-300 hover:text-white transition">
-                <i class="fa-brands fa-tiktok text-xl"></i> TikTok
-            </a>
-        </div>
-        <p class="mt-4 text-gray-400 text-sm">&copy; 2024 Crônicas Espectrais. Todos os direitos reservados.</p>
+      <p class="text-lg font-semibold">Siga-nos nas redes sociais</p>
+      <div class="flex justify-center gap-6 mt-4">
+        <a
+          href="https://www.instagram.com/lj_goncalves/"
+          target="_blank"
+          class="flex items-center gap-2 text-gray-300 hover:text-white transition"
+        >
+          <i class="fa-brands fa-instagram text-xl"></i> Instagram
+        </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100083157130201"
+          target="_blank"
+          class="flex items-center gap-2 text-gray-300 hover:text-white transition"
+        >
+          <i class="fa-brands fa-facebook text-xl"></i> Facebook
+        </a>
+        <a
+          href="https://www.tiktok.com/@luciano.de.jesus043"
+          target="_blank"
+          class="flex items-center gap-2 text-gray-300 hover:text-white transition"
+        >
+          <i class="fa-brands fa-tiktok text-xl"></i> TikTok
+        </a>
+      </div>
+      <p class="mt-4 text-gray-400 text-sm">
+        &copy; 2024 Crônicas Espectrais. Todos os direitos reservados.
+      </p>
     </footer>
 
     <script src="./assets/script/index.js"></script>
-
-</body>
-
+  </body>
 </html>
