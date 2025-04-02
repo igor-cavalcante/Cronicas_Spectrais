@@ -58,3 +58,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+
+//função de ler mais 
+
+document.getElementById("readMoreBtn").addEventListener("click", function() {
+    var moreText = document.getElementById("moreText");
+    var btn = document.getElementById("readMoreBtn");
+
+    if (moreText.classList.contains("hidden")) {
+      moreText.classList.remove("hidden");
+      btn.innerText = "Ler menos";
+    } else {
+      moreText.classList.add("hidden");
+      btn.innerText = "Ler mais...";
+    }
+  });
