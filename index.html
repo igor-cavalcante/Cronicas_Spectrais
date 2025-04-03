@@ -22,7 +22,7 @@
   <header class="bg-white h-16 shadow-md w-full fixed top-0 z-50">
     <nav class="flex justify-between items-center w-[92%] h-full mx-auto">
       <div>
-        <a href="home.html" class="hover:text-blue-900 transition block py-2">
+        <a href="#main" class="hover:text-blue-900 transition block py-2">
           <h1 class="text-xl font-bold">Crônicas Espectrais</h1>
         </a>
       </div>
@@ -146,17 +146,19 @@
       </div>
     </section>
 
+    
+
     <section id="autor" class="p-8 bg-gray-100 ">
-      <div class="container mx-auto flex flex-col md:flex-row  gap-10">
+      <div class="container  flex flex-col md:flex-row gap-10 max-w-5xl mx-auto">
 
         <!-- Imagem do Autor -->
-        <div class="w-full md:w-md flex justify-center">
+        <div class="w-full md:w-1/3 ">
           <img src="./assets/img/img-luciano/TOC01735.jpg" alt="Foto do Autor"
             class="rounded-2xl shadow-xl w-full object-cover">
         </div>
 
         <!-- Texto do Autor -->
-        <div class="w-full md:w-2/3 text-gray-800  ">
+        <div class="w-full  text-gray-800 md:w-1/2 text-left ">
           <h3 class="text-3xl font-extrabold text-blue-900 mb-5 text-center md:text-left">
             Luciano de Jesus Gonçalves
           </h3>
@@ -179,70 +181,76 @@
 
 
     <section id="livro" class="p-10 bg-gray-100">
-      <div class="container mx-auto flex flex-col md:flex-row items-center gap-10">
+      <div class="container mx-auto flex flex-col md:flex-row  gap-10">
         <!-- Imagem do Livro -->
-        <div class="w-full md:w-2/5 flex justify-center">
+        <!-- Imagem do Livro -->
+        <div class="w-full md:w-2/5 flex justify-center items-start">
           <div class="relative w-full max-w-xs md:max-w-md aspect-[3/4]">
             <img src="./assets/img/foto_pagina_livro.jpg" alt="Capa do Livro"
               class="rounded-lg shadow-lg w-full h-full object-cover" />
           </div>
         </div>
-    
+
+
         <!-- Texto -->
         <div class="md:w-1/2 text-left">
           <span><i class="mb-4 text-2xl fa-solid fa-quote-left text-blue-900"></i></span>
           <h1 class="text-3xl font-bold text-blue-900">
             Tudo bem! Ele é autista!
           </h1>
-    
+
           <!-- Citação completa com a borda laranja -->
           <blockquote class="italic text-lg text-gray-700 border-l-4 border-orange-500 pl-4 mt-4">
             <span id="previewText">
-              "Uma visita de cortesia a uma prima me colocou diante de situação curiosa, um almoço com dois desconhecidos,
+              "Uma visita de cortesia a uma prima me colocou diante de situação curiosa, um almoço com dois
+              desconhecidos,
               casal de amigos dela. Por vezes, o papo descontraído era interrompido pela senhora que, diante de uma
-              manifestação do marido, reprovava-o e, em cumplicidade comigo, logo eu, soltava a frase: ‘tudo bem! Ele é autista!’
+              manifestação do marido, reprovava-o e, em cumplicidade comigo, logo eu, soltava a frase: ‘tudo bem! Ele é
+              autista!’
             </span>
-    
+
             <span id="moreText" class="hidden">
               <br><br>
               Entre a primeira e, talvez, a quinta, sexta reprimenda conjugal, comecei a traçar na mente uma estratégia
               para acompanhar o assunto mais de perto, de modo mais empático. A confusão inicial foi tomada pela certeza
               de que eu estava, sim, diante de um autista.
               <br><br>
-              Mesmo acanhado, não consegui me controlar. Perguntei à esposa se o marido era, de fato, autista. A resposta
-              veio rápida, objetiva, sonora: ‘não! Ele não é autista! É que eu só brinco com ele assim. Estamos juntos há
+              Mesmo acanhado, não consegui me controlar. Perguntei à esposa se o marido era, de fato, autista. A
+              resposta
+              veio rápida, objetiva, sonora: ‘não! Ele não é autista! É que eu só brinco com ele assim. Estamos juntos
+              há
               vinte e tantos anos’, calculou um número, orgulhosa.
               <br><br>
               Surpreso, incrédulo, confuso, soltei um ‘ah, sim’, entre risos amarelados e a conversa seguiu normalmente.
               Escutei um pouco aquele senhor, negro retinto, 61 anos não aparentados – apesar da barba e dos cabelos
               brancos –, que me falava sobre o seu trabalho, o esforço para abrir e manter uma empresa, os clientes, a
-              postura nos negócios, pautada na honestidade, afinal de contas, ‘vivia num país extremamente racista e, por
+              postura nos negócios, pautada na honestidade, afinal de contas, ‘vivia num país extremamente racista e,
+              por
               isso, era preciso ser honesto’.
             </span>
           </blockquote>
-    
+
           <!-- Botão Ler Mais -->
-          <button id="readMoreBtn"
-            class="mt-4 text-blue-900 font-semibold hover:underline transition duration-300">
+          <button id="readMoreBtn" class="mt-4 text-blue-900 font-semibold hover:underline transition duration-300">
             Ler mais...
           </button>
-    
+
           <p class="mt-4 text-gray-700 leading-relaxed">
             Primeira crônica do autor, revela com humor e sensibilidade a descoberta do autismo através de situações
             cotidianas. Uma narrativa que convida à reflexão sobre diversidade e autoconhecimento.
           </p>
-    
+
           <div class="text-center mt-8">
             <p class="text-lg font-medium text-gray-600 mb-4">
               Gostou deste trecho? O livro completo traz muitas outras histórias como esta!
             </p>
-    
+
             <div class="flex flex-col sm:flex-row justify-center gap-4">
               <a href="#livro2"
                 class="bg-blue-900 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-800 transition flex items-center justify-center gap-2">
                 <i class="fa-solid fa-shopping-cart text-white"></i> Comprar na Patuá
               </a>
-    
+
               <a href="#livro2"
                 class="bg-blue-900 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-800 transition flex items-center justify-center gap-2">
                 <i class="fa-brands fa-amazon text-white"></i> Comprar na Amazon
@@ -251,18 +259,21 @@
           </div>
         </div>
       </div>
-    
+
       <div class="text-right w-full mt-6">
         <span><i class="text-blue-900 text-2xl fa-solid fa-quote-right"></i></span>
       </div>
     </section>
-    
-  
-    
-    
 
+   
+  
+
+  
 
     <section id="cta" class="bg-orange-500 text-white text-center py-10 px-6">
+      <div class="flex justify-center w-full">
+        <img src="./assets/img/gif_cronicas_2.gif" alt="GIF Responsivo" class="max-w-full h-auto rounded-lg shadow-lg">
+    </div>
       <div class="max-w-4xl mx-auto">
 
         <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">
@@ -301,13 +312,6 @@
 
       </div>
     </section>
-
-
-
-
-
-
-
   </main>
 
 
