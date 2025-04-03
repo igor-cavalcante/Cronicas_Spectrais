@@ -371,9 +371,6 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-8 {
-    width: calc(var(--spacing) * 8);
-  }
   .w-56 {
     width: calc(var(--spacing) * 56);
   }
@@ -528,6 +525,14 @@
   .border-t-2 {
     border-top-style: var(--tw-border-style);
     border-top-width: 2px;
+  }
+  .border-t-4 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 4px;
+  }
+  .border-b-4 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 4px;
   }
   .border-l-4 {
     border-left-style: var(--tw-border-style);
@@ -1042,16 +1047,6 @@
   .md\:w-2\/5 {
     @media (width >= 48rem) {
       width: calc(2/5 * 100%);
-    }
-  }
-  .md\:w-3\/3 {
-    @media (width >= 48rem) {
-      width: calc(3/3 * 100%);
-    }
-  }
-  .md\:w-3\/5 {
-    @media (width >= 48rem) {
-      width: calc(3/5 * 100%);
     }
   }
   .md\:w-\[50\%\] {
