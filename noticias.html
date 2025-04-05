@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Crônicas Espectrais</title>
   <link rel="stylesheet" href="./assets/styles/output.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -53,11 +54,10 @@
       </div>
 
       <div class="flex items-center gap-3 sm:gap-2">
-        <a
-        href="#cta"
+        <a href="#cta"
           class="bg-orange-500 text-white px-4 py-1 text-sm rounded-full hover:bg-orange-600 sm:px-2 sm:py-1 sm:text-xs sm:w-[90px] sm:max-w-[90px] sm:flex sm:items-center sm:justify-center">
           <i class="fa-solid fa-shopping-cart"></i> Comprar
-      </a>
+        </a>
 
         <!-- Ícone do menu -->
         <button id="menuToggle" onclick="onToggleMenu()" class="text-3xl cursor-pointer md:hidden">
@@ -69,8 +69,104 @@
 
 
 
-  <main class="">
+  <main class="bg-[#F5F5F0] border-t ">
+
+
+
+    <section class="pt-32 pb-10 bg-[#F5F5F0] text-center">
+      <h1 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 leading-tight px-4 max-w-4xl mx-auto">
+        Fique por dentro das principais notícias sobre <span class="text-indigo-700">Crônicas Espectrais</span> na mídia
+      </h1>
+      <p class="mt-4 text-gray-600 text-base md:text-lg px-4 max-w-2xl mx-auto">
+        Descubra as últimas reportagens, entrevistas e menções do livro em portais de renome.
+      </p>
+    </section>
     
+    
+
+    <section id="noticias" class="pt-10 pb-24 w-full font-[Merriweather,sans-serif]">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 space-y-16 max-w-5xl mx-auto px-6">
+    
+        <!-- Notícia 1 -->
+        <div class="flex flex-col md:flex-row gap-6">
+          <div class="md:w-1/2">
+            <img src="./assets/img/img-luciano/img_luciano.jpg" alt="noticia_1" class="w-full h-auto rounded-md">
+          </div>
+          <div class="md:w-1/2 flex flex-col justify-between">
+            <div>
+              <h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug">
+                Crônicas espectrais, notas sobre o TEA reflete sobre neurodiversidade e autodescoberta
+              </h2>
+            </div>
+            <div class="mt-auto">
+              <p class="text-sm text-gray-500 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-calendar-days text-gray-400"></i> 14/03/2025
+              </p>
+              <a href="https://marianakotscho.uol.com.br/inclusao/cronicas-espectrais-notas-sobre-o-tea-reflete-sobre-neurodiversidade-e-autodescoberta.html" target="_blank"
+                class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all">
+                Ler Notícia <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Notícia 2 -->
+        <div class="flex flex-col md:flex-row gap-6">
+          <div class="md:w-1/2">
+            <img src="./assets/img/img-luciano/TOC01777.jpg" alt="noticia_2" class="w-full h-auto rounded-md">
+          </div>
+          <div class="md:w-1/2 flex flex-col justify-between">
+            <div>
+              <h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug">
+                Livro de professor tocantinense ‘Crônicas espectrais, notas sobre o TEA’ será lançado nesta sexta-feira,
+                14, em Palmas
+              </h2>
+            </div>
+            <div class="mt-auto">
+              <p  class="text-sm text-gray-500 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-calendar-days text-gray-400"></i> 27/01/2025
+              </p>
+              <a href="https://tocantinscultural.com.br/livro-de-professor-tocantinense-cronicas-espectrais-notas-sobre-o-tea-sera-lancado-nesta-sexta-feira-14-em-palmas/" target="_blank"
+                class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all">
+                Ler Notícia <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+         <!-- Notícia 3 -->
+         <div class="flex flex-col md:flex-row gap-6">
+          <div class="md:w-1/2">
+            <img src="./assets/img/noticias/jornal_opcao_noticia.jpg" alt="noticia_2" class="w-full h-auto rounded-md">
+          </div>
+          <div class="md:w-1/2 flex flex-col justify-between">
+            <div>
+              <h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug">
+                Obra de Luciano de Jesus Gonçalves aborda autodescoberta e saúde mental com humor e sensibilidade
+              </h2>
+            </div>
+            <div class="mt-auto">
+              <p  class="text-sm text-gray-500 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-calendar-days text-gray-400"></i> 13/03/2025
+              </p>
+              <a href="https://tocantins.jornalopcao.com.br/colunas-e-blogs/opcao-cultural/em-palmas-professor-tocantinense-lanca-livro-sobre-tea-e-traz-reflexoes-sobre-neurodiversidade-554928/" target="_blank"
+                class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all">
+                Ler Notícia <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+
+    
+      </div>
+    </section>
+    
+
+
+
   </main>
 
 
@@ -99,4 +195,4 @@
   <script src="./assets/script/index.js"></script>
 </body>
 
-</html>         
+</html>
