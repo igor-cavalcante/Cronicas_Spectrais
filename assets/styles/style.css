@@ -15,4 +15,79 @@
   html {
     scroll-behavior: smooth;
   }
+
+
+  /* animação de escrever titulo no index */
+  
+  .typewriter h2 {
+    overflow: hidden;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap; /* Mantém em uma linha em telas grandes */
+    width: 0ch;
+    animation: typing 3.5s steps(42, end) forwards;
+  }
+
+  .typewriter h2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 0.15em;
+    background-color: blue;
+    animation:
+      blink-caret .75s step-end infinite,
+      hide-cursor 0.1s 3.5s forwards;
+  }
+
+  @keyframes typing {
+    from { width: 0ch; }
+    to { width: 42ch; }
+  }
+
+  @keyframes blink-caret {
+    from, to { background-color: transparent; }
+    50% { background-color: blue; }
+  }
+
+  @keyframes hide-cursor {
+    to { opacity: 0; width: 0; }
+  }
+
+  @media (max-width: 768px) {
+    .typewriter h2 {
+      font-size: 2rem;
+      white-space: normal; /* Permite quebra de linha */
+      width: 0ch;
+      max-width: 100%;
+      animation: typing 2.5s steps(42, end) forwards;
+    }
+
+    .typewriter h2::after {
+      animation:
+        blink-caret .75s step-end infinite,
+        hide-cursor 0.1s 2.5s forwards;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .typewriter h2 {
+      font-size: 1.5rem;
+      white-space: normal;
+      width: 0ch;
+      max-width: 100%;
+      animation: typing 2s steps(42, end) forwards;
+    }
+
+    .typewriter h2::after {
+      animation:
+        blink-caret .75s step-end infinite,
+        hide-cursor 0.1s 2s forwards;
+    }
+  }
+  
+  /*  */
   
