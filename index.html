@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <style>
@@ -76,7 +78,7 @@
 <main>
 
     <!-- Seção principal -->
-    <section id="main" class="py-24 bg-gray-100   border-gray-300 text-center">
+    <section id="main" class="py-24 bg-gray-100   border-gray-300 text-center" >
       <div class="max-w-6xl mx-auto px-6">
         <!-- Título do Livro -->
         <div class="typewriter">
@@ -154,7 +156,7 @@
 
     
 
-    <section id="autor" class="py-24 p-10 bg-white text-center  border-gray-300 ">
+    <section id="autor" class="py-24 p-10 bg-white text-center  border-gray-300 " data-aos="fade-up">
       <div class="container flex flex-col md:flex-row gap-10 max-w-5xl mx-auto">
 
         <!-- Imagem do Autor -->
@@ -201,7 +203,7 @@
 
 
 
-    <section id="livro" class="p-10 bg-gray-100">
+    <section id="livro" class="p-10 bg-gray-100" data-aos="fade-up">
       <div class="container mx-auto flex flex-col md:flex-row  gap-10">
 
         <!-- Imagem do Livro -->
@@ -221,7 +223,7 @@
           </h1>
 
           <!-- Citação completa com a borda laranja -->
-          <blockquote class="italic text-lg text-gray-700 border-l-4 border-orange-500 pl-4 mt-4">
+          <blockquote class="italic text-lg text-gray-700 border-l-4 border-orange-500 pl-4 mt-4" >
             <span id="previewText">
               "Uma visita de cortesia a uma prima me colocou diante de situação curiosa, um almoço com dois
               desconhecidos,
@@ -286,7 +288,7 @@
       </div>
     </section>
 
-    <section id="cta" class="bg-orange-500 text-white text-center py-10 px-6">
+    <section id="cta" class="bg-orange-500 text-white text-center py-10 px-6" >
       <div class="flex justify-center w-full">
         <img src="./assets/img/gif_cronicas_2.gif" alt="GIF Responsivo" class="max-w-full h-auto rounded-lg shadow-lg">
     </div>
@@ -351,11 +353,24 @@
       </a>
     </div>
     <p class="mt-4 text-gray-400 text-sm">
-      &copy; 2024 Crônicas Espectrais. Todos os direitos reservados.
+      &copy; 2025 Crônicas Espectrais. Todos os direitos reservados.
     </p>
   </footer>
 
   <script src="./assets/script/index.js"></script>
+
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Inicialize AOS
+  AOS.init({
+    duration: 800, // Duração da animação em ms
+    easing: 'ease-in-out', // Tipo de easing
+    once: true // Se as animações devem ocorrer apenas uma vez
+  });
+</script>
+
 </body>
 
 </html>
