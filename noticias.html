@@ -61,12 +61,20 @@
                 >Depoimentos</a
               >
             </li>
-            <li>
+            <li class="relative group">
               <a
-                class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
-                href="/lancamentos.html"
-                >Lançamentos</a
+                class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform flex items-center gap-1"
+                href="#"
+                >Lançamentos <i class="fa-solid fa-chevron-down text-xs"></i></a
               >
+              <ul class="absolute hidden group-hover:block bg-white shadow-md rounded-md py-2 min-w-[180px] left-0 top-full">
+                <li>
+                  <a href="/lancamento-sp.html" class="block px-4 py-2 hover:bg-gray-100">Lançamento SP</a>
+                </li>
+                <li>
+                  <a href="/lancamento-palmas.html" class="block px-4 py-2 hover:bg-gray-100">Lançamento Palmas</a>
+                </li>
+              </ul>
             </li>
             <li>
               <a
@@ -97,6 +105,7 @@
         </div>
       </nav>
     </header>
+
 
     <main class="bg-[#F5F5F0] border-t">
       <section class="pt-32 pb-10 bg-[#F5F5F0] text-center" data-aos="fade-up">
