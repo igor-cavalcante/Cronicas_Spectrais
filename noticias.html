@@ -1,216 +1,273 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crônicas Espectrais</title>
+    <link rel="stylesheet" href="./assets/styles/output.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Crônicas Espectrais</title>
-  <link rel="stylesheet" href="./assets/styles/output.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
+  <style>
+    main {
+      flex-grow: 1;
+    }
+  </style>
 
-<style>
-  main {
-    flex-grow: 1;
-  }
-</style>
+  <body class="min-h-screen flex flex-col">
+    <!-- Navbar fixa -->
+    <header class="bg-white h-16 shadow-md w-full fixed top-0 z-50">
+      <nav class="flex justify-between items-center w-[92%] h-full mx-auto">
+        <div>
+          <a href="/" class="hover:text-blue-900 transition block py-2">
+            <h1 class="text-xl font-bold">Crônicas Espectrais</h1>
+          </a>
+        </div>
+        <div
+          class="z-100 nav-links duration-500 md:static fixed bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
+        >
+          <ul
+            class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-medium"
+          >
+            <li>
+              <a
+                class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+                href="/#autor"
+                >O Autor</a
+              >
+            </li>
+            <li>
+              <a
+                class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+                href="/#livro"
+                >O Livro</a
+              >
+            </li>
+            <li>
+              <a
+                class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+                href="/depoimentos.html"
+                >Depoimentos</a
+              >
+            </li>
+            <li>
+              <a
+                class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+                href="/lancamentos.html"
+                >Lançamentos</a
+              >
+            </li>
+            <li>
+              <a
+                class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+                href="/noticias.html"
+                >Notícias</a
+              >
+            </li>
+          </ul>
+        </div>
 
-<body class=" min-h-screen flex flex-col">
-  <!-- Navbar fixa -->
-  <header class="bg-white h-16 shadow-md w-full fixed top-0 z-50">
-    <nav class="flex justify-between items-center w-[92%] h-full mx-auto">
-      <div>
-        <a href="/" class="hover:text-blue-900 transition block py-2">
-          <h1 class="text-xl font-bold">Crônicas Espectrais</h1>
+        <div class="flex items-center gap-3 sm:gap-2">
+          <a
+            href="#cta"
+            class="bg-orange-500 text-white px-4 py-1 text-sm rounded-full hover:bg-orange-600 sm:px-2 sm:py-1 sm:text-xs sm:w-[90px] sm:max-w-[90px] sm:flex sm:items-center sm:justify-center"
+          >
+            <i class="fa-solid fa-shopping-cart"></i> Comprar
+          </a>
+
+          <!-- Ícone do menu -->
+          <button
+            id="menuToggle"
+            onclick="onToggleMenu()"
+            class="text-3xl cursor-pointer md:hidden"
+          >
+            <i id="menuIcon" class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="bg-[#F5F5F0] border-t">
+      <section class="pt-32 pb-10 bg-[#F5F5F0] text-center" data-aos="fade-up">
+        <h1
+          class="text-3xl md:text-4xl font-serif font-bold text-gray-900 leading-tight px-4 max-w-4xl mx-auto"
+        >
+          Fique por dentro das principais notícias sobre
+          <span class="text-indigo-700">Crônicas Espectrais</span> na mídia
+        </h1>
+        <p
+          class="mt-4 text-gray-600 text-base md:text-lg px-4 max-w-2xl mx-auto"
+        >
+          Descubra as últimas reportagens, entrevistas e menções do livro em
+          portais de renome.
+        </p>
+      </section>
+
+      <section
+        id="noticias"
+        class="pt-10 pb-24 w-full font-[Merriweather,sans-serif]"
+        data-aos="fade-up"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-x-16 space-y-16 max-w-5xl mx-auto px-6"
+        >
+          <!-- Notícia 1 -->
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="md:w-1/2">
+              <img
+                src="./assets/img/img-luciano/img_luciano.jpg"
+                alt="noticia_1"
+                class="w-full h-auto rounded-md"
+              />
+            </div>
+            <div class="md:w-1/2 flex flex-col justify-between">
+              <div>
+                <h2
+                  class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug"
+                >
+                  Crônicas espectrais, notas sobre o TEA reflete sobre
+                  neurodiversidade e autodescoberta
+                </h2>
+              </div>
+              <div class="mt-auto">
+                <p class="text-sm text-gray-500 mb-4 flex items-center gap-2">
+                  <i class="fa-solid fa-calendar-days text-gray-400"></i>
+                  14/03/2025
+                </p>
+                <a
+                  href="https://marianakotscho.uol.com.br/inclusao/cronicas-espectrais-notas-sobre-o-tea-reflete-sobre-neurodiversidade-e-autodescoberta.html"
+                  target="_blank"
+                  class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all"
+                >
+                  Ler Notícia <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notícia 3 -->
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="md:w-1/2">
+              <img
+                src="./assets/img/noticias/jornal_opcao_noticia.jpg"
+                alt="noticia_2"
+                class="w-full h-auto rounded-md"
+              />
+            </div>
+            <div class="md:w-1/2 flex flex-col justify-between">
+              <div>
+                <h2
+                  class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug"
+                >
+                  Obra de Luciano de Jesus Gonçalves aborda autodescoberta e
+                  saúde mental com humor e sensibilidade
+                </h2>
+              </div>
+              <div class="mt-auto">
+                <p class="text-sm text-gray-500 mb-4 flex items-center gap-2">
+                  <i class="fa-solid fa-calendar-days text-gray-400"></i>
+                  13/03/2025
+                </p>
+                <a
+                  href="https://tocantins.jornalopcao.com.br/colunas-e-blogs/opcao-cultural/em-palmas-professor-tocantinense-lanca-livro-sobre-tea-e-traz-reflexoes-sobre-neurodiversidade-554928/"
+                  target="_blank"
+                  class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all"
+                >
+                  Ler Notícia <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notícia 2 -->
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="md:w-1/2">
+              <img
+                src="./assets/img/img-luciano/TOC01777.jpg"
+                alt="noticia_2"
+                class="w-full h-auto rounded-md"
+              />
+            </div>
+            <div class="md:w-1/2 flex flex-col justify-between">
+              <div>
+                <h2
+                  class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug"
+                >
+                  Livro de professor tocantinense ‘Crônicas espectrais, notas
+                  sobre o TEA’ será lançado nesta sexta-feira, 14, em Palmas
+                </h2>
+              </div>
+              <div class="mt-auto">
+                <p class="text-sm text-gray-500 mb-4 flex items-center gap-2">
+                  <i class="fa-solid fa-calendar-days text-gray-400"></i>
+                  27/01/2025
+                </p>
+                <a
+                  href="https://tocantinscultural.com.br/livro-de-professor-tocantinense-cronicas-espectrais-notas-sobre-o-tea-sera-lancado-nesta-sexta-feira-14-em-palmas/"
+                  target="_blank"
+                  class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all"
+                >
+                  Ler Notícia <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer fixado -->
+    <footer class="bg-gray-900 text-white text-center p-6 mt-auto">
+      <p class="text-lg font-semibold">Siga-nos nas redes sociais</p>
+      <div class="flex justify-center gap-6 mt-4">
+        <a
+          href="https://www.instagram.com/lj_goncalves/"
+          target="_blank"
+          class="flex items-center gap-2 text-gray-300 hover:text-white transition"
+        >
+          <i class="fa-brands fa-instagram text-xl"></i> Instagram
+        </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100083157130201"
+          target="_blank"
+          class="flex items-center gap-2 text-gray-300 hover:text-white transition"
+        >
+          <i class="fa-brands fa-facebook text-xl"></i> Facebook
+        </a>
+        <a
+          href="https://www.tiktok.com/@luciano.de.jesus043"
+          target="_blank"
+          class="flex items-center gap-2 text-gray-300 hover:text-white transition"
+        >
+          <i class="fa-brands fa-tiktok text-xl"></i> TikTok
         </a>
       </div>
-      <div
-        class="z-100 nav-links duration-500 md:static fixed bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
-        <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-medium">
-          <li>
-            <a class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
-              href="/#autor">O Autor</a>
-          </li>
-          <li>
-            <a class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
-              href="/#livro">O Livro</a>
-          </li>
-          <li>
-            <a class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
-              href="/depoimentos.html">Depoimentos</a>
-          </li>
-          <li>
-            <a class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
-              href="/lancamentos.html">Lançamentos</a>
-          </li>
-          <li>
-            <a class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
-              href="/noticias.html">Notícias</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="flex items-center gap-3 sm:gap-2">
-        <a href="#cta"
-          class="bg-orange-500 text-white px-4 py-1 text-sm rounded-full hover:bg-orange-600 sm:px-2 sm:py-1 sm:text-xs sm:w-[90px] sm:max-w-[90px] sm:flex sm:items-center sm:justify-center">
-          <i class="fa-solid fa-shopping-cart"></i> Comprar
-        </a>
-
-        <!-- Ícone do menu -->
-        <button id="menuToggle" onclick="onToggleMenu()" class="text-3xl cursor-pointer md:hidden">
-          <i id="menuIcon" class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-    </nav>
-  </header>
-
-
-
-  <main class="bg-[#F5F5F0] border-t ">
-
-
-
-    <section class="pt-32 pb-10 bg-[#F5F5F0] text-center" data-aos="fade-up">
-      <h1 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 leading-tight px-4 max-w-4xl mx-auto">
-        Fique por dentro das principais notícias sobre <span class="text-indigo-700">Crônicas Espectrais</span> na mídia
-      </h1>
-      <p class="mt-4 text-gray-600 text-base md:text-lg px-4 max-w-2xl mx-auto">
-        Descubra as últimas reportagens, entrevistas e menções do livro em portais de renome.
+      <p class="mt-4 text-gray-400 text-sm">
+        &copy; 2025 Crônicas Espectrais. Todos os direitos reservados.
       </p>
-    </section>
-    
-    
+    </footer>
 
-    <section id="noticias" class="pt-10 pb-24 w-full font-[Merriweather,sans-serif]" data-aos="fade-up">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 space-y-16 max-w-5xl mx-auto px-6">
-    
-        <!-- Notícia 1 -->
-        <div class="flex flex-col md:flex-row gap-6">
-          <div class="md:w-1/2">
-            <img src="./assets/img/img-luciano/img_luciano.jpg" alt="noticia_1" class="w-full h-auto rounded-md">
-          </div>
-          <div class="md:w-1/2 flex flex-col justify-between">
-            <div>
-              <h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug">
-                Crônicas espectrais, notas sobre o TEA reflete sobre neurodiversidade e autodescoberta
-              </h2>
-            </div>
-            <div class="mt-auto">
-              <p class="text-sm text-gray-500 mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-calendar-days text-gray-400"></i> 14/03/2025
-              </p>
-              <a href="https://marianakotscho.uol.com.br/inclusao/cronicas-espectrais-notas-sobre-o-tea-reflete-sobre-neurodiversidade-e-autodescoberta.html" target="_blank"
-                class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all">
-                Ler Notícia <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
+    <script src="./assets/script/index.js"></script>
 
-
-         <!-- Notícia 3 -->
-         <div class="flex flex-col md:flex-row gap-6">
-          <div class="md:w-1/2">
-            <img src="./assets/img/noticias/jornal_opcao_noticia.jpg" alt="noticia_2" class="w-full h-auto rounded-md">
-          </div>
-          <div class="md:w-1/2 flex flex-col justify-between">
-            <div>
-              <h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug">
-                Obra de Luciano de Jesus Gonçalves aborda autodescoberta e saúde mental com humor e sensibilidade
-              </h2>
-            </div>
-            <div class="mt-auto">
-              <p  class="text-sm text-gray-500 mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-calendar-days text-gray-400"></i> 13/03/2025
-              </p>
-              <a href="https://tocantins.jornalopcao.com.br/colunas-e-blogs/opcao-cultural/em-palmas-professor-tocantinense-lanca-livro-sobre-tea-e-traz-reflexoes-sobre-neurodiversidade-554928/" target="_blank"
-                class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all">
-                Ler Notícia <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Notícia 2 -->
-        <div class="flex flex-col md:flex-row gap-6">
-          <div class="md:w-1/2">
-            <img src="./assets/img/img-luciano/TOC01777.jpg" alt="noticia_2" class="w-full h-auto rounded-md">
-          </div>
-          <div class="md:w-1/2 flex flex-col justify-between">
-            <div>
-              <h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug">
-                Livro de professor tocantinense ‘Crônicas espectrais, notas sobre o TEA’ será lançado nesta sexta-feira,
-                14, em Palmas
-              </h2>
-            </div>
-            <div class="mt-auto">
-              <p  class="text-sm text-gray-500 mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-calendar-days text-gray-400"></i> 27/01/2025
-              </p>
-              <a href="https://tocantinscultural.com.br/livro-de-professor-tocantinense-cronicas-espectrais-notas-sobre-o-tea-sera-lancado-nesta-sexta-feira-14-em-palmas/" target="_blank"
-                class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all">
-                Ler Notícia <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-
-        
-
-
-
-    
-      </div>
-    </section>
-    
-
-
-
-  </main>
-
-
-  <!-- Footer fixado -->
-  <footer class="bg-gray-900 text-white text-center p-6 mt-auto">
-    <p class="text-lg font-semibold">Siga-nos nas redes sociais</p>
-    <div class="flex justify-center gap-6 mt-4">
-      <a href="https://www.instagram.com/lj_goncalves/" target="_blank"
-        class="flex items-center gap-2 text-gray-300 hover:text-white transition">
-        <i class="fa-brands fa-instagram text-xl"></i> Instagram
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=100083157130201" target="_blank"
-        class="flex items-center gap-2 text-gray-300 hover:text-white transition">
-        <i class="fa-brands fa-facebook text-xl"></i> Facebook
-      </a>
-      <a href="https://www.tiktok.com/@luciano.de.jesus043" target="_blank"
-        class="flex items-center gap-2 text-gray-300 hover:text-white transition">
-        <i class="fa-brands fa-tiktok text-xl"></i> TikTok
-      </a>
-    </div>
-    <p class="mt-4 text-gray-400 text-sm">
-      &copy; 2025 Crônicas Espectrais. Todos os direitos reservados.
-    </p>
-  </footer>
-
-  <script src="./assets/script/index.js"></script>
-
-
-
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  // Inicialize AOS
-  AOS.init({
-    duration: 800, // Duração da animação em ms
-    easing: 'ease-in-out', // Tipo de easing
-    once: true // Se as animações devem ocorrer apenas uma vez
-  });
-</script>
-
-</body>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Inicialize AOS
+      AOS.init({
+        duration: 800, // Duração da animação em ms
+        easing: "ease-in-out", // Tipo de easing
+        once: true, // Se as animações devem ocorrer apenas uma vez
+      });
+    </script>
+  </body>
 </html>

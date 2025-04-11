@@ -63,7 +63,7 @@
       white-space: normal; /* Permite quebra de linha */
       width: 0ch;
       max-width: 100%;
-      animation: typing 2.5s steps(42, end) forwards;
+      animation: typing 2.5s steps(45, end) forwards;
     }
 
     .typewriter h2::after {
@@ -79,7 +79,7 @@
       white-space: normal;
       width: 0ch;
       max-width: 100%;
-      animation: typing 2s steps(42, end) forwards;
+      animation: typing 2s steps(45, end) forwards;
     }
 
     .typewriter h2::after {
@@ -90,4 +90,5 @@
   }
   
   /*  */
+
   
