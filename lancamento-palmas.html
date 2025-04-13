@@ -12,9 +12,38 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
-  <style></style>
+  <style>
+    .carrossel-container {
+      width: 100%;
+      position: relative;
+      height: 500px; /* Altura fixa aumentada */
+      background-color: #f3f4f6; /* Fundo cinza claro enquanto carrega */
+    }
+    .carrossel-track {
+      width: 100%;
+      height: 100%;
+      display: flex;
+    }
+    .carrossel-slide {
+      min-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .carrossel-slide img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+  </style>
 
   <body class="min-h-screen flex flex-col">
     <!-- Navbar fixa -->
@@ -53,12 +82,15 @@
               >
             </li>
             <li class="relative group">
-              <a
-                class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform flex items-center gap-1"
-                href="#"
-                >Lançamentos <i class="fa-solid fa-chevron-down text-xs"></i></a
-              >
-              <ul class="absolute hidden group-hover:block bg-white shadow-md rounded-md py-2 min-w-[180px] left-0 top-full">
+              <button
+              id="lancamentosToggle"
+              class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform flex items-center gap-1"
+            >
+              Lançamentos <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+              <ul 
+              id="submenuLancamentos"
+              class="absolute hidden group-hover:block bg-white shadow-md rounded-md py-2 min-w-[180px] left-0 top-full">
                 <li>
                   <a href="/lancamento-sp.html" class="block px-4 py-2 hover:bg-gray-100">Lançamento SP</a>
                 </li>
@@ -97,9 +129,30 @@
       </nav>
     </header>
 
+    <script>
+      const lancamentosToggle = document.getElementById('lancamentosToggle');
+      const submenuLancamentos = document.getElementById('submenuLancamentos');
+    
+      lancamentosToggle.addEventListener('click', (e) => {
+        e.preventDefault(); // evita redirecionamento
+        submenuLancamentos.classList.toggle('hidden');
+      });
+    
+      // Opcional: fecha ao clicar fora do menu
+      document.addEventListener('click', function (e) {
+        if (
+          !lancamentosToggle.contains(e.target) &&
+          !submenuLancamentos.contains(e.target)
+        ) {
+          submenuLancamentos.classList.add('hidden');
+        }
+      });
+    </script>
+    
+
     <main >
       <!-- Hero Section -->
-      <section class="hero-pattern py-16 md:py-24">
+      <section class="hero-pattern py-16 md:py-24" data-aos="fade-up">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
           <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
             <span class="inline-block bg-teal-accent bg-opacity-20 text-teal-accent px-3 py-1 rounded-full text-sm font-medium mb-4">
@@ -132,77 +185,99 @@
         </div>
       </section>
 
-      <!-- Event Details -->
-<section id="evento" class="py-16 bg-white">
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
-        O Evento Inesquecível
-      </h2>
-      <div class="w-20 h-1 bg-spectral-primary mx-auto"></div>
-    </div>
-    
-    <div class="flex flex-col md:flex-row items-center">
-      <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-        <div class="bg-spectral-light p-8 rounded-xl">
-          <h3 class="text-2xl font-serif font-semibold text-gray-900 mb-4">
-            Na 45ª Roda Literária do NILA
-          </h3>
-          <p class="text-gray-600 mb-6">
-            O lançamento ocorreu no Espaço Cultural José Gomes Sobrinho, em Palmas-TO, marcado por um ambiente agradável de emoção, risadas, autógrafos e um delicioso bife ao final.
-          </p>
-          <div class="space-y-4">
-            <div class="flex items-start">
-              <div class="flex-shrink-0 mt-1">
-                <div class="w-8 h-8 bg-spectral-primary rounded-full flex items-center justify-center text-white">
-                  <i class="fas fa-microphone"></i>
+      <section id="evento" class="py-16 bg-white" data-aos="fade-up" > 
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
+              O Evento Inesquecível
+            </h2>
+            <div class="w-20 h-1 bg-spectral-primary mx-auto mb-6"></div>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+              Um registro completo do lançamento que marcou a cena literária de Palmas
+            </p>
+          </div>
+          
+          <div class="flex flex-col md:flex-row lg:flex-row gap-10 items-start">
+            <!-- Conteúdo Textual -->
+            <div class="lg:w-1/2 w-full">
+              <div class="bg-spectral-light p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div class="flex items-center mb-6">
+                  <div class="bg-spectral-primary text-white p-3 rounded-lg mr-4">
+                    <i class="fas fa-calendar-day text-2xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-serif font-semibold text-gray-900">
+                      Na 45ª Roda Literária do NILA
+                    </h3>
+                    <p class="text-spectral-primary font-medium">14 de Março de 2025</p>
+                  </div>
                 </div>
-              </div>
-              <div class="ml-4">
-                <h4 class="font-medium text-gray-900">Entrevista especial</h4>
-                <p class="text-gray-600 mt-1">
-                  Graduada em Jornalismo, Eduarda Formiga conduziu uma entrevista onde Luciano compartilhou sua jornada até o descobrimento do transtorno e a inspiração para criação do livro.
+                
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                  O Espaço Cultural José Gomes Sobrinho, em Palmas-TO, transformou-se em um verdadeiro palco de emoções, 
+                  onde literatura e cultura se entrelaçaram em uma noite memorável. O evento, marcado por risadas espontâneas 
+                  e momentos profundamente tocantes, foi complementado por uma seleção especial de delícias para degustação, 
+                  criando uma atmosfera acolhedora de confraternização entre autores e leitores.
                 </p>
+                
+                <div class="space-y-6">
+                  <div class="flex items-start bg-white p-4 rounded-lg shadow-xs hover:shadow-sm transition-shadow">
+                    <div class="flex-shrink-0">
+                      <div class="w-10 h-10 bg-spectral-primary/10 rounded-full flex items-center justify-center text-spectral-primary">
+                        <i class="fa-solid fa-microphone text-lg"></i>
+                      </div>
+                    </div>
+                    <div class="ml-4">
+                      <h4 class="font-semibold text-gray-900 text-lg">Entrevista especial</h4>
+                      <p class="text-gray-600 mt-2 leading-relaxed">
+                        Eduarda Formiga, jornalista premiada, conduziu uma entrevista intimista onde Luciano revelou pela primeira vez detalhes de sua jornada até o diagnóstico do TEA e como essa descoberta moldou a criação do livro.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start bg-white p-4 rounded-lg shadow-xs hover:shadow-sm transition-shadow">
+                    <div class="flex-shrink-0">
+                      <div class="w-10 h-10 bg-spectral-primary/10 rounded-full flex items-center justify-center text-spectral-primary">
+                        <i class="fas fa-book-open text-lg"></i>
+                      </div>
+                    </div>
+                    <div class="ml-4">
+                      <h4 class="font-semibold text-gray-900 text-lg">Momento dos autógrafos</h4>
+                      <p class="text-gray-600 mt-2 leading-relaxed">
+                        Durante mais de duas horas, Luciano dedicou atenção individualizada a cada leitor, criando mensagens personalizadas que transformaram simples cópias em peças únicas e memoráveis.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="flex items-start">
-              <div class="flex-shrink-0 mt-1">
-                <div class="w-8 h-8 bg-spectral-primary rounded-full flex items-center justify-center text-white">
-                  <i class="fas fa-book-open"></i>
+            
+            <!-- Galeria de Imagens -->
+            <div class="lg:w-1/2 w-full">
+              <div class="sticky top-24 grid grid-cols-1 gap-6">
+                <!-- Imagem da Reportagem -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                  <img src="./assets/img/Lançamentos/lancamento-palmas/luciano-reportagem.JPG" 
+                       alt="Luciano concedendo entrevista durante o evento" 
+                       class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                  
                 </div>
-              </div>
-              <div class="ml-4">
-                <h4 class="font-medium text-gray-900">Momento dos autógrafos</h4>
-                <p class="text-gray-600 mt-1">
-                  Luciano dedicou tempo para cada leitor, personalizando mensagens e criando memórias especiais com os fãs de sua obra.
-                </p>
+                
+                <!-- Imagem dos Autógrafos -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                  <img src="./assets/img/Lançamentos/lancamento-palmas/luciano-asinandolivro-3.JPG" 
+                       alt="Luciano autografando exemplares para os leitores" 
+                       class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                 
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      
-      <div class="md:w-1/2">
-        <div class="grid grid-cols-1 gap-4">
-          <!-- Imagem principal (ocupando toda a largura) -->
-          <div class="rounded-xl overflow-hidden hover-zoom">
-            <img src="./assets/img/Lançamentos/lancamento-palmas/luciano-reportagem.JPG" 
-                 alt="Luciano durante entrevista" 
-                 class="w-full h-auto object-cover">
-          </div>
-          
-    
-          
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+      </section>
 
        <!-- Author Spotlight -->
-       <section id="autor" class="py-16 bg-gray-50">
+       <section id="autor" class="py-16 bg-gray-50" data-aos="fade-up">
         <div class="container mx-auto px-4">
           <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
@@ -215,9 +290,6 @@
             <div class="md:w-2/3 mb-10 md:mb-0 flex justify-center">
               <div class="relative">
                 <img class="w-full" src="./assets/img/Lançamentos/lancamento-palmas/foto-luciano-1.JPG" alt="Retrato do autor Luciano" class="rounded-xl w-64 h-64 object-cover shadow-lg hover-zoom">
-                <div class="absolute -bottom-4 -right-4 bg-spectral-primary text-white px-4 py-2 rounded-full shadow-md">
-                  <i class="fas fa-pen-fancy mr-2"></i> Autor
-                </div>
               </div>
             </div>
             
@@ -248,7 +320,7 @@
       </section>
 
 
-      <section id="galeria-leitores" class="py-16 bg-gray-50">
+      <section id="galeria-leitores" class="py-16 bg-gray-50" data-aos="fade-up"> 
         <div class="container mx-auto px-4">
           <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-2">
@@ -279,34 +351,7 @@
         </div>
       </section>
       
-      <style>
-        .carrossel-container {
-          width: 100%;
-          position: relative;
-          height: 500px; /* Altura fixa aumentada */
-          background-color: #f3f4f6; /* Fundo cinza claro enquanto carrega */
-        }
-        .carrossel-track {
-          width: 100%;
-          height: 100%;
-          display: flex;
-        }
-        .carrossel-slide {
-          min-width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        .carrossel-slide img {
-          max-width: 100%;
-          max-height: 100%;
-          width: auto;
-          height: auto;
-          object-fit: contain;
-          border-radius: 8px;
-          box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-        }
-      </style>
+      
       
       <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -418,5 +463,16 @@
     </footer>
 
     <script src="./assets/script/index.js"></script>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Inicialize AOS
+      AOS.init({
+        duration: 800, // Duração da animação em ms
+        easing: "ease-in-out", // Tipo de easing
+        once: true, // Se as animações devem ocorrer apenas uma vez
+      });
+    </script>
   </body>
 </html>
