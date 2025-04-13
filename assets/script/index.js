@@ -15,6 +15,27 @@ function onToggleMenu() {
     menuIcon.classList.toggle('fa-xmark');
 }
 
+// dropdown de lançamento
+const lancamentosToggle = document.getElementById('lancamentosToggle');
+      const submenuLancamentos = document.getElementById('submenuLancamentos');
+    
+      lancamentosToggle.addEventListener('click', (e) => {
+        e.preventDefault(); // evita redirecionamento
+        submenuLancamentos.classList.toggle('hidden');
+      });
+    
+      // Opcional: fecha ao clicar fora do menu
+      document.addEventListener('click', function (e) {
+        if (
+          !lancamentosToggle.contains(e.target) &&
+          !submenuLancamentos.contains(e.target)
+        ) {
+          submenuLancamentos.classList.add('hidden');
+        }
+      });
+
+
+
 // Adiciona evento para cada link do menu mobile
 navItems.forEach(link => {
     link.addEventListener('click', () => {

@@ -59,12 +59,15 @@
               >
             </li>
             <li class="relative group">
-              <a
-                class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform flex items-center gap-1"
-                href="#"
-                >Lançamentos <i class="fa-solid fa-chevron-down text-xs"></i></a
-              >
-              <ul class="absolute hidden group-hover:block bg-white shadow-md rounded-md py-2 min-w-[180px] left-0 top-full">
+              <button
+              id="lancamentosToggle"
+              class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform flex items-center gap-1"
+            >
+              Lançamentos <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+              <ul 
+              id="submenuLancamentos"
+              class="absolute hidden group-hover:block bg-white shadow-md rounded-md py-2 min-w-[180px] left-0 top-full">
                 <li>
                   <a href="/lancamento-sp.html" class="block px-4 py-2 hover:bg-gray-100">Lançamento SP</a>
                 </li>
@@ -102,8 +105,6 @@
         </div>
       </nav>
     </header>
-
-    <!-- Seção principal -->
 
     <main>
       <!-- Seção principal -->
