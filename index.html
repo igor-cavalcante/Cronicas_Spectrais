@@ -13,13 +13,33 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-</head>
 
-<style>
-  main {
-    flex-grow: 1;
-  }
-</style>
+  
+  <!-- SCHEMA MARKUP PARA LIVRO E AUTOR (COLE AQUI) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "Crônicas espectrais, notas sobre o TEA",
+      "author": {
+        "@type": "Person",
+        "name": "Luciano de Jesus Gonçalves",
+        "url": "https://cronicas-spectrais.vercel.app/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Editora Patuá"
+      },
+      "description": "Mergulhe nas nuances do Transtorno do Espectro Autista (TEA) através de crônicas emocionantes e reflexivas.",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.editorapatua.com.br/cronicas-espectrais-notas-sobre-o-tea-de-luciano-de-jesus-goncalves/p",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+</head>
 
 <body class="min-h-screen flex flex-col">
   <!-- Navbar fixa -->
