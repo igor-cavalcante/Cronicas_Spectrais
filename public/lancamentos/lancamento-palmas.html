@@ -7,7 +7,7 @@
   <title>Crônicas Espectrais</title>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://unpkg.com">
-  <link rel="stylesheet" href="./assets/styles/output.css" />
+  <link rel="stylesheet" href="/assets/styles/output.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -61,50 +61,64 @@
         </a>
       </div>
       <div
-        class="z-100 nav-links duration-500 md:static fixed bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
-        <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-medium">
+        class="z-100 nav-links duration-500 md:static fixed bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
+      >
+        <ul
+          class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-medium"
+        >
           <li>
-            <a class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
-              href="/#autor">Luciano</a>
+            <a
+              class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+              href="/#autor"
+              >O Autor</a
+            >
           </li>
           <li>
-            <a class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
-              href="/#livro">O Livro</a>
+            <a
+              class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+              href="/#livro"
+              >O Livro</a
+            >
           </li>
           <li>
-            <a class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
-              href="/depoimentos.html">Depoimentos</a>
+            <a
+              class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+              href="../depoimentos.html"
+              >Depoimentos</a
+            >
           </li>
-          <li class="relative group">
-            <button id="lancamentosToggle"
-              class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform flex items-center gap-1">
-              Lançamentos <i class="fa-solid fa-chevron-down text-xs"></i>
-            </button>
-            <ul id="submenuLancamentos"
-              class="absolute hidden group-hover:block bg-white shadow-md rounded-md py-2 min-w-[180px] left-0 top-full">
-              <li>
-                <a href="/lancamento-sp.html" class="block px-4 py-2 hover:bg-gray-100">Lançamento SP</a>
-              </li>
-              <li>
-                <a href="/lancamento-palmas.html" class="block px-4 py-2 hover:bg-gray-100">Lançamento Palmas</a>
-              </li>
-            </ul>
+          <li class="">
+            <a
+              class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform "
+              href="../lancamentos.html"
+              >Lançamentos </a
+            >
+           
           </li>
           <li>
-            <a class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
-              href="/noticias.html">Notícias</a>
+            <a
+              class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+              href="../noticias.html"
+              >Notícias</a
+            >
           </li>
         </ul>
       </div>
 
       <div class="flex items-center gap-3 sm:gap-2">
-        <a href="#cta"
-          class="bg-orange-500 text-white px-4 py-1 text-sm rounded-full hover:bg-orange-600 sm:px-2 sm:py-1 sm:text-xs sm:w-[90px] sm:max-w-[90px] sm:flex sm:items-center sm:justify-center">
+        <a
+          href="#cta"
+          class="bg-orange-500 text-white px-4 py-1 text-sm rounded-full hover:bg-orange-600 sm:px-2 sm:py-1 sm:text-xs sm:w-[90px] sm:max-w-[90px] sm:flex sm:items-center sm:justify-center"
+        >
           <i class="fa-solid fa-shopping-cart"></i> Comprar
         </a>
 
         <!-- Ícone do menu -->
-        <button id="menuToggle" onclick="onToggleMenu()" class="text-3xl cursor-pointer md:hidden">
+        <button
+          id="menuToggle"
+          onclick="onToggleMenu()"
+          class="text-3xl cursor-pointer md:hidden"
+        >
           <i id="menuIcon" class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -131,7 +145,7 @@
         </div>
         <div class="md:w-1/2 flex justify-center">
           <div class="relative w-full max-w-md">
-            <img src="./assets/img/Lançamentos/lancamento-palmas/luciano-asinandolivro-3.JPG"
+            <img src="/assets/img/Lançamentos/lancamento-palmas/luciano-asinandolivro-3.JPG"
               alt="Luciano autografando livros no lançamento em Palmas"
               class="rounded-xl book-shadow hover-zoom w-full"
               fetchpriority="high">
@@ -233,7 +247,7 @@
               <!-- Imagem da Reportagem -->
               <div
                 class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                <img src="./assets/img/Lançamentos/lancamento-palmas/luciano-reportagem.JPG"
+                <img src="/assets/img/Lançamentos/lancamento-palmas/luciano-reportagem.JPG"
                   alt="Luciano concedendo entrevista durante o evento"
                   class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                 fetchpriority="high" >
@@ -242,7 +256,7 @@
 
               <!-- Imagem dos Autógrafos -->
               <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                <img src="./assets/img/Lançamentos/lancamento-palmas/luciano-asinandolivro-3.JPG"
+                <img src="/assets/img/Lançamentos/lancamento-palmas/luciano-asinandolivro-3.JPG"
                   alt="Luciano autografando exemplares para os leitores"
                   class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" 
                 fetchpriority="high"
@@ -270,7 +284,7 @@
           <div class="md:w-2/3 mb-10 md:mb-0 flex justify-center">
          
             <div class=" relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <img src="./assets/img/Lançamentos/lancamento-palmas/foto-luciano-1.JPG"
+              <img src="/assets/img/Lançamentos/lancamento-palmas/foto-luciano-1.JPG"
                 alt="Luciano autografando exemplares para os leitores"
                 class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                 fetchpriority="high">
@@ -347,14 +361,14 @@
       document.addEventListener('DOMContentLoaded', function () {
         // Lista de imagens
         const imagens = [
-          './assets/img/Lançamentos/lancamento-palmas/Luciano-leitor-1.jpg',
-          './assets/img/Lançamentos/lancamento-palmas/luciano-leitor-2.jpg',
-          './assets/img/Lançamentos/lancamento-palmas/luciano-leitor-3.jpg',
-          './assets/img/Lançamentos/lancamento-palmas/luciano-leitor-4.jpg',
-          './assets/img/Lançamentos/lancamento-palmas/luciano-leitor-5.webp',
-          './assets/img/Lançamentos/lancamento-palmas/luciano-leitor-6.jpg',
-          './assets/img/Lançamentos/lancamento-palmas/luciano-leitor-7.jpg',
-          './assets/img/Lançamentos/lancamento-palmas/luciano-leitor-8.jpg'
+          '/assets/img/Lançamentos/lancamento-palmas/Luciano-leitor-1.jpg',
+          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-2.jpg',
+          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-3.jpg',
+          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-4.jpg',
+          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-5.webp',
+          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-6.jpg',
+          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-7.jpg',
+          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-8.jpg'
         ];
 
         const altTexts = [
@@ -450,7 +464,7 @@
     </p>
   </footer>
 
-  <script src="./assets/script/index.js"></script>
+  <script src="/assets/script/index.js"></script>
 
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
