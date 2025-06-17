@@ -1,9 +1,5 @@
 
-// menu mobile
-// document.getElementById("menu-toggle").addEventListener("click", function () {
-//     let mobileMenu = document.getElementById("mobile-menu");
-//     mobileMenu.classList.toggle("hidden");
-// });
+//Configrando navbar
 const navLinks = document.querySelector('.nav-links');
 const menuIcon = document.getElementById('menuIcon');
 const menuToggle = document.getElementById('menuToggle');
@@ -14,6 +10,27 @@ function onToggleMenu() {
     menuIcon.classList.toggle('fa-bars');
     menuIcon.classList.toggle('fa-xmark');
 }
+
+// dropdown de lançamento
+const lancamentosToggle = document.getElementById('lancamentosToggle');
+      const submenuLancamentos = document.getElementById('submenuLancamentos');
+    
+      lancamentosToggle.addEventListener('click', (e) => {
+        e.preventDefault(); // evita redirecionamento
+        submenuLancamentos.classList.toggle('hidden');
+      });
+    
+      // Opcional: fecha ao clicar fora do menu
+      document.addEventListener('click', function (e) {
+        if (
+          !lancamentosToggle.contains(e.target) &&
+          !submenuLancamentos.contains(e.target)
+        ) {
+          submenuLancamentos.classList.add('hidden');
+        }
+      });
+
+
 
 // Adiciona evento para cada link do menu mobile
 navItems.forEach(link => {
@@ -60,17 +77,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
+
 //função de ler mais 
 
-document.getElementById("readMoreBtn").addEventListener("click", function() {
-    var moreText = document.getElementById("moreText");
-    var btn = document.getElementById("readMoreBtn");
+// document.getElementById("readMoreBtn").addEventListener("click", function() {
+//     var moreText = document.getElementById("moreText");
+//     var btn = document.getElementById("readMoreBtn");
 
-    if (moreText.classList.contains("hidden")) {
-      moreText.classList.remove("hidden");
-      btn.innerText = "Ler menos";
-    } else {
-      moreText.classList.add("hidden");
-      btn.innerText = "Ler mais...";
-    }
-  });
+//     if (moreText.classList.contains("hidden")) {
+//       moreText.classList.remove("hidden");
+//       btn.innerText = "Ler menos";
+//     } else {
+//       moreText.classList.add("hidden");
+//       btn.innerText = "Ler mais...";
+//     }
+//   });
