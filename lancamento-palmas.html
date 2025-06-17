@@ -5,10 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Crônicas Espectrais</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://unpkg.com">
   <link rel="stylesheet" href="./assets/styles/output.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Pré-conexão a CDNs -->
+
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
@@ -129,7 +133,9 @@
           <div class="relative w-full max-w-md">
             <img src="./assets/img/Lançamentos/lancamento-palmas/luciano-asinandolivro-3.JPG"
               alt="Luciano autografando livros no lançamento em Palmas"
-              class="rounded-xl book-shadow hover-zoom w-full">
+              class="rounded-xl book-shadow hover-zoom w-full"
+              fetchpriority="high">
+
             <div class="absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-md">
               <div class="flex items-center">
                 <div
@@ -229,16 +235,18 @@
                 class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <img src="./assets/img/Lançamentos/lancamento-palmas/luciano-reportagem.JPG"
                   alt="Luciano concedendo entrevista durante o evento"
-                  class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                  class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                fetchpriority="high" >
 
               </div>
 
               <!-- Imagem dos Autógrafos -->
-              <div
-                class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <img src="./assets/img/Lançamentos/lancamento-palmas/luciano-asinandolivro-3.JPG"
                   alt="Luciano autografando exemplares para os leitores"
-                  class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                  class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" 
+                fetchpriority="high"
+                  >
 
               </div>
             </div>
@@ -258,11 +266,16 @@
         </div>
 
         <div class="flex flex-col md:flex-row items-center">
+
           <div class="md:w-2/3 mb-10 md:mb-0 flex justify-center">
-            <div class="relative">
-              <img class="w-full" src="./assets/img/Lançamentos/lancamento-palmas/foto-luciano-1.JPG"
-                alt="Retrato do autor Luciano" class="rounded-xl w-64 h-64 object-cover shadow-lg hover-zoom">
+         
+            <div class=" relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <img src="./assets/img/Lançamentos/lancamento-palmas/foto-luciano-1.JPG"
+                alt="Luciano autografando exemplares para os leitores"
+                class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                fetchpriority="high">
             </div>
+
           </div>
 
           <div class="md:w-2/3 md:pl-12">
