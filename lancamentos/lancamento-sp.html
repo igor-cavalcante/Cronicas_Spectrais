@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crônicas Espectrais</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="/assets/styles/output.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Pré-conexão a CDNs -->
+
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<style>
+  .carrossel-container {
+    width: 100%;
+    position: relative;
+    height: 500px;
+    /* Altura fixa aumentada */
+    background-color: #f3f4f6;
+    /* Fundo cinza claro enquanto carrega */
+  }
+
+  .carrossel-track {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .carrossel-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carrossel-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+<body class="min-h-screen flex flex-col">
+  <!-- Navbar fixa -->
+  <header class="bg-white h-16 shadow-md w-full fixed top-0 z-50">
+    <nav class="flex justify-between items-center w-[92%] h-full mx-auto">
+      <div>
+        <a href="/" class="hover:text-blue-900 transition block py-2">
+          <h1 class="text-xl font-bold">Crônicas Espectrais</h1>
+        </a>
+      </div>
+      <div
+        class="z-100 nav-links duration-500 md:static fixed bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
+      >
+        <ul
+          class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-medium"
+        >
+          <li>
+            <a
+              class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+              href="/#autor"
+              >O Autor</a
+            >
+          </li>
+          <li>
+            <a
+              class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+              href="/#livro"
+              >O Livro</a
+            >
+          </li>
+          <li>
+            <a
+              class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+              href="../depoimentos.html"
+              >Depoimentos</a
+            >
+          </li>
+          <li class="">
+            <a
+              class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform "
+              href="../lancamentos.html"
+              >Lançamentos </a
+            >
+           
+          </li>
+          <li>
+            <a
+              class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+              href="../noticias.html"
+              >Notícias</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex items-center gap-3 sm:gap-2">
+        <a
+          href="#cta"
+          class="bg-orange-500 text-white px-4 py-1 text-sm rounded-full hover:bg-orange-600 sm:px-2 sm:py-1 sm:text-xs sm:w-[90px] sm:max-w-[90px] sm:flex sm:items-center sm:justify-center"
+        >
+          <i class="fa-solid fa-shopping-cart"></i> Comprar
+        </a>
+
+        <!-- Ícone do menu -->
+        <button
+          id="menuToggle"
+          onclick="onToggleMenu()"
+          class="text-3xl cursor-pointer md:hidden"
+        >
+          <i id="menuIcon" class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-pattern py-16 md:py-24" data-aos="fade-up">
+      <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+          <span
+            class="inline-block bg-teal-accent bg-opacity-20 text-teal-accent px-3 py-1 rounded-full text-sm font-medium mb-4">
+            Lançamento Oficial
+          </span>
+          <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">
+            Um marco literário em <span class="text-spectral-primary">Palmas</span>
+          </h1>
+          <p class="text-lg text-gray-600 mb-8">
+            A 45ª Roda Literária do NILA foi palco do emocionante lançamento de "Crônicas Espectrais: Notas sobre o
+            TEA", com a presença do autor Luciano e entrevista conduzida pela jornalista Eduarda Formiga.
+          </p>
+
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <div class="relative w-full max-w-md">
+            <img src="/assets/img/Lançamentos/lancamento-palmas/luciano-asinandolivro-3.JPG"
+              alt="Luciano autografando livros no lançamento em Palmas"
+              class="rounded-xl book-shadow hover-zoom w-full"
+              fetchpriority="high">
+
+            <div class="absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-md">
+              <div class="flex items-center">
+                <div
+                  class="w-10 h-10 bg-spectral-primary rounded-full flex items-center justify-center text-white mr-3">
+                  <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500">Data do evento</p>
+                  <p class="font-medium">14/03/2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="evento" class="py-16 bg-white" data-aos="fade-up">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
+            O Evento Inesquecível
+          </h2>
+          <div class="w-20 h-1 bg-spectral-primary mx-auto mb-6"></div>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Um registro completo do lançamento que marcou a cena literária de Palmas
+          </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row lg:flex-row gap-10 items-start">
+          <!-- Conteúdo Textual -->
+          <div class="lg:w-1/2 w-full">
+            <div class="bg-spectral-light p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div class="flex items-center mb-6">
+                <div class="bg-spectral-primary text-white p-3 rounded-lg mr-4">
+                  <i class="fas fa-calendar-day text-2xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-serif font-semibold text-gray-900">
+                    Na 45ª Roda Literária do NILA
+                  </h3>
+                  <p class="text-spectral-primary font-medium">14 de Março de 2025</p>
+                </div>
+              </div>
+
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                O Espaço Cultural José Gomes Sobrinho, em Palmas-TO, transformou-se em um verdadeiro palco de emoções,
+                onde literatura e cultura se entrelaçaram em uma noite memorável. O evento, marcado por risadas
+                espontâneas
+                e momentos profundamente tocantes, foi complementado por uma seleção especial de delícias para
+                degustação,
+                criando uma atmosfera acolhedora de confraternização entre autores e leitores.
+              </p>
+
+              <div class="space-y-6">
+                <div class="flex items-start bg-white p-4 rounded-lg shadow-xs hover:shadow-sm transition-shadow">
+                  <div class="flex-shrink-0">
+                    <div
+                      class="w-10 h-10 bg-spectral-primary/10 rounded-full flex items-center justify-center text-spectral-primary">
+                      <i class="fa-solid fa-microphone text-lg"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="font-semibold text-gray-900 text-lg">Entrevista especial</h4>
+                    <p class="text-gray-600 mt-2 leading-relaxed">
+                      Eduarda Formiga, jornalista premiada, conduziu uma entrevista intimista onde Luciano revelou pela
+                      primeira vez detalhes de sua jornada até o diagnóstico do TEA e como essa descoberta moldou a
+                      criação do livro.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start bg-white p-4 rounded-lg shadow-xs hover:shadow-sm transition-shadow">
+                  <div class="flex-shrink-0">
+                    <div
+                      class="w-10 h-10 bg-spectral-primary/10 rounded-full flex items-center justify-center text-spectral-primary">
+                      <i class="fas fa-book-open text-lg"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="font-semibold text-gray-900 text-lg">Momento dos autógrafos</h4>
+                    <p class="text-gray-600 mt-2 leading-relaxed">
+                      Durante mais de duas horas, Luciano dedicou atenção individualizada a cada leitor, criando
+                      mensagens personalizadas que transformaram simples cópias em peças únicas e memoráveis.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Galeria de Imagens -->
+          <div class="lg:w-1/2 w-full">
+            <div class="sticky top-24 grid grid-cols-1 gap-6">
+              <!-- Imagem da Reportagem -->
+              <div
+                class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <img src="/assets/img/Lançamentos/lancamento-palmas/luciano-reportagem.JPG"
+                  alt="Luciano concedendo entrevista durante o evento"
+                  class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                fetchpriority="high" >
+
+              </div>
+
+              <!-- Imagem dos Autógrafos -->
+              <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <img src="/assets/img/Lançamentos/lancamento-palmas/luciano-asinandolivro-3.JPG"
+                  alt="Luciano autografando exemplares para os leitores"
+                  class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" 
+                fetchpriority="high"
+                  >
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Author Spotlight -->
+    <section id="autor" class="py-16 bg-gray-50" data-aos="fade-up">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
+           Luciano
+          </h2>
+          <div class="w-20 h-1 bg-spectral-primary mx-auto"></div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center">
+
+          <div class="md:w-2/3 mb-10 md:mb-0 flex justify-center">
+         
+            <div class=" relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <img src="/assets/img/Lançamentos/lancamento-palmas/foto-luciano-1.JPG"
+                alt="Luciano autografando exemplares para os leitores"
+                class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                fetchpriority="high">
+            </div>
+
+          </div>
+
+          <div class="md:w-2/3 md:pl-12">
+            <h3 class="text-2xl font-serif font-semibold text-gray-900 mb-4">
+              Uma jornada de descobertas e superação
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Durante o evento, Luciano compartilhou sua trajetória pessoal, desde o diagnóstico do Transtorno do
+              Espectro Autista (TEA) até o processo de transformar suas experiências em literatura. Sua história
+              inspirou muitos presentes, criando um momento de conexão genuína entre autor e leitores.
+            </p>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 text-spectral-primary text-2xl mt-1">
+                  <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="ml-4">
+                  <blockquote class="text-gray-700 italic mb-4">
+                    "Escrever 'Crônicas Espectrais' foi mais que um projeto literário - foi um processo de
+                    autoconhecimento e uma forma de dar voz às experiências de tantas pessoas no espectro."
+                  </blockquote>
+                  <p class="text-gray-600 font-medium">— Luciano, autor</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="galeria-leitores" class="py-16 bg-gray-50" data-aos="fade-up">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-2">
+            Momentos com os amigos
+          </h2>
+          <div class="w-20 h-1 bg-spectral-primary mx-auto mb-6"></div>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Registros especiais da sessão de autógrafos e encontros durante o lançamento
+          </p>
+        </div>
+
+        <!-- Carrossel Simples -->
+        <div class="relative max-w-4xl mx-auto">
+          <div class="carrossel-container overflow-hidden rounded-xl">
+            <div class="carrossel-track flex transition-transform duration-300">
+              <!-- Slides serão inseridos pelo JavaScript -->
+            </div>
+          </div>
+
+          <!-- Botões de navegação -->
+          <button
+            class="carrossel-prev absolute left-4 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow-lg z-10 hover:bg-gray-100">
+            <i class="fas fa-chevron-left text-spectral-primary text-xl"></i>
+          </button>
+          <button
+            class="carrossel-next absolute right-4 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow-lg z-10 hover:bg-gray-100">
+            <i class="fas fa-chevron-right text-spectral-primary text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Lista de imagens
+        const imagens = [
+          '/assets/img/Lançamentos/lancamento-palmas/Luciano-leitor-1.jpg',
+          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-2.jpg',
+          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-3.jpg',
+          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-4.jpg',
+          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-5.webp',
+          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-6.jpg',
+          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-7.jpg',
+          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-8.jpg'
+        ];
+
+        const altTexts = [
+          'Luciano autografando livro para fã',
+          'Luciano conversando com leitor',
+          'Luciano sorrindo com fã',
+          'Luciano posando com leitor',
+          'Grupo de leitores com autor',
+          'Momento emocionante com fã',
+          'Detalhe da assinatura',
+          'Autógrafo dedicado'
+        ];
+
+        // Inserir slides no HTML
+        const track = document.querySelector('.carrossel-track');
+        imagens.forEach((img, index) => {
+          const slide = document.createElement('div');
+          slide.className = 'carrossel-slide';
+          slide.innerHTML = `<img src="${img}" alt="${altTexts[index]}" loading="lazy">`;
+          track.appendChild(slide);
+        });
+
+        // Configuração do carrossel
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.carrossel-slide');
+        const totalSlides = slides.length;
+        const container = document.querySelector('.carrossel-container');
+
+        function updateCarrossel() {
+          track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        // Event listeners para os botões
+        document.querySelector('.carrossel-next').addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % totalSlides;
+          updateCarrossel();
+        });
+
+        document.querySelector('.carrossel-prev').addEventListener('click', () => {
+          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+          updateCarrossel();
+        });
+
+        // Inicialização
+        updateCarrossel();
+
+        // Opcional: Auto-play
+        let interval = setInterval(() => {
+          currentIndex = (currentIndex + 1) % totalSlides;
+          updateCarrossel();
+        }, 5000);
+
+        // Pausar auto-play ao interagir
+        container.addEventListener('mouseenter', () => clearInterval(interval));
+        container.addEventListener('mouseleave', () => {
+          interval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarrossel();
+          }, 5000);
+        });
+      });
+    </script>
+  </main>
+
+
+  <!-- Footer fixado -->
+  <footer class="bg-gray-900 text-white text-center p-6 mt-auto ">
+    <p class="text-lg font-semibold">Siga-me nas redes sociais</p>
+    <div class="flex justify-center gap-6 mt-4 flex-wrap">
+      <a href="https://www.instagram.com/lj_goncalves/" target="_blank"
+        class="flex items-center gap-2 text-gray-300 hover:text-white transition">
+        <i class="fa-brands fa-instagram text-xl"></i> Instagram
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100083157130201" target="_blank"
+        class="flex items-center gap-2 text-gray-300 hover:text-white transition">
+        <i class="fa-brands fa-facebook text-xl"></i> Facebook
+      </a>
+      <a href="https://www.tiktok.com/@luciano.de.jesus043" target="_blank"
+        class="flex items-center gap-2 text-gray-300 hover:text-white transition">
+        <i class="fa-brands fa-tiktok text-xl"></i> TikTok
+      </a>
+
+
+      <a href="https://www.youtube.com/@lucianodejesusgoncalves/featured" target="_blank"
+        class="flex items-center gap-2 text-gray-300 hover:text-white transition">
+        <i class="fa-brands fa-youtube"></i> Youtube
+      </a>
+
+
+    </div>
+    <p class="mt-4 text-gray-400 text-sm">
+      &copy; 2025 Crônicas Espectrais. Todos os direitos reservados.
+    </p>
+  </footer>
+
+  <script src="/assets/script/index.js"></script>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Inicialize AOS
+    AOS.init({
+      duration: 800, // Duração da animação em ms
+      easing: "ease-in-out", // Tipo de easing
+      once: true, // Se as animações devem ocorrer apenas uma vez
+    });
+  </script>
+</body>
+
+</html>

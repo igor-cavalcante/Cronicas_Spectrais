@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Depoimentos - Crônicas Espectrais</title>
-  <link rel="stylesheet" href="./assets/styles/output.css" />
+  <link rel="stylesheet" href="../assets/styles/output.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
@@ -20,50 +20,64 @@
         </a>
       </div>
       <div
-        class="z-100 nav-links duration-500 md:static fixed bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
-        <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-medium">
+        class="z-100 nav-links duration-500 md:static fixed bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
+      >
+        <ul
+          class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-medium"
+        >
           <li>
-            <a class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
-              href="/#autor">Luciano</a>
+            <a
+              class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+              href="/#autor"
+              >O Autor</a
+            >
           </li>
           <li>
-            <a class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
-              href="/#livro">O Livro</a>
+            <a
+              class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+              href="/#livro"
+              >O Livro</a
+            >
           </li>
           <li>
-            <a class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
-              href="/depoimentos.html">Depoimentos</a>
+            <a
+              class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+              href="/depoimentos.html"
+              >Depoimentos</a
+            >
           </li>
-          <li class="relative group">
-            <button id="lancamentosToggle"
-              class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform flex items-center gap-1">
-              Lançamentos <i class="fa-solid fa-chevron-down text-xs"></i>
-            </button>
-            <ul id="submenuLancamentos"
-              class="absolute hidden group-hover:block bg-white shadow-md rounded-md py-2 min-w-[180px] left-0 top-full">
-              <li>
-                <a href="/lancamento-sp.html" class="block px-4 py-2 hover:bg-gray-100">Lançamento SP</a>
-              </li>
-              <li>
-                <a href="/lancamento-palmas.html" class="block px-4 py-2 hover:bg-gray-100">Lançamento Palmas</a>
-              </li>
-            </ul>
+          <li class="">
+            <a
+              class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform "
+              href="/lancamentos.html"
+              >Lançamentos </a
+            >
+           
           </li>
           <li>
-            <a class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
-              href="/noticias.html">Notícias</a>
+            <a
+              class="transition-all duration-500 ease-in-out hover:text-blue-900 hover:scale-105 hover:font-semibold transform"
+              href="/noticias.html"
+              >Notícias</a
+            >
           </li>
         </ul>
       </div>
 
       <div class="flex items-center gap-3 sm:gap-2">
-        <a href="#cta"
-          class="bg-orange-500 text-white px-4 py-1 text-sm rounded-full hover:bg-orange-600 sm:px-2 sm:py-1 sm:text-xs sm:w-[90px] sm:max-w-[90px] sm:flex sm:items-center sm:justify-center">
+        <a
+          href="#cta"
+          class="bg-orange-500 text-white px-4 py-1 text-sm rounded-full hover:bg-orange-600 sm:px-2 sm:py-1 sm:text-xs sm:w-[90px] sm:max-w-[90px] sm:flex sm:items-center sm:justify-center"
+        >
           <i class="fa-solid fa-shopping-cart"></i> Comprar
         </a>
 
         <!-- Ícone do menu -->
-        <button id="menuToggle" onclick="onToggleMenu()" class="text-3xl cursor-pointer md:hidden">
+        <button
+          id="menuToggle"
+          onclick="onToggleMenu()"
+          class="text-3xl cursor-pointer md:hidden"
+        >
           <i id="menuIcon" class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -99,7 +113,7 @@
               <div class="w-full h-full flex items-center justify-center p-4">
                 <div
                   class="bg-white rounded-xl shadow-md overflow-hidden w-full max-w-2xl h-full max-h-[80vh] flex items-center justify-center p-2">
-                  <img src="./assets/img/depoimentos/depoimento1.jpg" alt="Depoimento 1"
+                  <img src="/assets/img/depoimentos/depoimento1.jpg" alt="Depoimento 1"
                     class="object-contain w-full h-full rounded-lg" />
                 </div>
               </div>
@@ -110,7 +124,7 @@
               <div class="w-full h-full flex items-center justify-center p-4">
                 <div
                   class="bg-white rounded-xl shadow-md overflow-hidden w-full max-w-2xl h-full max-h-[80vh] flex items-center justify-center p-2">
-                  <img src="./assets/img/depoimentos/depoimento2.jpg" alt="Depoimento 3"
+                  <img src="../assets/img/depoimentos/depoimento2.jpg" alt="Depoimento 3"
                     class="object-contain w-full h-full rounded-lg" />
                 </div>
               </div>
@@ -121,7 +135,7 @@
               <div class="w-full h-full flex items-center justify-center p-4">
                 <div
                   class="bg-white rounded-xl shadow-md overflow-hidden w-full max-w-2xl h-full max-h-[80vh] flex items-center justify-center p-2">
-                  <img src="./assets/img/depoimentos/depoimento3.jpg" alt="Depoimento 4"
+                  <img src="../assets/img/depoimentos/depoimento3.jpg" alt="Depoimento 4"
                     class="object-contain w-full h-full rounded-lg" />
                 </div>
               </div>
@@ -132,7 +146,7 @@
               <div class="w-full h-full flex items-center justify-center p-4">
                 <div
                   class="bg-white rounded-xl shadow-md overflow-hidden w-full max-w-2xl h-full max-h-[80vh] flex items-center justify-center p-2">
-                  <img src="./assets/img/depoimentos/depoimento4.jpg" alt="Depoimento 5"
+                  <img src="../assets/img/depoimentos/depoimento4.jpg" alt="Depoimento 5"
                     class="object-contain w-full h-full rounded-lg" />
                 </div>
               </div>
@@ -143,7 +157,7 @@
               <div class="w-full h-full flex items-center justify-center p-4">
                 <div
                   class="bg-white rounded-xl shadow-md overflow-hidden w-full max-w-2xl h-full max-h-[80vh] flex items-center justify-center p-2">
-                  <img src="./assets/img/depoimentos/depoimento2.jpg" alt="Depoimento 6"
+                  <img src="../assets/img/depoimentos/depoimento2.jpg" alt="Depoimento 6"
                     class="object-contain w-full h-full rounded-lg" />
                 </div>
               </div>
@@ -154,7 +168,7 @@
               <div class="w-full h-full flex items-center justify-center p-4">
                 <div
                   class="bg-white rounded-xl shadow-md overflow-hidden w-full max-w-2xl h-full max-h-[80vh] flex items-center justify-center p-2">
-                  <img src="./assets/img/depoimentos/depoimento3.jpg" alt="Depoimento 7"
+                  <img src="../assets/img/depoimentos/depoimento3.jpg" alt="Depoimento 7"
                     class="object-contain w-full h-full rounded-lg" />
                 </div>
               </div>
@@ -200,37 +214,37 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Depoimento 1 -->
           <div class="bg-white rounded-xl shadow-md overflow-hidden flex items-center justify-center p-3 h-80">
-            <img src="./assets/img/depoimentos/depoimento1.jpg" alt="Depoimento 1"
+            <img src="../assets/img/depoimentos/depoimento1.jpg" alt="Depoimento 1"
               class="object-contain w-full h-full rounded-lg" />
           </div>
 
           <!-- Depoimento 2 -->
           <div class="bg-white rounded-xl shadow-md overflow-hidden flex items-center justify-center p-3 h-80">
-            <img src="./assets/img/depoimentos/depoimento3.jpg" alt="Depoimento 3"
+            <img src="../assets/img/depoimentos/depoimento3.jpg" alt="Depoimento 3"
               class="object-contain w-full h-full rounded-lg" />
           </div>
 
           <!-- Depoimento 3 -->
           <div class="bg-white rounded-xl shadow-md overflow-hidden flex items-center justify-center p-3 h-80">
-            <img src="./assets/img/depoimentos/depoimento4.jpg" alt="Depoimento 4"
+            <img src="../assets/img/depoimentos/depoimento4.jpg" alt="Depoimento 4"
               class="object-contain w-full h-full rounded-lg" />
           </div>
 
           <!-- Depoimento 4 -->
           <div class="bg-white rounded-xl shadow-md overflow-hidden flex items-center justify-center p-3 h-80">
-            <img src="./assets/img/depoimentos/depoimento5.jpg" alt="Depoimento 5"
+            <img src="../assets/img/depoimentos/depoimento5.jpg" alt="Depoimento 5"
               class="object-contain w-full h-full rounded-lg" />
           </div>
 
           <!-- Depoimento 5 -->
           <div class="bg-white rounded-xl shadow-md overflow-hidden flex items-center justify-center p-3 h-80">
-            <img src="./assets/img/depoimentos/depoimento6.jpg" alt="Depoimento 6"
+            <img src="../assets/img/depoimentos/depoimento6.jpg" alt="Depoimento 6"
               class="object-contain w-full h-full rounded-lg" />
           </div>
 
           <!-- Depoimento 6 -->
           <div class="bg-white rounded-xl shadow-md overflow-hidden flex items-center justify-center p-3 h-80">
-            <img src="./assets/img/depoimentos/depoimento7.jpg" alt="Depoimento 7"
+            <img src="../assets/img/depoimentos/depoimento7.jpg" alt="Depoimento 7"
               class="object-contain w-full h-full rounded-lg" />
           </div>
         </div>
@@ -295,7 +309,7 @@
       </p>
     </footer>
 
-  <script src="./assets/script/index.js"></script>
+  <script src="../assets/script/index.js"></script>
 
   <script>
     // Carousel Functionality
