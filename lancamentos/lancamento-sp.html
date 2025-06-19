@@ -4,16 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Crônicas Espectrais</title>
+  <title>Crônicas Espectrais - Lançamento SP</title>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://unpkg.com">
   <link rel="stylesheet" href="/assets/styles/output.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--Pré-conexão a CDNs -->
-
-
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 
@@ -22,9 +19,7 @@
     width: 100%;
     position: relative;
     height: 500px;
-    /* Altura fixa aumentada */
     background-color: #f3f4f6;
-    /* Fundo cinza claro enquanto carrega */
   }
 
   .carrossel-track {
@@ -48,6 +43,35 @@
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-pattern {
+    background-color: #f8fafc;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e2e8f0' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  .spectral-primary {
+    color: #1e40af;
+  }
+  
+  .bg-spectral-primary {
+    background-color: #1e40af;
+  }
+  
+  .bg-spectral-light {
+    background-color: #f0f7ff;
+  }
+  
+  .hover-zoom {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-zoom:hover {
+    transform: scale(1.03);
+  }
+  
+  .book-shadow {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 </style>
 
@@ -93,7 +117,6 @@
               href="../lancamentos.html"
               >Lançamentos </a
             >
-           
           </li>
           <li>
             <a
@@ -113,7 +136,6 @@
           <i class="fa-solid fa-shopping-cart"></i> Comprar
         </a>
 
-        <!-- Ícone do menu -->
         <button
           id="menuToggle"
           onclick="onToggleMenu()"
@@ -130,35 +152,32 @@
     <section class="hero-pattern py-16 md:py-24" data-aos="fade-up">
       <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-          <span
-            class="inline-block bg-teal-accent bg-opacity-20 text-teal-accent px-3 py-1 rounded-full text-sm font-medium mb-4">
-            Lançamento Oficial
+          <span class="inline-block bg-teal-accent bg-opacity-20 text-teal-accent px-3 py-1 rounded-full text-sm font-medium mb-4">
+            Lançamento em São Paulo-SP
           </span>
           <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">
-            Um marco literário em <span class="text-spectral-primary">Palmas</span>
+            Noite mágica na <span class="text-spectral-primary">Patuscada</span>
           </h1>
           <p class="text-lg text-gray-600 mb-8">
-            A 45ª Roda Literária do NILA foi palco do emocionante lançamento de "Crônicas Espectrais: Notas sobre o
-            TEA", com a presença do autor Luciano e entrevista conduzida pela jornalista Eduarda Formiga.
+            A icônica livraria da Vila Madalena foi palco do emocionante lançamento de "Crônicas Espectrais: Notas sobre o
+            TEA", com música, abraços e muitas histórias sobre o processo criativo do livro.
           </p>
-
         </div>
         <div class="md:w-1/2 flex justify-center">
           <div class="relative w-full max-w-md">
-            <img src="/assets/img/Lançamentos/lancamento-palmas/luciano-asinandolivro-3.JPG"
-              alt="Luciano autografando livros no lançamento em Palmas"
+            <img src="/assets/img/Lancamentos/lancamento-SP/luciano-assinando-1.jpg"
+              alt="Luciano na Livraria Patuscada durante o lançamento"
               class="rounded-xl book-shadow hover-zoom w-full"
               fetchpriority="high">
 
             <div class="absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-md">
               <div class="flex items-center">
-                <div
-                  class="w-10 h-10 bg-spectral-primary rounded-full flex items-center justify-center text-white mr-3">
+                <div class="w-10 h-10 bg-spectral-primary rounded-full flex items-center justify-center text-white mr-3">
                   <i class="fas fa-calendar-alt"></i>
                 </div>
                 <div>
                   <p class="text-xs text-gray-500">Data do evento</p>
-                  <p class="font-medium">14/03/2025</p>
+                  <p class="font-medium">27/02/2025</p>
                 </div>
               </div>
             </div>
@@ -167,139 +186,143 @@
       </div>
     </section>
 
-    <section id="evento" class="py-16 bg-white" data-aos="fade-up">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
-            O Evento Inesquecível
-          </h2>
-          <div class="w-20 h-1 bg-spectral-primary mx-auto mb-6"></div>
-          <p class="text-gray-600 max-w-2xl mx-auto">
-            Um registro completo do lançamento que marcou a cena literária de Palmas
+  <section id="evento" class="py-16 bg-white" data-aos="fade-up">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
+        O Evento Inesquecível
+      </h2>
+      <div class="w-20 h-1 bg-spectral-primary mx-auto mb-6"></div>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Um registro completo do lançamento que marcou o início da circulação do livro
+      </p>
+    </div>
+
+    <div class="flex flex-col md:flex-row lg:flex-row gap-10 items-start">
+      
+      <!-- Coluna do conteúdo textual + imagem ao final -->
+      <div class="lg:w-1/2 w-full">
+        <div class="bg-spectral-light p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div class="flex items-center mb-6">
+            <div class="bg-spectral-primary text-white p-3 rounded-lg mr-4">
+              <i class="fas fa-store text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-serif font-semibold text-gray-900">
+                Na Livraria Patuscada
+              </h3>
+              <p class="text-spectral-primary font-medium">27 de Fevereiro de 2025</p>
+            </div>
+          </div>
+
+          <p class="text-gray-600 mb-6 leading-relaxed">
+        Situado na Vila Madalena, o espaço icônico da Patuscada, reduto da literatura brasileira contemporânea,
+         há 14 anos, cada cantinho, as prateleiras, livros e amuletos criam um ambiente aconchegante e único.
+          A data foi uma excelente oportunidade para que eu e meus convidados pudéssemos conhecer a equipe que
+           faz da Editora Patuá uma realidade.  
           </p>
-        </div>
 
-        <div class="flex flex-col md:flex-row lg:flex-row gap-10 items-start">
-          <!-- Conteúdo Textual -->
-          <div class="lg:w-1/2 w-full">
-            <div class="bg-spectral-light p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div class="flex items-center mb-6">
-                <div class="bg-spectral-primary text-white p-3 rounded-lg mr-4">
-                  <i class="fas fa-calendar-day text-2xl"></i>
-                </div>
-                <div>
-                  <h3 class="text-2xl font-serif font-semibold text-gray-900">
-                    Na 45ª Roda Literária do NILA
-                  </h3>
-                  <p class="text-spectral-primary font-medium">14 de Março de 2025</p>
+          <div class="space-y-6">
+            <div class="flex items-start bg-white p-4 rounded-lg shadow-xs hover:shadow-sm transition-shadow">
+              <div class="flex-shrink-0">
+                <div class="w-10 h-10 bg-spectral-primary/10 rounded-full flex items-center justify-center text-spectral-primary">
+                  <i class="fa-solid fa-users text-lg"></i>
                 </div>
               </div>
-
-              <p class="text-gray-600 mb-6 leading-relaxed">
-                O Espaço Cultural José Gomes Sobrinho, em Palmas-TO, transformou-se em um verdadeiro palco de emoções,
-                onde literatura e cultura se entrelaçaram em uma noite memorável. O evento, marcado por risadas
-                espontâneas
-                e momentos profundamente tocantes, foi complementado por uma seleção especial de delícias para
-                degustação,
-                criando uma atmosfera acolhedora de confraternização entre autores e leitores.
-              </p>
-
-              <div class="space-y-6">
-                <div class="flex items-start bg-white p-4 rounded-lg shadow-xs hover:shadow-sm transition-shadow">
-                  <div class="flex-shrink-0">
-                    <div
-                      class="w-10 h-10 bg-spectral-primary/10 rounded-full flex items-center justify-center text-spectral-primary">
-                      <i class="fa-solid fa-microphone text-lg"></i>
-                    </div>
-                  </div>
-                  <div class="ml-4">
-                    <h4 class="font-semibold text-gray-900 text-lg">Entrevista especial</h4>
-                    <p class="text-gray-600 mt-2 leading-relaxed">
-                      Eduarda Formiga, jornalista premiada, conduziu uma entrevista intimista onde Luciano revelou pela
-                      primeira vez detalhes de sua jornada até o diagnóstico do TEA e como essa descoberta moldou a
-                      criação do livro.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="flex items-start bg-white p-4 rounded-lg shadow-xs hover:shadow-sm transition-shadow">
-                  <div class="flex-shrink-0">
-                    <div
-                      class="w-10 h-10 bg-spectral-primary/10 rounded-full flex items-center justify-center text-spectral-primary">
-                      <i class="fas fa-book-open text-lg"></i>
-                    </div>
-                  </div>
-                  <div class="ml-4">
-                    <h4 class="font-semibold text-gray-900 text-lg">Momento dos autógrafos</h4>
-                    <p class="text-gray-600 mt-2 leading-relaxed">
-                      Durante mais de duas horas, Luciano dedicou atenção individualizada a cada leitor, criando
-                      mensagens personalizadas que transformaram simples cópias em peças únicas e memoráveis.
-                    </p>
-                  </div>
-                </div>
+              <div class="ml-4">
+                <h4 class="font-semibold text-gray-900 text-lg">Encontro especial</h4>
+                <p class="text-gray-600 mt-2 leading-relaxed">
+                  O lançamento realizado na Livraria Patuscada, sede das atividades da Editora Patuá, marcou 
+                  o início da circulação de Cônicas espectrais, notas sobre o TEA. Marcado por uma noite enluarada e calorosa, o
+                   evento foi regado por música, abraços, encontros, risadas e, claro, muitas curiosidades sobre o processo de elaboração 
+                   do livro de crônicas. 
+                
+                </p>
               </div>
             </div>
-          </div>
 
-          <!-- Galeria de Imagens -->
-          <div class="lg:w-1/2 w-full">
-            <div class="sticky top-24 grid grid-cols-1 gap-6">
-              <!-- Imagem da Reportagem -->
-              <div
-                class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                <img src="/assets/img/Lançamentos/lancamento-palmas/luciano-reportagem.JPG"
-                  alt="Luciano concedendo entrevista durante o evento"
-                  class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                fetchpriority="high" >
-
+            <div class="flex items-start bg-white p-4 rounded-lg shadow-xs hover:shadow-sm transition-shadow">
+              <div class="flex-shrink-0">
+                <div class="w-10 h-10 bg-spectral-primary/10 rounded-full flex items-center justify-center text-spectral-primary">
+                  <i class="fas fa-book-open text-lg"></i>
+                </div>
               </div>
-
-              <!-- Imagem dos Autógrafos -->
-              <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                <img src="/assets/img/Lançamentos/lancamento-palmas/luciano-asinandolivro-3.JPG"
-                  alt="Luciano autografando exemplares para os leitores"
-                  class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" 
-                fetchpriority="high"
-                  >
-
+              <div class="ml-4">
+                <h4 class="font-semibold text-gray-900 text-lg">Sessão de autógrafos</h4>
+                <p class="text-gray-600 mt-2 leading-relaxed">
+                 O bate-papo foi seguido de uma sessão de autógrafos com os presentes. Os amigos e familiares vieram de diversas partes
+                  do país. Théo,  um dos mais animados, esteve completamente à vontade. Esse ponto de partida só poderia ser dado dessa forma.
+                   Foi lindo. 
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- Coluna da galeria com uma imagem só -->
+     
+
+<div class="lg:w-1/2 w-full flex flex-col gap-6">
+        <div class="flex justify-center">
+          <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-full max-w-md">
+            <img src="/assets/img/Lancamentos/lancamento-SP/Patuscada.jpg"
+              alt="Interior acolhedor da Livraria Patuscada"
+              class="w-full h-auto max-h-[600px] object-cover transition-transform duration-500 group-hover:scale-105"
+              fetchpriority="high">
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-full max-w-md">
+            <img src="/assets/img/lancamentos/lancamento-SP/luciano_com_theo-2.jpg"
+              alt="Luciano autografando exemplares na Patuscada"
+              class="w-full h-auto max-h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
+              fetchpriority="high">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
 
     <!-- Author Spotlight -->
     <section id="autor" class="py-16 bg-gray-50" data-aos="fade-up">
       <div class="container mx-auto px-4">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
-           Luciano
+            Luciano
           </h2>
           <div class="w-20 h-1 bg-spectral-primary mx-auto"></div>
         </div>
 
         <div class="flex flex-col md:flex-row items-center">
-
           <div class="md:w-2/3 mb-10 md:mb-0 flex justify-center">
-         
-            <div class=" relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <img src="/assets/img/Lançamentos/lancamento-palmas/foto-luciano-1.JPG"
+                  
+            <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 max-w-xs">
+              <img src="/assets/img/Lancamentos/lancamento-SP/luciano.jpg"
                 alt="Luciano autografando exemplares para os leitores"
                 class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                 fetchpriority="high">
-            </div>
+          </div>
 
           </div>
 
           <div class="md:w-2/3 md:pl-12">
             <h3 class="text-2xl font-serif font-semibold text-gray-900 mb-4">
-              Uma jornada de descobertas e superação
+              Um marco na jornada literária
             </h3>
             <p class="text-gray-600 mb-6">
-              Durante o evento, Luciano compartilhou sua trajetória pessoal, desde o diagnóstico do Transtorno do
-              Espectro Autista (TEA) até o processo de transformar suas experiências em literatura. Sua história
-              inspirou muitos presentes, criando um momento de conexão genuína entre autor e leitores.
+              O lançamento na Patuscada representou muito mais que o início da circulação do livro - foi a materialização 
+              de um sonho e a oportunidade de conectar-se pessoalmente com leitores e amigos que acompanham essa jornada. 
+              Conhecer a equipe que faz da Editora Patuá uma realidade foi um dos momentos mais especiais da noite.
             </p>
 
             <div class="bg-white p-6 rounded-xl shadow-sm">
@@ -309,8 +332,8 @@
                 </div>
                 <div class="ml-4">
                   <blockquote class="text-gray-700 italic mb-4">
-                    "Escrever 'Crônicas Espectrais' foi mais que um projeto literário - foi um processo de
-                    autoconhecimento e uma forma de dar voz às experiências de tantas pessoas no espectro."
+                    "Esse ponto de partida na Patuscada, com tanta gente querida, só poderia ser dado dessa forma. 
+                    Foi lindo ver as crônicas ganhando vida nas mãos dos leitores."
                   </blockquote>
                   <p class="text-gray-600 font-medium">— Luciano, autor</p>
                 </div>
@@ -321,7 +344,6 @@
       </div>
     </section>
 
-
     <section id="galeria-leitores" class="py-16 bg-gray-50" data-aos="fade-up">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
@@ -330,7 +352,7 @@
           </h2>
           <div class="w-20 h-1 bg-spectral-primary mx-auto mb-6"></div>
           <p class="text-gray-600 max-w-2xl mx-auto">
-            Registros especiais da sessão de autógrafos e encontros durante o lançamento
+            Registros especiais dos encontros e sessão de autógrafos na Patuscada
           </p>
         </div>
 
@@ -343,43 +365,40 @@
           </div>
 
           <!-- Botões de navegação -->
-          <button
-            class="carrossel-prev absolute left-4 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow-lg z-10 hover:bg-gray-100">
+          <button class="carrossel-prev absolute left-4 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow-lg z-10 hover:bg-gray-100">
             <i class="fas fa-chevron-left text-spectral-primary text-xl"></i>
           </button>
-          <button
-            class="carrossel-next absolute right-4 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow-lg z-10 hover:bg-gray-100">
+          <button class="carrossel-next absolute right-4 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow-lg z-10 hover:bg-gray-100">
             <i class="fas fa-chevron-right text-spectral-primary text-xl"></i>
           </button>
         </div>
       </div>
     </section>
 
-
-
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        // Lista de imagens
+        // Lista de imagens para SP
         const imagens = [
-          '/assets/img/Lançamentos/lancamento-palmas/Luciano-leitor-1.jpg',
-          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-2.jpg',
-          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-3.jpg',
-          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-4.jpg',
-          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-5.webp',
-          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-6.jpg',
-          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-7.jpg',
-          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-8.jpg'
+          '/assets/img/Lancamentos/lancamento-SP/foto_com_leitor_1.jpg',
+          '/assets/img/Lancamentos/lancamento-SP/foto_com_eduardo-1.jpg',
+          '/assets/img/Lancamentos/lancamento-SP/foto_com_leitor_2.jpg',
+          '/assets/img/Lancamentos/lancamento-SP/foto_com_leitor_3.jpg',
+          '/assets/img/Lancamentos/lancamento-SP/foto_com_leitor_4.jpg',
+          '/assets/img/Lancamentos/lancamento-SP/foto_com_leitor_5.jpg',
+          '/assets/img/Lancamentos/lancamento-SP/foto_com_leitor_6.jpg',
+          '/assets/img/Lancamentos/lancamento-SP/foto_com_leitor_7.jpg',
+          '/assets/img/Lancamentos/lancamento-SP/foto_com_leitor_8.jpg'
         ];
 
         const altTexts = [
-          'Luciano autografando livro para fã',
-          'Luciano conversando com leitor',
-          'Luciano sorrindo com fã',
-          'Luciano posando com leitor',
-          'Grupo de leitores com autor',
-          'Momento emocionante com fã',
-          'Detalhe da assinatura',
-          'Autógrafo dedicado'
+          'Luciano com leitor na Patuscada',
+          'Grupo de amigos no lançamento',
+          'Momento de autógrafos emocionante',
+          'Luciano conversando com fãs',
+          'Leitor mostrando livro autografado',
+          'Amigos reunidos na livraria',
+          'Detalhe da dedicatória especial',
+          'Sorrisos durante o evento'
         ];
 
         // Inserir slides no HTML
@@ -395,7 +414,6 @@
         let currentIndex = 0;
         const slides = document.querySelectorAll('.carrossel-slide');
         const totalSlides = slides.length;
-        const container = document.querySelector('.carrossel-container');
 
         function updateCarrossel() {
           track.style.transform = `translateX(-${currentIndex * 100}%)`;
@@ -422,6 +440,7 @@
         }, 5000);
 
         // Pausar auto-play ao interagir
+        const container = document.querySelector('.carrossel-container');
         container.addEventListener('mouseenter', () => clearInterval(interval));
         container.addEventListener('mouseleave', () => {
           interval = setInterval(() => {
@@ -433,9 +452,8 @@
     </script>
   </main>
 
-
   <!-- Footer fixado -->
-  <footer class="bg-gray-900 text-white text-center p-6 mt-auto ">
+  <footer class="bg-gray-900 text-white text-center p-6 mt-auto">
     <p class="text-lg font-semibold">Siga-me nas redes sociais</p>
     <div class="flex justify-center gap-6 mt-4 flex-wrap">
       <a href="https://www.instagram.com/lj_goncalves/" target="_blank"
@@ -450,14 +468,10 @@
         class="flex items-center gap-2 text-gray-300 hover:text-white transition">
         <i class="fa-brands fa-tiktok text-xl"></i> TikTok
       </a>
-
-
       <a href="https://www.youtube.com/@lucianodejesusgoncalves/featured" target="_blank"
         class="flex items-center gap-2 text-gray-300 hover:text-white transition">
         <i class="fa-brands fa-youtube"></i> Youtube
       </a>
-
-
     </div>
     <p class="mt-4 text-gray-400 text-sm">
       &copy; 2025 Crônicas Espectrais. Todos os direitos reservados.
@@ -466,16 +480,14 @@
 
   <script src="/assets/script/index.js"></script>
 
-
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     // Inicialize AOS
     AOS.init({
-      duration: 800, // Duração da animação em ms
-      easing: "ease-in-out", // Tipo de easing
-      once: true, // Se as animações devem ocorrer apenas uma vez
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
     });
   </script>
 </body>
-
 </html>

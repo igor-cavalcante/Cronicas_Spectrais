@@ -22,9 +22,7 @@
     width: 100%;
     position: relative;
     height: 500px;
-    /* Altura fixa aumentada */
     background-color: #f3f4f6;
-    /* Fundo cinza claro enquanto carrega */
   }
 
   .carrossel-track {
@@ -48,6 +46,35 @@
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-pattern {
+    background-color: #f8fafc;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e2e8f0' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  .spectral-primary {
+    color: #1e40af;
+  }
+  
+  .bg-spectral-primary {
+    background-color: #1e40af;
+  }
+  
+  .bg-spectral-light {
+    background-color: #f0f7ff;
+  }
+  
+  .hover-zoom {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-zoom:hover {
+    transform: scale(1.03);
+  }
+  
+  .book-shadow {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 </style>
 
@@ -132,7 +159,7 @@
         <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
           <span
             class="inline-block bg-teal-accent bg-opacity-20 text-teal-accent px-3 py-1 rounded-full text-sm font-medium mb-4">
-            Lançamento Oficial
+            Lançamento em Palmas-TO
           </span>
           <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">
             Um marco literário em <span class="text-spectral-primary">Palmas</span>
@@ -145,7 +172,7 @@
         </div>
         <div class="md:w-1/2 flex justify-center">
           <div class="relative w-full max-w-md">
-            <img src="/assets/img/Lançamentos/lancamento-palmas/luciano-asinandolivro-3.JPG"
+            <img src="/assets/img/Lancamentos/lancamento-palmas/luciano-asinandolivro-3.JPG"
               alt="Luciano autografando livros no lançamento em Palmas"
               class="rounded-xl book-shadow hover-zoom w-full"
               fetchpriority="high">
@@ -196,12 +223,11 @@
               </div>
 
               <p class="text-gray-600 mb-6 leading-relaxed">
-                O Espaço Cultural José Gomes Sobrinho, em Palmas-TO, transformou-se em um verdadeiro palco de emoções,
-                onde literatura e cultura se entrelaçaram em uma noite memorável. O evento, marcado por risadas
-                espontâneas
-                e momentos profundamente tocantes, foi complementado por uma seleção especial de delícias para
-                degustação,
-                criando uma atmosfera acolhedora de confraternização entre autores e leitores.
+             O Espaço Cultural José Gomes Sobrinho, em Palmas-TO, transformou-se em um verdadeiro palco
+              de emoções, onde literatura e cultura se entrelaçaram em uma noite memorável. Marcado por
+               risadas espontâneas e momentos profundamente tocantes, o evento foi complementado por um
+                coquetel que criou, ainda mais, uma atmosfera acolhedora de confraternização entre os
+                 presentes. 
               </p>
 
               <div class="space-y-6">
@@ -215,9 +241,9 @@
                   <div class="ml-4">
                     <h4 class="font-semibold text-gray-900 text-lg">Entrevista especial</h4>
                     <p class="text-gray-600 mt-2 leading-relaxed">
-                      Eduarda Formiga, jornalista premiada, conduziu uma entrevista intimista onde Luciano revelou pela
-                      primeira vez detalhes de sua jornada até o diagnóstico do TEA e como essa descoberta moldou a
-                      criação do livro.
+                   A jornalista Eduarda Formiga conduziu uma entrevista intimista onde Luciano revelou, pela primeira vez,
+                    detalhes de sua jornada até o diagnóstico do TEA. O autor relatou, ainda, como essa descoberta moldou 
+                     criação do livro. 
                     </p>
                   </div>
                 </div>
@@ -232,8 +258,8 @@
                   <div class="ml-4">
                     <h4 class="font-semibold text-gray-900 text-lg">Momento dos autógrafos</h4>
                     <p class="text-gray-600 mt-2 leading-relaxed">
-                      Durante mais de duas horas, Luciano dedicou atenção individualizada a cada leitor, criando
-                      mensagens personalizadas que transformaram simples cópias em peças únicas e memoráveis.
+                     Momento mais aguardado por todos, durante mais de duas horas, Luciano dedicou atenção individualizada a 
+                     cada leitor, criando mensagens personalizadas que transformaram simples cópias em peças únicas e memoráveis. 
                     </p>
                   </div>
                 </div>
@@ -247,7 +273,7 @@
               <!-- Imagem da Reportagem -->
               <div
                 class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                <img src="/assets/img/Lançamentos/lancamento-palmas/luciano-reportagem.JPG"
+                <img src="/assets/img/Lancamentos/lancamento-palmas/luciano-reportagem.JPG"
                   alt="Luciano concedendo entrevista durante o evento"
                   class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                 fetchpriority="high" >
@@ -256,7 +282,7 @@
 
               <!-- Imagem dos Autógrafos -->
               <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                <img src="/assets/img/Lançamentos/lancamento-palmas/luciano-asinandolivro-3.JPG"
+                <img src="/assets/img/Lancamentos/lancamento-palmas/luciano-asinandolivro-3.JPG"
                   alt="Luciano autografando exemplares para os leitores"
                   class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" 
                 fetchpriority="high"
@@ -284,7 +310,7 @@
           <div class="md:w-2/3 mb-10 md:mb-0 flex justify-center">
          
             <div class=" relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <img src="/assets/img/Lançamentos/lancamento-palmas/foto-luciano-1.JPG"
+              <img src="/assets/img/Lancamentos/lancamento-palmas/foto-luciano-1.JPG"
                 alt="Luciano autografando exemplares para os leitores"
                 class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                 fetchpriority="high">
@@ -309,8 +335,9 @@
                 </div>
                 <div class="ml-4">
                   <blockquote class="text-gray-700 italic mb-4">
-                    "Escrever 'Crônicas Espectrais' foi mais que um projeto literário - foi um processo de
-                    autoconhecimento e uma forma de dar voz às experiências de tantas pessoas no espectro."
+                   "Escrever 'Crônicas Espectrais' foi mais que um projeto literário! Foi um processo de autoconhecimento 
+                    uma forma de dar voz às experiências pessoais,de início, mas que podem revelar os prejuízos, desafios 
+                    e conquistas de tantas outras pessoas que estão no espectro." 
                   </blockquote>
                   <p class="text-gray-600 font-medium">— Luciano, autor</p>
                 </div>
@@ -361,14 +388,14 @@
       document.addEventListener('DOMContentLoaded', function () {
         // Lista de imagens
         const imagens = [
-          '/assets/img/Lançamentos/lancamento-palmas/Luciano-leitor-1.jpg',
-          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-2.jpg',
-          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-3.jpg',
-          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-4.jpg',
-          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-5.webp',
-          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-6.jpg',
-          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-7.jpg',
-          '/assets/img/Lançamentos/lancamento-palmas/luciano-leitor-8.jpg'
+          '/assets/img/Lancamentos/lancamento-palmas/Luciano-leitor-1.jpg',
+          '/assets/img/Lancamentos/lancamento-palmas/luciano-leitor-2.jpg',
+          '/assets/img/Lancamentos/lancamento-palmas/luciano-leitor-3.jpg',
+          '/assets/img/Lancamentos/lancamento-palmas/luciano-leitor-4.jpg',
+          '/assets/img/Lancamentos/lancamento-palmas/luciano-leitor-5.webp',
+          '/assets/img/Lancamentos/lancamento-palmas/luciano-leitor-6.jpg',
+          '/assets/img/Lancamentos/lancamento-palmas/luciano-leitor-7.jpg',
+          '/assets/img/Lancamentos/lancamento-palmas/luciano-leitor-8.jpg'
         ];
 
         const altTexts = [
