@@ -124,7 +124,7 @@
               <div class="w-full h-full flex items-center justify-center p-4">
                 <div
                   class="bg-white rounded-xl shadow-md overflow-hidden w-full max-w-2xl h-full max-h-[80vh] flex items-center justify-center p-2">
-                  <img src="../assets/img/depoimentos/depoimento2.jpg" alt="Depoimento 3"
+                  <img src="../assets/img/depoimentos/depoimento2.jpg" alt="Depoimento 2"
                     class="object-contain w-full h-full rounded-lg" />
                 </div>
               </div>
@@ -135,7 +135,7 @@
               <div class="w-full h-full flex items-center justify-center p-4">
                 <div
                   class="bg-white rounded-xl shadow-md overflow-hidden w-full max-w-2xl h-full max-h-[80vh] flex items-center justify-center p-2">
-                  <img src="../assets/img/depoimentos/depoimento3.jpg" alt="Depoimento 4"
+                  <img src="../assets/img/depoimentos/depoimento3.jpg" alt="Depoimento 3"
                     class="object-contain w-full h-full rounded-lg" />
                 </div>
               </div>
@@ -146,7 +146,7 @@
               <div class="w-full h-full flex items-center justify-center p-4">
                 <div
                   class="bg-white rounded-xl shadow-md overflow-hidden w-full max-w-2xl h-full max-h-[80vh] flex items-center justify-center p-2">
-                  <img src="../assets/img/depoimentos/depoimento4.jpg" alt="Depoimento 5"
+                  <img src="../assets/img/depoimentos/depoimento4.jpg" alt="Depoimento 4"
                     class="object-contain w-full h-full rounded-lg" />
                 </div>
               </div>
@@ -157,7 +157,7 @@
               <div class="w-full h-full flex items-center justify-center p-4">
                 <div
                   class="bg-white rounded-xl shadow-md overflow-hidden w-full max-w-2xl h-full max-h-[80vh] flex items-center justify-center p-2">
-                  <img src="../assets/img/depoimentos/depoimento2.jpg" alt="Depoimento 6"
+                  <img src="../assets/img/depoimentos/depoimento5.jpg" alt="Depoimento 5"
                     class="object-contain w-full h-full rounded-lg" />
                 </div>
               </div>
@@ -168,11 +168,13 @@
               <div class="w-full h-full flex items-center justify-center p-4">
                 <div
                   class="bg-white rounded-xl shadow-md overflow-hidden w-full max-w-2xl h-full max-h-[80vh] flex items-center justify-center p-2">
-                  <img src="../assets/img/depoimentos/depoimento3.jpg" alt="Depoimento 7"
+                  <img src="../assets/img/depoimentos/depoimento6.jpg" alt="Depoimento 6"
                     class="object-contain w-full h-full rounded-lg" />
                 </div>
               </div>
             </div>
+
+           
           </div>
 
           <!-- Navigation Controls -->
@@ -220,33 +222,35 @@
 
           <!-- Depoimento 2 -->
           <div class="bg-white rounded-xl shadow-md overflow-hidden flex items-center justify-center p-3 h-80">
-            <img src="../assets/img/depoimentos/depoimento3.jpg" alt="Depoimento 3"
+            <img src="../assets/img/depoimentos/depoimento2.jpg" alt="Depoimento 2"
               class="object-contain w-full h-full rounded-lg" />
           </div>
 
           <!-- Depoimento 3 -->
           <div class="bg-white rounded-xl shadow-md overflow-hidden flex items-center justify-center p-3 h-80">
-            <img src="../assets/img/depoimentos/depoimento4.jpg" alt="Depoimento 4"
+            <img src="../assets/img/depoimentos/depoimento3.jpg" alt="Depoimento 3"
               class="object-contain w-full h-full rounded-lg" />
           </div>
 
           <!-- Depoimento 4 -->
           <div class="bg-white rounded-xl shadow-md overflow-hidden flex items-center justify-center p-3 h-80">
-            <img src="../assets/img/depoimentos/depoimento5.jpg" alt="Depoimento 5"
+            <img src="../assets/img/depoimentos/depoimento4.jpg" alt="Depoimento 4"
               class="object-contain w-full h-full rounded-lg" />
           </div>
 
           <!-- Depoimento 5 -->
           <div class="bg-white rounded-xl shadow-md overflow-hidden flex items-center justify-center p-3 h-80">
-            <img src="../assets/img/depoimentos/depoimento6.jpg" alt="Depoimento 6"
+            <img src="../assets/img/depoimentos/depoimento5.jpg" alt="Depoimento 5"
               class="object-contain w-full h-full rounded-lg" />
           </div>
 
           <!-- Depoimento 6 -->
           <div class="bg-white rounded-xl shadow-md overflow-hidden flex items-center justify-center p-3 h-80">
-            <img src="../assets/img/depoimentos/depoimento7.jpg" alt="Depoimento 7"
+            <img src="../assets/img/depoimentos/depoimento6.jpg" alt="Depoimento 6"
               class="object-contain w-full h-full rounded-lg" />
           </div>
+
+         
         </div>
       </div>
     </section>
@@ -313,113 +317,98 @@
 
   <script>
     // Carousel Functionality
-    document.addEventListener("DOMContentLoaded", () => {
-      const slides = document.querySelectorAll(".carousel-slide");
-      const indicators = document.querySelectorAll(".carousel-indicator");
-      const prevBtn = document.getElementById("prevBtn");
-      const nextBtn = document.getElementById("nextBtn");
-      let currentIndex = 0;
-      let autoSlideInterval;
+   document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".carousel-slide");
+  const indicators = document.querySelectorAll(".carousel-indicator");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  let currentIndex = 0;
+  let autoSlideInterval;
 
-      const updateCarousel = () => {
-        slides.forEach((slide, index) => {
-          slide.classList.remove("active", "prev", "next", "hidden");
+  // Função para atualizar a exibição do carrossel
+  const updateCarousel = () => {
+    slides.forEach((slide, index) => {
+      // Primeiro, remova todas as classes de estado
+      slide.classList.remove("active", "prev", "next", "hidden");
+      
+      // Calcular índices para slides anterior e próximo
+      const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+      const nextIndex = (currentIndex + 1) % slides.length;
 
-          if (index === currentIndex) {
-            slide.classList.add("active");
-          } else if (
-            index ===
-            (currentIndex - 1 + slides.length) % slides.length
-          ) {
-            slide.classList.add("prev");
-          } else if (index === (currentIndex + 1) % slides.length) {
-            slide.classList.add("next");
-          } else {
-            slide.classList.add("hidden");
-          }
-        });
-
-        indicators.forEach((indicator, index) => {
-          indicator.classList.toggle(
-            "bg-primary-500",
-            index === currentIndex
-          );
-          indicator.classList.toggle("bg-gray-300", index !== currentIndex);
-          indicator.classList.toggle("w-3", index !== currentIndex);
-          indicator.classList.toggle("w-6", index === currentIndex);
-        });
-      };
-
-      const goToSlide = (index) => {
-        currentIndex = index;
-        updateCarousel();
-      };
-
-      const nextSlide = () => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateCarousel();
-      };
-
-      const prevSlide = () => {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        updateCarousel();
-      };
-
-      const startAutoSlide = () => {
-        autoSlideInterval = setInterval(nextSlide, 5000);
-      };
-
-      const stopAutoSlide = () => {
-        clearInterval(autoSlideInterval);
-      };
-
-      // Event Listeners
-      nextBtn.addEventListener("click", () => {
-        nextSlide();
-        stopAutoSlide();
-        startAutoSlide();
-      });
-
-      prevBtn.addEventListener("click", () => {
-        prevSlide();
-        stopAutoSlide();
-        startAutoSlide();
-      });
-
-      indicators.forEach((indicator, index) => {
-        indicator.addEventListener("click", () => {
-          goToSlide(index);
-          stopAutoSlide();
-          startAutoSlide();
-        });
-      });
-
-      // Keyboard Navigation
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "ArrowRight") {
-          nextSlide();
-          stopAutoSlide();
-          startAutoSlide();
-        } else if (e.key === "ArrowLeft") {
-          prevSlide();
-          stopAutoSlide();
-          startAutoSlide();
-        }
-      });
-
-      // Pause auto slide on hover
-      const carousel = document.querySelector(".relative");
-      if (carousel) {
-        carousel.addEventListener("mouseenter", stopAutoSlide);
-        carousel.addEventListener("mouseleave", startAutoSlide);
-        carousel.addEventListener("touchstart", stopAutoSlide);
-        carousel.addEventListener("touchend", startAutoSlide);
+      // Aplicar classes com base na posição
+      if (index === currentIndex) {
+        slide.classList.add("active");
+      } else if (index === prevIndex) {
+        slide.classList.add("prev");
+      } else if (index === nextIndex) {
+        slide.classList.add("next");
+      } else {
+        slide.classList.add("hidden");
       }
-
-      // Initialize
-      updateCarousel();
-      startAutoSlide();
     });
+
+    // Atualizar indicadores
+    indicators.forEach((indicator, index) => {
+      indicator.classList.toggle("active", index === currentIndex);
+      indicator.classList.toggle("w-6", index === currentIndex);
+      indicator.classList.toggle("w-3", index !== currentIndex);
+    });
+  };
+
+  // Funções de navegação
+  const goToSlide = (index) => {
+    currentIndex = index;
+    updateCarousel();
+  };
+
+  const nextSlide = () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+  };
+
+  const prevSlide = () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
+  };
+
+  // Controle do slideshow automático
+  const startAutoSlide = () => {
+    stopAutoSlide();
+    autoSlideInterval = setInterval(nextSlide, 5000);
+  };
+
+  const stopAutoSlide = () => {
+    clearInterval(autoSlideInterval);
+  };
+
+  // Event listeners
+  nextBtn.addEventListener("click", () => {
+    nextSlide();
+    stopAutoSlide();
+    startAutoSlide();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    prevSlide();
+    stopAutoSlide();
+    startAutoSlide();
+  });
+
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener("click", () => goToSlide(index));
+  });
+
+  // Pausar no hover/toque
+  const carousel = document.querySelector(".relative");
+  carousel?.addEventListener("mouseenter", stopAutoSlide);
+  carousel?.addEventListener("mouseleave", startAutoSlide);
+  carousel?.addEventListener("touchstart", stopAutoSlide);
+  carousel?.addEventListener("touchend", startAutoSlide);
+
+  // Inicialização
+  updateCarousel();
+  startAutoSlide();
+});
   </script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
