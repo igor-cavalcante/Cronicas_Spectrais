@@ -1,0 +1,104 @@
+<header class="bg-white h-16 shadow-md w-full fixed top-0 z-50">
+    <nav class="flex justify-between items-center w-[92%] h-full mx-auto">
+        <div>
+            <a href="/" class="hover:text-blue-900 transition block py-2">
+                <h1 class="text-xl font-bold">Crônicas Espectrais</h1>
+            </a>
+        </div>
+
+        <div
+            class="z-100 nav-links duration-500 lg:static fixed bg-white lg:min-h-fit min-h-[60vh] left-0 top-[-100%] lg:w-auto w-full flex items-center px-5">
+            <ul
+                class="flex lg:flex-row flex-col lg:items-center lg:gap-4 xl:gap-8 gap-4 lg:text-sm xl:text-base font-medium w-full mt-6 lg:mt-0 px-4 lg:px-0 bg-white">
+
+                <li class="w-full lg:w-auto border-b border-gray-100 lg:border-none pb-2 lg:pb-0">
+                    <a class="block w-full lg:py-4 transition-all duration-300 hover:text-blue-900 hover:underline underline-offset-4 decoration-2"
+                        href="/#autor">O Autor</a>
+                </li>
+
+                <li class="w-full lg:w-auto border-b border-gray-100 lg:border-none pb-2 lg:pb-0">
+                    <a class="block w-full lg:py-4 transition-all duration-300 hover:text-blue-900 hover:underline underline-offset-4 decoration-2"
+                        href="/#livro">O Livro</a>
+                </li>
+
+                <li class="w-full lg:w-auto border-b border-gray-100 lg:border-none pb-2 lg:pb-0">
+                    <a class="block w-full lg:py-4 transition-all duration-300 hover:text-blue-900 hover:underline underline-offset-4 decoration-2"
+                        href="/depoimentos.html">Depoimentos</a>
+                </li>
+
+
+
+
+                </li>
+
+                <li class="w-full lg:w-auto border-b border-gray-100 lg:border-none pb-2 lg:pb-0">
+                    <a class="block w-full lg:py-4 transition-all duration-300 hover:text-blue-900 hover:underline underline-offset-4 decoration-2"
+                        href="/lancamentos.html">Lançamentos</a>
+                </li>
+                <li class="relative group w-full lg:w-auto border-b border-gray-100 lg:border-none pb-2 lg:pb-0">
+                    <button id="podcastsBtn"
+                        class="block w-full lg:py-4 text-left transition-all duration-300 hover:text-blue-900 hover:underline underline-offset-4 decoration-2 focus:outline-none">
+                        Podcasts
+                    </button>
+                    <ul id="menuPodcasts"
+                        class="hidden lg:group-hover:block lg:absolute left-0 top-[100%] w-full lg:w-64 bg-gray-50 lg:bg-white lg:shadow-lg lg:border lg:border-gray-100 z-50 transition-all duration-300">
+                        <li>
+                            <a href="https://mejulguempodcast.com/2025/03/24/letras-de-esquina-010-cronicas-espectrais-notas-sobre-o-tea/"
+                                target="_blank" rel="noopener noreferrer"
+                                class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-900">
+                                Me Julguem – CRÔNICAS ESPECTRAIS
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://mejulguempodcast.com/2026/04/14/letras-de-esquina-021-para-alem-das-letras/"
+                                target="_blank" rel="noopener noreferrer"
+                                class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-900">
+                                Me julguem – PARA ALEM DAS LETRAS
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="/podcasts/podcasts.html"
+                                class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-900">
+                                Podcasts com Luciano
+                            </a>
+                        </li> -->
+                    </ul>
+
+                <li class="w-full lg:w-auto">
+                    <a class="block w-full lg:py-4 transition-all duration-300 hover:text-blue-900 hover:underline underline-offset-4 decoration-2"
+                        href="/noticias.html">Notícias</a>
+                </li>
+
+                <!-- <li class="relative group w-full lg:w-auto border-b border-gray-100 lg:border-none pb-2 lg:pb-0">
+                    <button id="explorarBtn"
+                        class="block w-full lg:py-4 text-left transition-all duration-300 hover:text-blue-900 hover:underline underline-offset-4 decoration-2 focus:outline-none">
+                        Explorar
+                    </button>
+                    <ul id="menuExplorar"
+                        class="hidden lg:group-hover:block lg:absolute left-0 top-[100%] w-full lg:w-48 bg-gray-50 lg:bg-white lg:shadow-lg lg:border lg:border-gray-100 z-50 transition-all duration-300">
+                        <li><a href="#artigos"
+                                class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-900">Artigos</a>
+                        </li>
+                        <li><a href="#entrevistas"
+                                class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-900">Entrevistas</a>
+                        </li>
+                        <li><a href="#citacoes"
+                                class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-900">Citações</a>
+                        </li>
+                    </ul>
+                </li> -->
+            </ul>
+        </div>
+
+
+        <div class="flex items-center gap-3 sm:gap-2">
+            <a href="#cta"
+                class="bg-orange-500 text-white px-4 py-1 text-sm rounded-full hover:bg-orange-600 sm:px-2 sm:py-1 sm:text-xs sm:w-[90px] sm:max-w-[90px] sm:flex sm:items-center sm:justify-center">
+                <i class="fa-solid fa-shopping-cart"></i> Comprar
+            </a>
+            <button id="menuToggle" onclick="onToggleMenu()" class="text-3xl cursor-pointer lg:hidden">
+                <i id="menuIcon" class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+</header>

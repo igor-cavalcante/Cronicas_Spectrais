@@ -1,95 +1,84 @@
+// --- 1. Função de Carregamento (Mantém o código limpo) ---
+async function loadNavbar() {
+    try {
+        const response = await fetch('/assets/components/navbar.html');
+        if (!response.ok) throw new Error("Falha ao carregar a navbar");
+        
+        const navbarHtml = await response.text();
+        document.getElementById('navbar-placeholder').innerHTML = navbarHtml;
 
-//Configrando navbar
-const navLinks = document.querySelector('.nav-links');
-const menuIcon = document.getElementById('menuIcon');
-const menuToggle = document.getElementById('menuToggle');
-const navItems = document.querySelectorAll('.nav-links a'); // Seleciona todos os links dentro do menu
-
-function onToggleMenu() {
-    navLinks.classList.toggle('top-[8%]');
-    menuIcon.classList.toggle('fa-bars');
-    menuIcon.classList.toggle('fa-xmark');
+        // --- 2. Inicializa os eventos APÓS o carregamento ---
+        initNavbarEvents();
+    } catch (error) {
+        console.error("Erro ao carregar componente:", error);
+    }
 }
 
-// dropdown de lançamento
-const lancamentosToggle = document.getElementById('lancamentosToggle');
-      const submenuLancamentos = document.getElementById('submenuLancamentos');
-    
-      lancamentosToggle.addEventListener('click', (e) => {
-        e.preventDefault(); // evita redirecionamento
-        submenuLancamentos.classList.toggle('hidden');
-      });
-    
-      // Opcional: fecha ao clicar fora do menu
-      document.addEventListener('click', function (e) {
-        if (
-          !lancamentosToggle.contains(e.target) &&
-          !submenuLancamentos.contains(e.target)
-        ) {
-          submenuLancamentos.classList.add('hidden');
-        }
-      });
+// --- 3. Inicialização dos Eventos ---
+function initNavbarEvents() {
+    const navLinks = document.querySelector('.nav-links');
+    const menuIcon = document.getElementById('menuIcon');
+    const menuToggle = document.getElementById('menuToggle');
+    const navItems = document.querySelectorAll('.nav-links a');
 
+    // --- Abrir/Fechar Menu Mobile (Hambúrguer) ---
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('top-[8%]');
+            menuIcon.classList.toggle('fa-bars');
+            menuIcon.classList.toggle('fa-xmark');
+        });
+    }
 
-
-// Adiciona evento para cada link do menu mobile
-navItems.forEach(link => {
-    link.addEventListener('click', () => {
-        // Fecha o menu removendo a classe que o mantém visível
-        navLinks.classList.remove('top-[8%]');
-        menuIcon.classList.remove('fa-xmark');
-        menuIcon.classList.add('fa-bars');
+    // Fechar menu mobile ao clicar em links
+    navItems.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('top-[8%]');
+            menuIcon.classList.remove('fa-xmark');
+            menuIcon.classList.add('fa-bars');
+            
+            // Opcional: Fecha submenus abertos ao trocar de página
+            document.getElementById('menuExplorar')?.classList.add('hidden');
+            document.getElementById('menuPodcasts')?.classList.add('hidden');
+        });
     });
-});
 
+    // --- Lógica de Submenus (Dropdowns) ---
+    function initMobileDropdown(btnId, menuId) {
+        const btn = document.getElementById(btnId);
+        const menu = document.getElementById(menuId);
 
-// button dropdownBtn
+        if (btn && menu) {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault(); 
+                e.stopPropagation(); 
+                
+                // Toggle apenas em mobile (lg = 1024px)
+                if (window.innerWidth < 1024) {
+                    menu.classList.toggle('hidden');
+                }
+            });
+        }
+    }
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     const dropdownBtn = document.getElementById("dropdownBtn");
-//     const dropdownMenu = document.getElementById("dropdownMenu");
+    initMobileDropdown('explorarBtn', 'menuExplorar');
+    initMobileDropdown('podcastsBtn', 'menuPodcasts');
 
-//     dropdownBtn.addEventListener("click", function () {
-//         dropdownMenu.classList.toggle("opacity-0");
-//         dropdownMenu.classList.toggle("invisible");
-//         dropdownMenu.classList.toggle("scale-95");
-//     });
+    // Fecha submenus se clicar fora
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth < 1024) {
+            const menuExplorar = document.getElementById('menuExplorar');
+            const menuPodcasts = document.getElementById('menuPodcasts');
+            
+            if (menuExplorar && !menuExplorar.contains(e.target) && !document.getElementById('explorarBtn').contains(e.target)) {
+                menuExplorar.classList.add('hidden');
+            }
+            if (menuPodcasts && !menuPodcasts.contains(e.target) && !document.getElementById('podcastsBtn').contains(e.target)) {
+                menuPodcasts.classList.add('hidden');
+            }
+        }
+    });
+}
 
-//     // Fechar menu se clicar fora dele
-//     document.addEventListener("click", function (event) {
-//         if (!dropdownBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
-//             dropdownMenu.classList.add("opacity-0", "invisible", "scale-95");
-//         }
-//     });
-// });
-
-
-// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//     anchor.addEventListener('click', function (e) {
-//         e.preventDefault();
-//         const target = document.querySelector(this.getAttribute('href'));
-//         if (target) {
-//             window.scrollTo({
-//                 top: target.offsetTop - 60, // Ajuste para compensar a navbar fixa
-//                 behavior: 'smooth'
-//             });
-//         }
-//     });
-// });
-
-
-
-//função de ler mais 
-
-// document.getElementById("readMoreBtn").addEventListener("click", function() {
-//     var moreText = document.getElementById("moreText");
-//     var btn = document.getElementById("readMoreBtn");
-
-//     if (moreText.classList.contains("hidden")) {
-//       moreText.classList.remove("hidden");
-//       btn.innerText = "Ler menos";
-//     } else {
-//       moreText.classList.add("hidden");
-//       btn.innerText = "Ler mais...";
-//     }
-//   });
+// --- Início ---
+document.addEventListener('DOMContentLoaded', loadNavbar);
