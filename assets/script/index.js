@@ -3,7 +3,7 @@ async function loadNavbar() {
     try {
         const response = await fetch('/assets/components/navbar.html');
         if (!response.ok) throw new Error("Falha ao carregar a navbar");
-        
+
         const navbarHtml = await response.text();
         document.getElementById('navbar-placeholder').innerHTML = navbarHtml;
 
@@ -23,7 +23,8 @@ function initNavbarEvents() {
 
     // --- Abrir/Fechar Menu Mobile (Hambúrguer) ---
     if (menuToggle) {
-        menuToggle.addEventListener('click', () => {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); // Evita que o clique no botão dispare o evento de "clicar fora"
             navLinks.classList.toggle('top-[8%]');
             menuIcon.classList.toggle('fa-bars');
             menuIcon.classList.toggle('fa-xmark');
@@ -36,7 +37,7 @@ function initNavbarEvents() {
             navLinks.classList.remove('top-[8%]');
             menuIcon.classList.remove('fa-xmark');
             menuIcon.classList.add('fa-bars');
-            
+
             // Opcional: Fecha submenus abertos ao trocar de página
             document.getElementById('menuExplorar')?.classList.add('hidden');
             document.getElementById('menuPodcasts')?.classList.add('hidden');
@@ -50,9 +51,9 @@ function initNavbarEvents() {
 
         if (btn && menu) {
             btn.addEventListener('click', (e) => {
-                e.preventDefault(); 
-                e.stopPropagation(); 
-                
+                e.preventDefault();
+                e.stopPropagation();
+
                 // Toggle apenas em mobile (lg = 1024px)
                 if (window.innerWidth < 1024) {
                     menu.classList.toggle('hidden');
@@ -64,16 +65,28 @@ function initNavbarEvents() {
     initMobileDropdown('explorarBtn', 'menuExplorar');
     initMobileDropdown('podcastsBtn', 'menuPodcasts');
 
-    // Fecha submenus se clicar fora
+    // --- Fechar menus ao clicar fora ---
     document.addEventListener('click', (e) => {
+        // Fechar o menu principal mobile se clicar fora dele
+        if (navLinks && navLinks.classList.contains('top-[8%]')) {
+            if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                navLinks.classList.remove('top-[8%]');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Fechar submenus dropdowns se clicar fora
         if (window.innerWidth < 1024) {
             const menuExplorar = document.getElementById('menuExplorar');
             const menuPodcasts = document.getElementById('menuPodcasts');
-            
-            if (menuExplorar && !menuExplorar.contains(e.target) && !document.getElementById('explorarBtn').contains(e.target)) {
+            const btnExplorar = document.getElementById('explorarBtn');
+            const btnPodcasts = document.getElementById('podcastsBtn');
+
+            if (menuExplorar && btnExplorar && !menuExplorar.contains(e.target) && !btnExplorar.contains(e.target)) {
                 menuExplorar.classList.add('hidden');
             }
-            if (menuPodcasts && !menuPodcasts.contains(e.target) && !document.getElementById('podcastsBtn').contains(e.target)) {
+            if (menuPodcasts && btnPodcasts && !menuPodcasts.contains(e.target) && !btnPodcasts.contains(e.target)) {
                 menuPodcasts.classList.add('hidden');
             }
         }
