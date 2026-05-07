@@ -4,431 +4,253 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Crônicas Espectrais</title>
+  <title>Mídia e Notícias - Crônicas Espectrais</title>
   <link rel="stylesheet" href="../assets/styles/output.css" />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    main { flex-grow: 1; }
+    .font-serif { font-family: 'Merriweather', serif; }
+  </style>
 </head>
 
-<style>
-  main {
-    flex-grow: 1;
-  }
-</style>
-
-<body class="min-h-screen flex flex-col">
-  <!-- Navbar fixa -->
+<body class="min-h-screen flex flex-col bg-[#F5F5F0]">
   <div id="navbar-placeholder"></div>
-  <!-- Navbar fixa -->
 
-  <main class="bg-[#F5F5F0] border-t">
-    <section class="pt-32 pb-10 bg-[#F5F5F0] text-center" data-aos="fade-up">
-      <h1 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 leading-tight px-4 max-w-4xl mx-auto italic">
-        Fique por dentro das principais notícias sobre
-        <span class="text-indigo-700">Crônicas Espectrais</span> na mídia
+  <main class="border-t">
+    <section class="pt-32 pb-10 text-center" data-aos="fade-up">
+      <h1 class="text-3xl md:text-5xl font-serif font-bold text-gray-900 leading-tight px-4 max-w-4xl mx-auto italic">
+        Crônicas Espectrais na <span class="text-indigo-700">Mídia</span>
       </h1>
       <p class="mt-4 text-gray-600 text-base md:text-lg px-4 max-w-2xl mx-auto">
-        Descubra as últimas reportagens, entrevistas e menções do livro em
-        portais de renome.
+        Descubra as últimas reportagens, entrevistas, artigos autorais e menções do livro em portais de renome.
       </p>
     </section>
 
-    <section id="noticias" class="pt-10 pb-24 w-full font-[Merriweather,sans-serif]" data-aos="fade-up">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 space-y-16 max-w-5xl mx-auto px-6">
+    <section id="artigos" class="py-16 bg-white border-b border-gray-100" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="h-px w-8 bg-orange-500"></span>
+        <span class="text-orange-600 font-bold uppercase tracking-widest text-xs">Perspectivas</span>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900">Artigos de Opinião</h2>
+      <p class="text-gray-500 mt-2 font-light italic">Reflexões exclusivas de Luciano Gonçalves para grandes portais.</p>
+    </div>
 
-        <!-- Notícia  -->
-        <div class="flex flex-col md:flex-row gap-6">
-          <div class="md:w-1/2">
-            <img src="./assets/img/noticias/canal-autismo-25-02-2026.jpeg" alt="noticia_1"
-              class="w-full h-56 md:h-64 object-cover rounded-md" />
-          </div>
-          <div class="md:w-1/2 flex flex-col justify-between">
-            <div>
-              <h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug">
-                Professor e pesquisador transforma diagnóstico tardio em literatura com o livro ’Crônicas espectrais’
-              </h2>
-            </div>
-            <div class="mt-auto">
-              <p class="text-sm text-gray-500 mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-calendar-days text-gray-400"></i>
-                25/02/2026
-              </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div class="group relative bg-[#F9F9F7] p-8 rounded-3xl border border-transparent hover:border-indigo-100 hover:bg-white hover:shadow-2xl transition-all duration-500">
+        <div class="flex justify-between items-start mb-6">
+          <span class="bg-orange-100 text-orange-700 text-[10px] font-black px-3 py-1 rounded-full uppercase">RH Pra Você</span>
+          <span class="text-gray-400 text-xs font-mono">10.02.2026</span>
+        </div>
+        <h3 class="text-2xl font-serif font-bold text-blue-900 mb-4 group-hover:text-indigo-700 transition-colors leading-tight">
+          Autismo e NR-01: Desafios da Ergonomia Psicológica
+        </h3>
+        <p class="text-gray-600 text-sm leading-relaxed mb-8 line-clamp-3">
+          Uma análise necessária sobre como as normas de segurança do trabalho podem acolher a neurodiversidade através da saúde mental.
+        </p>
+        <a href="https://rhpravoce.com.br/colab/autismo-nr01-ergonomia-psicologica-rh" target="_blank" 
+           class="inline-flex items-center text-indigo-700 font-bold text-sm border-b-2 border-indigo-100 hover:border-indigo-600 pb-1 transition-all">
+          Ler Artigo Completo <i class="fa-solid fa-chevron-right ml-2 text-[10px]"></i>
+        </a>
+      </div>
 
-              <p class=" text-gray-500 mb-4 flex items-center gap-2">
-                Canal Autismo | Revista Autismo, São Paulo-SP
-              </p>
+      <div class="group relative bg-[#F9F9F7] p-8 rounded-3xl border border-transparent hover:border-indigo-100 hover:bg-white hover:shadow-2xl transition-all duration-500">
+        <div class="flex justify-between items-start mb-6">
+          <span class="bg-orange-100 text-orange-700 text-[10px] font-black px-3 py-1 rounded-full uppercase">Mariana Kotscho</span>
+          <span class="text-gray-400 text-xs font-mono">12.02.2026</span>
+        </div>
+        <h3 class="text-2xl font-serif font-bold text-blue-900 mb-4 group-hover:text-indigo-700 transition-colors leading-tight">
+          Volta às aulas: e agora, professor autista?
+        </h3>
+        <p class="text-gray-600 text-sm leading-relaxed mb-8 line-clamp-3">
+          A jornada do educador neurodivergente no retorno ao ambiente escolar e as nuances da inclusão real na prática docente.
+        </p>
+        <a href="https://marianakotscho.uol.com.br/educacao/volta-as-aulas-e-agora-professor-autista.html" target="_blank" 
+           class="inline-flex items-center text-indigo-700 font-bold text-sm border-b-2 border-indigo-100 hover:border-indigo-600 pb-1 transition-all">
+          Ler Artigo Completo <i class="fa-solid fa-chevron-right ml-2 text-[10px]"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-              <a href="https://www.canalautismo.com.br/noticia/professor-e-pesquisador-transforma-diagnostico-tardio-em-literatura-com-o-livro-cronicas-espectrais/"
-                target="_blank"
-                class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all">
-                Ler Notícia <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
+    <section id="noticias" class="pt-10 pb-20 w-full font-[Merriweather,sans-serif]" data-aos="fade-up">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="flex items-center gap-4 mb-12">
+          <div class="h-8 w-2 bg-indigo-700"></div>
+          <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-800">Reportagens e Entrevistas</h2>
         </div>
 
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-16">
 
-        <!-- Notícia  -->
-        <div class="flex flex-col md:flex-row gap-6">
-          <div class="md:w-1/2">
-            <img src="./assets/img/noticias/pauta73-03-09-2025.jpg" alt="noticia_1"
-              class="w-full h-56 md:h-64 object-cover rounded-md" />
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="md:w-1/2"><img src="./assets/img/noticias/canal-autismo-25-02-2026.jpeg" class="w-full h-56 object-cover rounded-md" /></div>
+            <div class="md:w-1/2 flex flex-col justify-between">
+              <h2 class="text-xl font-bold text-gray-800 leading-snug">Professor transforma diagnóstico tardio em literatura</h2>
+              <div class="mt-auto">
+                <p class="text-sm text-gray-500 mb-2">25/02/2026 | Canal Autismo</p>
+                <a href="https://www.canalautismo.com.br/noticia/professor-e-pesquisador-transforma-diagnostico-tardio-em-literatura-com-o-livro-cronicas-espectrais/" target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all text-sm">Ler Notícia <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
           </div>
-          <div class="md:w-1/2 flex flex-col justify-between">
-            <div>
-              <h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug">
-                Professor teixeirense lança livro sobre neurodiversidade e educação no CONVERGENTES 2025
-              </h2>
-            </div>
-            <div class="mt-auto">
-              <p class="text-sm text-gray-500 mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-calendar-days text-gray-400"></i>
-                03/09/2025
-              </p>
 
-              <p class=" text-gray-500 mb-4 flex items-center gap-2">
-                Pauta73 | Fonte: Jornal O Sollo
-              </p>
-
-              <a href="https://pauta73.com.br/2025/09/03/professor-teixeirense-lanca-livro-sobre-neurodiversidade-e-educacao-no-convergentes-2025/"
-                target="_blank"
-                class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all">
-                Ler Notícia <i class="fa-solid fa-arrow-right"></i>
-              </a>
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="md:w-1/2"><img src="./assets/img/noticias/pauta73-03-09-2025.jpg" class="w-full h-56 object-cover rounded-md" /></div>
+            <div class="md:w-1/2 flex flex-col justify-between">
+              <h2 class="text-xl font-bold text-gray-800 leading-snug">Lançamento sobre neurodiversidade no CONVERGENTES 2025</h2>
+              <div class="mt-auto">
+                <p class="text-sm text-gray-500 mb-2">03/09/2025 | Pauta73</p>
+                <a href="https://pauta73.com.br/2025/09/03/professor-teixeirense-lanca-livro-sobre-neurodiversidade-e-educacao-no-convergentes-2025/" target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all text-sm">Ler Notícia <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
             </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="md:w-1/2"><img src="./assets/img/noticias/ministerio-da-cultura01-08-2025.png" class="w-full h-56 object-cover rounded-md" /></div>
+            <div class="md:w-1/2 flex flex-col justify-between">
+              <h2 class="text-xl font-bold text-gray-800 leading-snug">Biblioteca Demonstrativa recebe o lançamento de Crônicas Espectrais</h2>
+              <div class="mt-auto">
+                <p class="text-sm text-gray-500 mb-2">01/08/2025 | MinC</p>
+                <a href="https://www.gov.br/cultura/pt-br/assuntos/noticias/biblioteca-demonstrativa-recebe-o-lancamento-do-livro-cronicas-espectrais-notas-sobre-o-tea-de-luciano-de-jesus-goncalves" target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all text-sm">Ler Notícia <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="md:w-1/2"><img src="./assets/img/imagem_livro.webp" class="w-full h-56 object-cover rounded-md" /></div>
+            <div class="md:w-1/2 flex flex-col justify-between">
+              <h2 class="text-xl font-bold text-gray-800 leading-snug">Professor do IFTO lança livro ‘Crônicas Espectrais’</h2>
+              <div class="mt-auto">
+                <p class="text-sm text-gray-500 mb-2">21/05/2025 | Canal Autismo</p>
+                <a href="https://www.canalautismo.com.br/noticia/professor-da-ufms-diagnosticado-com-autismo-lanca-livro-cronicas-espectrais/" target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all text-sm">Ler Notícia <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="md:w-1/2"><img src="./assets/img/noticias/portal-ifto-02-04-2025.jpeg" class="w-full h-64 object-cover rounded-md" /></div>
+            <div class="md:w-1/2 flex flex-col justify-between">
+              <h2 class="text-xl font-bold text-gray-800 leading-snug">Autismo: conscientização e inclusão além do dia 2 de abril</h2>
+              <div class="mt-auto">
+                <p class="text-sm text-gray-500 mb-2">02/04/2025 | Portal IFTO</p>
+                <a href="https://portal.ifto.edu.br/noticias/autismo-conscientizacao-e-inclusao-para-alem-do-dia-2-de-abril" target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all text-sm">Ler Notícia <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="md:w-1/2"><img src="../assets/img/img-luciano/img_luciano.jpg" class="w-full h-56 object-cover rounded-md" /></div>
+            <div class="md:w-1/2 flex flex-col justify-between">
+              <h2 class="text-xl font-bold text-gray-800 leading-snug">Livro reflete sobre neurodiversidade e autodescoberta</h2>
+              <div class="mt-auto">
+                <p class="text-sm text-gray-500 mb-2">14/03/2025 | Mariana Kotscho</p>
+                <a href="https://marianakotscho.uol.com.br/inclusao/cronicas-espectrais-notas-sobre-o-tea-reflete-sobre-neurodiversidade-e-autodescoberta.html" target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all text-sm">Ler Notícia <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="md:w-1/2"><img src="./assets/img/noticias/jornal_opcao_noticia-13-03-2025.jpg" class="w-full h-56 object-cover rounded-md" /></div>
+            <div class="md:w-1/2 flex flex-col justify-between">
+              <h2 class="text-xl font-bold text-gray-800 leading-snug">Obra de Luciano Gonçalves aborda saúde mental com humor</h2>
+              <div class="mt-auto">
+                <p class="text-sm text-gray-500 mb-2">13/03/2025 | Jornal Opção</p>
+                <a href="https://tocantins.jornalopcao.com.br/colunas-e-blogs/opcao-cultural/em-palmas-professor-tocantinense-lanca-livro-sobre-tea-e-traz-reflexoes-sobre-neurodiversidade-554928/" target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all text-sm">Ler Notícia <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="md:w-1/2"><img src="./assets/img/noticias/t1-noticias-13-03-2025.jpg" class="w-full h-56 object-cover rounded-md" /></div>
+            <div class="md:w-1/2 flex flex-col justify-between">
+              <h2 class="text-xl font-bold text-gray-800 leading-snug">Crônicas Espectrais será lançado nesta sexta, 14 em Palmas</h2>
+              <div class="mt-auto">
+                <p class="text-sm text-gray-500 mb-2">13/03/2025 | T1 Notícias</p>
+                <a href="https://t1noticias.com.br/cidades/livro-cronicas-espectrais-notas-sobre-o-tea-sera-lancado-nesta-sexta-14/135500/" target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all text-sm">Ler Notícia <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="md:w-1/2"><img src="./assets/img/noticias/portal-Stylo-12-03-2025.webp" class="w-full h-56 object-cover rounded-md" /></div>
+            <div class="md:w-1/2 flex flex-col justify-between">
+              <h2 class="text-xl font-bold text-gray-800 leading-snug">Luciano Gonçalves lança livro de estreia em Palmas</h2>
+              <div class="mt-auto">
+                <p class="text-sm text-gray-500 mb-2">12/03/2025 | Portal Stylo</p>
+                <a href="https://www.portalstylo.com.br/noticia/luciano-de-jesus-goncalves-lanca-seu-livro-de-estreia-cronicas-espectrais-notas-sobre-o-tea-nesta-sexta14" target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all text-sm">Ler Notícia <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="md:w-1/2"><img src="./assets/img/noticias/tocantins-cultural-27-01-2025.jpeg" class="w-full h-56 object-cover rounded-md" /></div>
+            <div class="md:w-1/2 flex flex-col justify-between">
+              <h2 class="text-xl font-bold text-gray-800 leading-snug">Livro de professor tocantinense será lançado em Palmas</h2>
+              <div class="mt-auto">
+                <p class="text-sm text-gray-500 mb-2">27/01/2025 | Tocantins Cultural</p>
+                <a href="https://tocantinscultural.com.br/livro-de-professor-tocantinense-cronicas-espectrais-notas-sobre-o-tea-sera-lancado-nesta-sexta-feira-14-em-palmas/" target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all text-sm">Ler Notícia <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="md:w-1/2"><img src="./assets/img/foto_capa_livro.jpg" class="w-full h-56 object-cover rounded-md" /></div>
+            <div class="md:w-1/2 flex flex-col justify-between">
+              <h2 class="text-xl font-bold text-gray-800 leading-snug">Professor do IFTO publica crônicas sobre Autismo</h2>
+              <div class="mt-auto">
+                <p class="text-sm text-gray-500 mb-2">10/01/2025 | CONIF</p>
+                <a href="https://portal.redefederal.org.br/noticias/noticias/geral/professor-do-ifto-publica-cronicas-sobre-transtorno-do-espectro-autista" target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all text-sm">Ler Notícia <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  
+
+    <section id="citacoes" class="py-20" data-aos="fade-up">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center mb-12"><h2 class="text-3xl font-serif font-bold text-gray-900 italic">Citações e Participações</h2></div>
+        <div class="space-y-4">
+        
+          <div class="flex flex-col md:flex-row md:items-center justify-between p-6 bg-white rounded-xl border-l-4 border-indigo-700 shadow-sm">
+            <div><p class="text-xs font-bold text-gray-400">11/11/2025</p><h4 class="text-lg font-bold text-gray-800">Governo do Tocantins fortalece conscientização sobre autismo</h4></div>
+            <a href="https://www.to.gov.br/saude/noticias/governo-do-tocantins-fortalece-conscientizacao-sobre-o-autismo-em-adultos-e-idosos/5azwptvqxu6u" target="_blank" class="text-indigo-600 font-medium">Ver Notícia <i class="fa-solid fa-link"></i></a>
+          </div>
+          <div class="flex flex-col md:flex-row md:items-center justify-between p-6 bg-white rounded-xl border-l-4 border-indigo-700 shadow-sm">
+            <div><p class="text-xs font-bold text-gray-400">07/10/2025</p><h4 class="text-lg font-bold text-gray-800">Lançamento do livro ‘Meu Coração Desenha’ na 48ª Roda Literária</h4></div>
+            <a href="https://www.palmas.to.gov.br/core/noticias/fundacao-cultural-de-palmas-promove-lancamento-do-livro-meu-coracao-desenha-na-48a-roda-literaria-nesta-quarta-8/" target="_blank" class="text-indigo-600 font-medium">Ver Notícia <i class="fa-solid fa-link"></i></a>
+          </div>
+          <div class="flex flex-col md:flex-row md:items-center justify-between p-6 bg-white rounded-xl border-l-4 border-indigo-700 shadow-sm">
+            <div><p class="text-xs font-bold text-gray-400">14/09/2025</p><h4 class="text-lg font-bold text-gray-800">Convergentes 2025: Colegiado de Psicologia da Anhanguera</h4></div>
+            <a href="https://vidadiaria.com.br/convergentes-2025-supera-expectativas-e-consolida-novo-momento-do-colegiado-de-psicologia-da-faculdade-anhanguera-de-teixeira-de-freitas" target="_blank" class="text-indigo-600 font-medium">Ver Notícia <i class="fa-solid fa-link"></i></a>
+          </div>
+          <div class="flex flex-col md:flex-row md:items-center justify-between p-6 bg-white rounded-xl border-l-4 border-indigo-700 shadow-sm">
+            <div><p class="text-xs font-bold text-gray-400">02/08/2025</p><h4 class="text-lg font-bold text-gray-800">Agenda Cultural do DF - Agosto de 2025</h4></div>
+            <a href="https://tracosbrasil.com.br/blogs/materias/agenda-cultural-do-df-de-2-a-9-de-agosto" target="_blank" class="text-indigo-600 font-medium">Ver Notícia <i class="fa-solid fa-link"></i></a>
           </div>
         </div>
-
-        <!-- Notícia  -->
-        <div class="flex flex-col md:flex-row gap-6">
-          <div class="md:w-1/2">
-            <img src="./assets/img/noticias/ministerio-da-cultura01-08-2025.png" alt="noticia_1"
-              class="w-full h-56 md:h-64 object-cover rounded-md" />
-          </div>
-          <div class="md:w-1/2 flex flex-col justify-between">
-            <div>
-              <h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug">
-                Biblioteca Demonstrativa recebe o lançamento do livro Crônicas espectrais, notas sobre o TEA, de Luciano
-                de Jesus Gonçalves
-              </h2>
-            </div>
-            <div class="mt-auto">
-              <p class="text-sm text-gray-500 mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-calendar-days text-gray-400"></i>
-                01/08/2025
-              </p>
-
-              <p class=" text-gray-500 mb-4 flex items-center gap-2">
-                Ministério da Cultura, Tocantins
-              </p>
-
-              <a href="https://www.gov.br/cultura/pt-br/assuntos/noticias/biblioteca-demonstrativa-recebe-o-lancamento-do-livro-cronicas-espectrais-notas-sobre-o-tea-de-luciano-de-jesus-goncalves "
-                target="_blank"
-                class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all">
-                Ler Notícia <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Notícia  -->
-        <div class="flex flex-col md:flex-row gap-6">
-          <div class="md:w-1/2">
-            <img src="./assets/img/imagem_livro.webp" alt="noticia_1"
-              class="w-full h-56 md:h-64 object-cover rounded-md" />
-          </div>
-          <div class="md:w-1/2 flex flex-col justify-between">
-            <div>
-              <h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug">
-                Professor da <del>"UFMS"</del> <ins>(IFTO)</ins> diagnosticado com autismo lança livro ‘Crônicas
-                Espectrais’
-              </h2>
-            </div>
-            <div class="mt-auto">
-              <p class="text-sm text-gray-500 mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-calendar-days text-gray-400"></i>
-                21/05/2025
-              </p>
-
-              <p class=" text-gray-500 mb-4 flex items-center gap-2">
-                Canal Autismo | Revista Autismo, São Paulo-SP
-              </p>
-
-
-              <a href="https://www.canalautismo.com.br/noticia/professor-da-ufms-diagnosticado-com-autismo-lanca-livro-cronicas-espectrais/"
-                target="_blank"
-                class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all">
-                Ler Notícia <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- Notícia  -->
-        <div class="flex flex-col md:flex-row gap-6">
-          <div class="md:w-1/2 ">
-            <img src="./assets/img/noticias/portal-ifto-02-04-2025.jpeg" alt="noticia_1"
-              class="w-full h-64 md:h-64 object-cover rounded-md" />
-          </div>
-          <div class="md:w-1/2 flex flex-col justify-between">
-            <div>
-              <h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug">
-              Autismo: conscientização e inclusão para além da celebração do dia 2 de abril 
-              </h2>
-            </div>
-            <div class="mt-auto">
-              <p class="text-sm text-gray-500 mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-calendar-days text-gray-400"></i>
-                02/04/2025
-              </p>
-
-              <p class=" text-gray-500 mb-4 flex items-center gap-2">
-                Portal IFTO, Tocantins
-              </p>
-
-
-              <a href="https://portal.ifto.edu.br/noticias/autismo-conscientizacao-e-inclusao-para-alem-do-dia-2-de-abril"
-                target="_blank"
-                class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all">
-                Ler Notícia <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- Notícia  -->
-        <div class="flex flex-col md:flex-row gap-6">
-          <div class="md:w-1/2">
-            <img src="../assets/img/img-luciano/img_luciano.jpg" alt="noticia_1"
-              class="w-full h-56 md:h-64 object-cover rounded-md" />
-          </div>
-          <div class="md:w-1/2 flex flex-col justify-between">
-            <div>
-              <h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug">
-                Crônicas espectrais, notas sobre o TEA reflete sobre
-                neurodiversidade e autodescoberta
-              </h2>
-            </div>
-            <div class="mt-auto">
-              <p class="text-sm text-gray-500 mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-calendar-days text-gray-400"></i>
-                14/03/2025
-              </p>
-
-              <p class=" text-gray-500 mb-4 flex items-center gap-2">
-                Mariana Kotscho, São Paulo-SP
-              </p>
-
-
-              <a href="https://marianakotscho.uol.com.br/inclusao/cronicas-espectrais-notas-sobre-o-tea-reflete-sobre-neurodiversidade-e-autodescoberta.html"
-                target="_blank"
-                class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all">
-                Ler Notícia <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Notícia  -->
-        <div class="flex flex-col md:flex-row gap-6">
-          <div class="md:w-1/2">
-            <img src="./assets/img/noticias/jornal_opcao_noticia-13-03-2025.jpg" alt="noticia_2"
-              class="w-full h-56 md:h-64 object-cover rounded-md" />
-          </div>
-          <div class="md:w-1/2 flex flex-col justify-between">
-            <div>
-              <h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug">
-                Obra de Luciano de Jesus Gonçalves aborda autodescoberta e
-                saúde mental com humor e sensibilidade
-              </h2>
-            </div>
-            <div class="mt-auto">
-              <p class="text-sm text-gray-500 mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-calendar-days text-gray-400"></i>
-                13/03/2025
-              </p>
-              <p class=" text-gray-500 mb-4 flex items-center gap-2">
-                Jornal Opção, Tocantins.
-              </p>
-              <a href="https://tocantins.jornalopcao.com.br/colunas-e-blogs/opcao-cultural/em-palmas-professor-tocantinense-lanca-livro-sobre-tea-e-traz-reflexoes-sobre-neurodiversidade-554928/"
-                target="_blank"
-                class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all">
-                Ler Notícia <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- Notícia  -->
-        <div class="flex flex-col md:flex-row gap-6">
-          <div class="md:w-1/2">
-            <img src="./assets/img/noticias/t1-noticias-13-03-2025.jpg" alt="noticia_2"
-              class="w-full h-56 md:h-64 object-cover rounded-md" />
-          </div>
-          <div class="md:w-1/2 flex flex-col justify-between">
-            <div>
-              <h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug">
-               Livro 'Crônicas Espectrais, Notas sobre o TEA' será lançado nesta sexta, 14 
-              </h2>
-            </div>
-            <div class="mt-auto">
-              <p class="text-sm text-gray-500 mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-calendar-days text-gray-400"></i>
-                13/03/2025
-              </p>
-              <p class=" text-gray-500 mb-4 flex items-center gap-2">
-               T1 Notícias
-              </p>
-              <a href="https://t1noticias.com.br/cidades/livro-cronicas-espectrais-notas-sobre-o-tea-sera-lancado-nesta-sexta-14/135500/"
-                target="_blank"
-                class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all">
-                Ler Notícia <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-          <!-- Notícia  -->
-        <div class="flex flex-col md:flex-row gap-6">
-          <div class="md:w-1/2">
-            <img src="./assets/img/noticias/portal-Stylo-12-03-2025.webp" alt="noticia_2"
-              class="w-full h-56 md:h-64 object-cover rounded-md" />
-          </div>
-          <div class="md:w-1/2 flex flex-col justify-between">
-            <div>
-              <h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug">
-              Luciano de Jesus Gonçalves lança seu livro de estreia ‘Crônicas espectrais, notas sobre o TEA’ nesta sexta,14 
-              </h2>
-            </div>
-            <div class="mt-auto">
-              <p class="text-sm text-gray-500 mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-calendar-days text-gray-400"></i>
-                12/03/2025
-              </p>
-              <p class=" text-gray-500 mb-4 flex items-center gap-2">
-              PORTAL STYLO
-              </p>
-              <a href="https://www.portalstylo.com.br/noticia/luciano-de-jesus-goncalves-lanca-seu-livro-de-estreia-cronicas-espectrais-notas-sobre-o-tea-nesta-sexta14"
-                target="_blank"
-                class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all">
-                Ler Notícia <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-
-
-        <!-- Notícia  -->
-        <div class="flex flex-col md:flex-row gap-6">
-          <div class="md:w-1/2">
-            <img src="./assets/img/noticias/tocantins-cultural-27-01-2025.jpeg" alt="noticia_2"
-              class="w-full h-56 md:h-64 object-cover rounded-md" />
-          </div>
-          <div class="md:w-1/2 flex flex-col justify-between">
-            <div>
-              <h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug">
-                Livro de professor tocantinense ‘Crônicas espectrais, notas
-                sobre o TEA’ será lançado nesta sexta-feira, 14, em Palmas
-              </h2>
-            </div>
-            <div class="mt-auto">
-              <p class="text-sm text-gray-500 mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-calendar-days text-gray-400"></i>
-                27/01/2025
-              </p>
-
-              TOCANTINS CULTURAL, Tocantins
-              <a href="https://tocantinscultural.com.br/livro-de-professor-tocantinense-cronicas-espectrais-notas-sobre-o-tea-sera-lancado-nesta-sexta-feira-14-em-palmas/"
-                target="_blank"
-                class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all">
-                Ler Notícia <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-
-
-        <!-- Notícia  -->
-        <div class="flex flex-col md:flex-row gap-6">
-          <div class="md:w-1/2">
-            <img src="./assets/img/foto_capa_livro.jpg" alt="noticia_2"
-              class="w-full h-56 md:h-64 object-cover rounded-md" />
-          </div>
-          <div class="md:w-1/2 flex flex-col justify-between">
-            <div>
-              <h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-800 leading-snug">
-                Professor do IFTO publica crônicas sobre Transtorno do Espectro Autista
-              </h2>
-            </div>
-            <div class="mt-auto">
-              <p class="text-sm text-gray-500 mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-calendar-days text-gray-400"></i>
-                10/01/2025
-              </p>
-
-              CONIF, Brazilia - DF
-              <a href="https://portal.redefederal.org.br/noticias/noticias/geral/professor-do-ifto-publica-cronicas-sobre-transtorno-do-espectro-autista"
-                target="_blank"
-                class="inline-flex items-center gap-2 bg-indigo-600 text-white font-medium px-5 py-2 rounded-full hover:bg-indigo-700 transition-all">
-                Ler Notícia <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
   </main>
 
-  <!-- Footer fixado -->
-  <footer class="bg-gray-900 text-white text-center p-6 mt-auto ">
-    <p class="text-lg font-semibold">Siga-me nas redes sociais</p>
-    <div class="flex justify-center gap-6 mt-4 flex-wrap">
-      <a href="https://www.instagram.com/lj_goncalves/" target="_blank"
-        class="flex items-center gap-2 text-gray-300 hover:text-white transition">
-        <i class="fa-brands fa-instagram text-xl"></i> Instagram
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=100083157130201" target="_blank"
-        class="flex items-center gap-2 text-gray-300 hover:text-white transition">
-        <i class="fa-brands fa-facebook text-xl"></i> Facebook
-      </a>
-      <a href="https://www.tiktok.com/@luciano.de.jesus043" target="_blank"
-        class="flex items-center gap-2 text-gray-300 hover:text-white transition">
-        <i class="fa-brands fa-tiktok text-xl"></i> TikTok
-      </a>
-
-
-      <a href="https://www.youtube.com/@lucianodejesusgoncalves/featured" target="_blank"
-        class="flex items-center gap-2 text-gray-300 hover:text-white transition">
-        <i class="fa-brands fa-youtube"></i> Youtube
-      </a>
-
-
+  <footer class="bg-gray-900 text-white text-center p-8 mt-auto">
+    <p class="text-lg font-semibold mb-4">Siga-me nas redes sociais</p>
+    <div class="flex justify-center gap-8 flex-wrap">
+      <a href="https://www.instagram.com/lj_goncalves/" target="_blank" class="hover:text-indigo-400 transition-colors"><i class="fa-brands fa-instagram text-2xl"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=100083157130201" target="_blank" class="hover:text-indigo-400 transition-colors"><i class="fa-brands fa-facebook text-2xl"></i></a>
+      <a href="https://www.youtube.com/@lucianodejesusgoncalves/featured" target="_blank" class="hover:text-indigo-400 transition-colors"><i class="fa-brands fa-youtube text-2xl"></i></a>
     </div>
-    <p class="mt-4 text-gray-400 text-sm">
-      &copy; 2025 Crônicas Espectrais. Todos os direitos reservados.
-    </p>
+    <p class="mt-6 text-gray-400 text-sm">&copy; 2026 Crônicas Espectrais. Todos os direitos reservados.</p>
   </footer>
 
   <script src="./assets/script/index.js"></script>
-
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    // Inicialize AOS
-    AOS.init({
-      duration: 800, // Duração da animação em ms
-      easing: "ease-in-out", // Tipo de easing
-      once: true, // Se as animações devem ocorrer apenas uma vez
-    });
-  </script>
+  <script>AOS.init({ duration: 800, once: true });</script>
 </body>
-
 </html>
